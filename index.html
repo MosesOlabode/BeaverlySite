@@ -114,7 +114,7 @@
        ═══════════════════════════════ -->
   <div class="hp-trust bv-atm">
     <div class="hp-trust-list">
-      <div class="hp-trust-item"><i data-lucide="shield-check" style="width:13px;height:13px"></i>Funds stay with your broker</div>
+      <div class="hp-trust-item"><i data-lucide="shield-check" style="width:13px;height:13px"></i>Funds stay with your provider</div>
       <div class="hp-trust-sep"></div>
       <div class="hp-trust-item"><i data-lucide="lock" style="width:13px;height:13px"></i>Never touches your money</div>
       <div class="hp-trust-sep"></div>
@@ -138,7 +138,7 @@
         <div class="hp-demo-copy reveal">
           <span class="eyebrow">Demo below</span>
           <h2>Select what you want below<br>Watch Chilla work.</h2>
-          <p>This is a lightweight Chilla demo experience from connecting your broker to live reports. Every step requires your explicit authorization before it runs.</p>
+          <p>This is a lightweight Chilla demo experience from connecting your account to live reports. Every step requires your explicit authorization before it runs.</p>
         </div>
 
         <!-- Right: polished demo panel -->
@@ -167,12 +167,12 @@
             <!-- Step 1: Connect -->
             <div class="demo-card active" id="dc-step-1">
               <div class="dc-label">Step 1 of 6</div>
-              <div class="dc-title">Connect Your Environment</div>
-              <div class="dc-desc">Authorize your broker account. You fund it normally, then connect Chilla to automate only what you approved . Your funds remain with your broker throughout.</div>
-              <div class="dc-broker-row">
+              <div class="dc-title">Connect Your Account</div>
+              <div class="dc-desc">Authorize your connected account. You fund it normally, then connect Chilla to automate only what you approved. Your funds remain with your provider throughout.</div>
+              <div class="dc-provider-row">
                 <div>
-                  <div class="dc-broker-name">cTrader</div>
-                  <div class="dc-broker-s" id="dcBrokerS">Not connected</div>
+                  <div class="dc-provider-name">cTrader</div>
+                  <div class="dc-provider-s" id="dcProviderS">Not connected</div>
                 </div>
                 <button class="dc-connect-btn" id="dcConnectBtn">Connect</button>
               </div>
@@ -193,10 +193,10 @@
               </div>
             </div>
 
-            <!-- Step 3: Playgrounds -->
+            <!-- Step 3: Markets -->
             <div class="demo-card" id="dc-step-3">
               <div class="dc-label">Step 3 of 6</div>
-              <div class="dc-title">Select Playgrounds</div>
+              <div class="dc-title">Select Markets</div>
               <div class="dc-desc">Choose from any of the markets compatible with your selected behavior.</div>
               <div class="dc-pg-grid">
                 <div class="dc-pg sel" data-pg="EURUSD"><span class="dc-pg-chk">✓</span>EURUSD</div>
@@ -261,7 +261,7 @@
 
       <div class="hp-accounts-hdr">
         <span class="eyebrow eyebrow-inv">Supported Accounts</span>
-        <h2 class="hp-accounts-h2">Works with leading brokers<br>and prop firms.</h2>
+        <h2 class="hp-accounts-h2">Works with leading providers<br>and prop firms.</h2>
         <p class="hp-accounts-sub">Connect your existing account. Your capital stays where it is — Chilla only acts within the scope you authorize.</p>
       </div>
 
@@ -270,16 +270,16 @@
         <div class="hp-accounts-infra-label">
           <span class="hp-infra-tag">via cTrader ecosystem</span>
         </div>
-        <div class="hp-broker-grid">
-          <div class="hp-broker-pill">Deriv</div>
-          <div class="hp-broker-pill">IC Markets</div>
-          <div class="hp-broker-pill">Pepperstone</div>
-          <div class="hp-broker-pill">FP Markets</div>
-          <div class="hp-broker-pill">FxPro</div>
-          <div class="hp-broker-pill">Fusion Markets</div>
-          <div class="hp-broker-pill">Tradeview</div>
-          <div class="hp-broker-pill">Skilling</div>
-          <div class="hp-broker-pill hp-broker-pill--prop">FTMO <span class="hp-prop-badge">Prop</span></div>
+        <div class="hp-provider-grid">
+          <div class="hp-provider-pill">Deriv</div>
+          <div class="hp-provider-pill">IC Markets</div>
+          <div class="hp-provider-pill">Pepperstone</div>
+          <div class="hp-provider-pill">FP Markets</div>
+          <div class="hp-provider-pill">FxPro</div>
+          <div class="hp-provider-pill">Fusion Markets</div>
+          <div class="hp-provider-pill">Tradeview</div>
+          <div class="hp-provider-pill">Skilling</div>
+          <div class="hp-provider-pill hp-provider-pill--prop">FTMO <span class="hp-prop-badge">Prop</span></div>
         </div>
         <p class="hp-accounts-more">…and many more through the cTrader ecosystem</p>
       </div>
@@ -293,19 +293,19 @@
             Temporarily paused
           </span>
         </div>
-        <div class="hp-broker-grid">
-          <div class="hp-broker-pill hp-broker-pill--dim">Deriv</div>
+        <div class="hp-provider-grid">
+          <div class="hp-provider-pill hp-provider-pill--dim">Deriv</div>
         </div>
         <p class="hp-accounts-paused-note">Options · Multipliers · Accumulators — API infrastructure being upgraded. Returning soon.</p>
       </div>
 
       <!-- CTA row -->
       <div class="hp-accounts-cta">
-        <a href="/supported-accounts.html" class="hp-accounts-link" data-track="brokers_view_all">
+        <a href="/supported-accounts.html" class="hp-accounts-link" data-track="providers_view_all">
           View all supported accounts
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
         </a>
-        <p class="hp-accounts-disc">Funds remain in your broker account at all times. Beaverly holds no user capital.</p>
+        <p class="hp-accounts-disc">Funds remain in your connected account at all times. Beaverly holds no user capital.</p>
       </div>
 
     </div>
@@ -326,8 +326,8 @@
         <div class="hp-how-card reveal">
           <div class="hp-how-num">01</div>
           <i data-lucide="link" class="hp-how-icon"></i>
-          <h3>Connect Your Environment</h3>
-          <p>Connect your broker accounts through a secure flow. Multiple accounts, one dashboard. Your funds stay with your broker — Beaverly holds nothing.</p>
+          <h3>Connect Your Account</h3>
+          <p>Connect your connected accounts through a secure flow. Multiple accounts, one dashboard. Your funds stay with your provider — Beaverly holds nothing.</p>
         </div>
         <div class="hp-how-card reveal" style="transition-delay:.08s">
           <div class="hp-how-num">02</div>
@@ -413,10 +413,10 @@
         <div class="hp-split-text reveal">
           <span class="eyebrow">The Product</span>
           <h2>Chilla™ — the calm automation experience.</h2>
-          <p>Connect your broker. Choose your instructions. Choose your comfort boundaries. Then let Chilla operate quietly in the background — strictly within the scope you approved.</p>
+          <p>Connect your provider. Choose your instructions. Choose your comfort boundaries. Then let Chilla operate quietly in the background — strictly within the scope you approved.</p>
           <p>Every action surfaces in Flow — Chilla's real-time transparency feed. Plain language. Filterable. Exportable. You always know what happened and why.</p>
           <div class="hp-pills">
-            <span class="hp-pill"><i data-lucide="link" style="width:10px;height:10px"></i>Multi-environment</span>
+            <span class="hp-pill"><i data-lucide="link" style="width:10px;height:10px"></i>Multi-account</span>
             <span class="hp-pill"><i data-lucide="git-commit" style="width:10px;height:10px"></i>Version-tracked</span>
             <span class="hp-pill"><i data-lucide="shield" style="width:10px;height:10px"></i>Guardrail-enforced</span>
             <span class="hp-pill"><i data-lucide="activity" style="width:10px;height:10px"></i>Flow transparency</span>
@@ -439,7 +439,7 @@
             <div class="cp-line"><span class="cpg">MONITOR  </span><span class="cpv">Position under observation</span></div>
             <div class="cp-line"><span class="cpy">PASSED  </span><span class="cpv">Monthly limit approaching</span></div>
             <div class="cp-line"><span class="cpg">EXIT     </span><span class="cpv">Position closed</span></div>
-            <div class="cp-line"><span class="cpc">         Lifecycle complete. Environment confirmed.</span></div>
+            <div class="cp-line"><span class="cpc">         Lifecycle complete. Account confirmed.</span></div>
           </div>
         </div>
       </div>
@@ -478,7 +478,7 @@
           </div>
           <div class="hp-guar">
             <i data-lucide="lock" class="hp-g-ico"></i>
-            <div><h4>Account-Scoped Operation</h4><p>Automation is always bound to the user-selected account. Funds remain held by your broker.</p></div>
+            <div><h4>Account-Scoped Operation</h4><p>Automation is always bound to the user-selected account. Funds remain held by your provider.</p></div>
           </div>
         </div>
       </div>
@@ -494,7 +494,7 @@
       <div class="hp-sec-hdr reveal">
         <span class="eyebrow">Plans</span>
         <h2>Pick your chill mode.</h2>
-        <p>Start free to understand the full setup. Upgrade when you're ready for continuous automation across more environments and behaviors.</p>
+        <p>Start free to understand the full setup. Upgrade when you're ready for continuous automation across more accounts and behaviors.</p>
       </div>
       <div class="hp-plan-grid">
 
@@ -504,7 +504,7 @@
           <div class="hp-plan-note">Understand Chilla before going live.</div>
           <div class="hp-plan-feats">
             <div class="hp-pf"><i data-lucide="check"></i>Choose what you want Chilla to do for you</div>
-            <div class="hp-pf"><i data-lucide="check"></i>Connect your broker into your automation environment</div>
+            <div class="hp-pf"><i data-lucide="check"></i>Connect your account with a provider</div>
             <div class="hp-pf"><i data-lucide="check"></i>Choose your comfort levels and monthly budgets</div>
             <div class="hp-pf"><i data-lucide="check"></i>Review your choices before live activation</div>
           </div>
@@ -532,10 +532,10 @@
           <div class="hp-plan-feats">
             <div class="hp-pf"><i data-lucide="check"></i>Everything in Chill Mode</div>
             <div class="hp-pf"><i data-lucide="check"></i>Run all you want Chilla to do with more breathing room</div>
-            <div class="hp-pf"><i data-lucide="check"></i>Run Chilla live on up to 3 broker accounts in your automation environment</div>
+            <div class="hp-pf"><i data-lucide="check"></i>Run Chilla live on up to 3 connected accounts in your connected account</div>
             <div class="hp-pf"><i data-lucide="check"></i>Run your choices on all your accounts without slowing down under load</div>
             <div class="hp-pf"><i data-lucide="check"></i>Chilla processes all your choices before others on the queue</div>
-            <div class="hp-pf"><i data-lucide="check"></i>Comfortably run Chilla on a large account balance if it's above your broker's initial limits</div>
+            <div class="hp-pf"><i data-lucide="check"></i>Comfortably run Chilla on a large account balance if it's above your provider's initial limits</div>
           </div>
           <a href="https://chilla.beaverlyai.com" class="hp-plan-btn light" target="_blank" rel="noopener">Go Deeper</a>
         </div>
@@ -547,7 +547,7 @@
           <div class="hp-plan-feats">
             <div class="hp-pf"><i data-lucide="check"></i>Everything in Deep Chill</div>
             <div class="hp-pf"><i data-lucide="check"></i>Maximum capacity to run all your choices and accounts</div>
-            <div class="hp-pf"><i data-lucide="check"></i>Largest room to connect many broker accounts</div>
+            <div class="hp-pf"><i data-lucide="check"></i>Largest room to connect many connected accounts</div>
             <div class="hp-pf"><i data-lucide="check"></i>Early access to special updates before general release</div>
             <div class="hp-pf"><i data-lucide="check"></i>Seamlessly run Chilla in complex coordinations if you run accounts with much larger balances</div>
           </div>
@@ -604,12 +604,12 @@
       <div class="hp-sec-hdr reveal">
         <span class="eyebrow">FAQ</span>
         <h2>Questions before you chill.</h2>
-        <p>Chilla is not a bank, not an investment service, not a brokerage. Your money stays with you — always.</p>
+        <p>Chilla is not a bank, not an investment service, not an account provider. Your money stays with you — always.</p>
       </div>
       <div class="hp-faq-list">
         <details class="hp-faq-item">
           <summary class="hp-faq-q">What is Chilla?<i data-lucide="plus" class="fqi"></i></summary>
-          <p class="hp-faq-a">Chilla™ is Beaverly's user-facing automation product. You connect your environment, choose what you want it to do and your non-negotiables, and Chilla runs in the background — strictly within the scope you approved. Chilla keeps you informed on all its action in plain language through Flow.</p>
+          <p class="hp-faq-a">Chilla™ is Beaverly's user-facing automation product. You connect your account, choose what you want it to do and your non-negotiables, and Chilla runs in the background — strictly within the scope you approved. Chilla keeps you informed on all its action in plain language through Flow.</p>
         </details>
         <details class="hp-faq-item">
           <summary class="hp-faq-q">What is Beaverly?<i data-lucide="plus" class="fqi"></i></summary>
@@ -617,15 +617,15 @@
         </details>
         <details class="hp-faq-item">
           <summary class="hp-faq-q">Is my money safe?<i data-lucide="plus" class="fqi"></i></summary>
-          <p class="hp-faq-a">Yes. Your funds remain in your regulated broker account at all times. Beaverly never holds or has custody of your money. We only provide the automation infrastructure — you retain full access to your account throughout.</p>
+          <p class="hp-faq-a">Yes. Your funds remain in your regulated connected account at all times. Beaverly never holds or has custody of your money. We only provide the automation infrastructure — you retain full access to your account throughout.</p>
         </details>
         <details class="hp-faq-item">
           <summary class="hp-faq-q">Can I pause or withdraw anytime?<i data-lucide="plus" class="fqi"></i></summary>
-          <p class="hp-faq-a">Absolutely. You can pause automation or revoke any instruction from your dashboard at any moment. Your funds are in your broker account — your ability to withdraw is entirely independent of Chilla.</p>
+          <p class="hp-faq-a">Absolutely. You can pause automation or revoke any instruction from your dashboard at any moment. Your funds are in your connected account — your ability to withdraw is entirely independent of Chilla.</p>
         </details>
         <details class="hp-faq-item">
           <summary class="hp-faq-q">How do I get started?<i data-lucide="plus" class="fqi"></i></summary>
-          <p class="hp-faq-a">Register on Chilla, connect your environment, choose a behavior, set your comfort level, review comfort implications, give your authorization, and watch Flow. The free Chill Architect plan lets you explore the full setup before running any live automation.</p>
+          <p class="hp-faq-a">Register on Chilla, connect your account, choose a behavior, set your comfort level, review comfort implications, give your authorization, and watch Flow. The free Chill Architect plan lets you explore the full setup before running any live automation.</p>
         </details>
         <details class="hp-faq-item">
           <summary class="hp-faq-q">Do I need trading knowledge?<i data-lucide="plus" class="fqi"></i></summary>
@@ -679,7 +679,7 @@
   <section class="hp-cta-final bv-atm" id="contact">
     <div class="hp-cta-inner reveal">
       <h2>Ready to start<br>chilling?</h2>
-      <p>Connect your environment. Choose what you want done. Watch Flow. Market participation, on your terms — without changing who you are.</p>
+      <p>Connect your account. Choose what you want done. Watch Flow. Market participation, on your terms — without changing who you are.</p>
       <div class="hp-cta-btns">
         <a href="https://chilla.beaverlyai.com" class="btn-wh" data-track="final_cta">Open Chilla</a>
         <a href="#pricing" class="btn-ol-inv" data-track="final_plans">View Plans</a>

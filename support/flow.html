@@ -48,9 +48,9 @@
           <a href="chilla-basics.html">Chilla Basics</a>
           <a href="flow.html" aria-current="page">Flow and Transparency</a>
           <a href="automation-capacity.html">Automation Capacity</a>
-          <a href="behaviors-playgrounds.html">Behaviors and Playgrounds</a>
+          <a href="behaviors-markets.html">Behaviors and Markets</a>
           <a href="instructions-and-comfort.html">Instructions and Comfort</a>
-          <a href="environments.html">Environments and Connections</a>
+          <a href="connected-accounts.html">Connected Accounts</a>
           <a href="plans-billing-usage.html">Plans, Billing and Usage</a>
           <a href="troubleshooting.html">Troubleshooting</a>
           <a href="account-security.html">Account and Security</a>
@@ -89,10 +89,10 @@
                   <tr><th>Element</th><th>Meaning</th><th>What to do next</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Entry event</td><td>Automation opened a position within your instruction scope.</td><td>Confirm environment and instruction are the expected ones.</td></tr>
+                  <tr><td>Entry event</td><td>Automation opened a position within your instruction scope.</td><td>Confirm account and instruction are the expected ones.</td></tr>
                   <tr><td>Exit event</td><td>A tracked position lifecycle ended and was closed.</td><td>Review sequence around the event if you need context.</td></tr>
-                  <tr><td>Passed event</td><td>System stepped aside with a specific reason such as comfort boundary, instruction scope, or environment minimum.</td><td>Open event details and compare with instruction comfort and account readiness.</td></tr>
-                  <tr><td>Warning event</td><td>Validation or environment warning event was recorded.</td><td>Use troubleshooting steps and include the warning title in support requests.</td></tr>
+                  <tr><td>Passed event</td><td>System stepped aside with a specific reason such as comfort boundary, instruction scope, or account minimum.</td><td>Open event details and compare with instruction comfort and account readiness.</td></tr>
+                  <tr><td>Warning event</td><td>Validation or account warning event was recorded.</td><td>Use troubleshooting steps and include the warning title in support requests.</td></tr>
                   <tr><td>Live event</td><td>Monitoring update without an entry/exit action.</td><td>No action needed unless the update conflicts with your expected setup.</td></tr>
                 </tbody>
               </table>
@@ -108,7 +108,7 @@
                 </thead>
                 <tbody>
                   <tr><td><code>insufficient_balance</code></td><td>Entry paused by available resources</td></tr>
-                  <tr><td><code>broker_minimum</code></td><td>Entry paused by environment minimum</td></tr>
+                  <tr><td><code>provider_minimum</code></td><td>Entry paused by account minimum</td></tr>
                   <tr><td><code>not_authorized</code></td><td>Entry paused by instruction scope</td></tr>
                   <tr><td><code>validation_failed</code></td><td>Action paused by validation check</td></tr>
                   <tr><td><code>risk_cap_exhausted</code> / <code>risk_cap_approaching</code></td><td>Entry paused by comfort boundary</td></tr>
@@ -156,7 +156,7 @@
             <h2>Flow FAQ</h2>
             <details>
               <summary>I expected activity but Flow is quiet. Is that a problem?</summary>
-              <p>Not always. A quiet period can mean no valid conditions, active monitoring, or step-aside behavior within your boundaries. Check instruction status, environment readiness, and capacity first.</p>
+              <p>Not always. A quiet period can mean no valid conditions, active monitoring, or step-aside behavior within your boundaries. Check instruction status, account readiness, and capacity first.</p>
             </details>
             <details>
               <summary>Can Flow be used for support requests?</summary>

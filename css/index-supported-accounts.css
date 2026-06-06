@@ -95,13 +95,13 @@
   }
 }
 
-.hp-broker-grid {
+.hp-provider-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.hp-broker-pill {
+.hp-provider-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.38rem;
@@ -115,13 +115,13 @@
   transition: color 0.25s, border-color 0.25s, background 0.25s;
 }
 
-.hp-broker-pill:hover {
+.hp-provider-pill:hover {
   color: rgba(255, 255, 255, 0.82);
   border-color: rgba(255, 255, 255, 0.22);
   background: rgba(255, 255, 255, 0.07);
 }
 
-.hp-broker-pill--prop {
+.hp-provider-pill--prop {
   /* Prop firm variation keeps the same visual treatment. */
 }
 
@@ -136,7 +136,7 @@
   padding: 0.1rem 0.42rem;
 }
 
-.hp-broker-pill--dim {
+.hp-provider-pill--dim {
   opacity: 0.45;
   cursor: default;
   pointer-events: none;

@@ -262,15 +262,15 @@ body { overflow-x: hidden; }
 .dc-title { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin-bottom: .3rem; }
 .dc-desc { font-size: .83rem; color: var(--mid); line-height: 1.65; margin-bottom: 1.2rem; }
 
-/* Broker row */
-.dc-broker-row {
+/* Provider row */
+.dc-provider-row {
   display: flex; align-items: center; justify-content: space-between;
   background: var(--cream); border: 1px solid var(--border);
   border-radius: 10px; padding: .92rem 1.05rem; gap: 1rem;
 }
-.dc-broker-name { font-size: .88rem; font-weight: 700; color: var(--ink); }
-.dc-broker-s { font-size: .74rem; color: var(--mid); margin-top: 2px; }
-.dc-broker-s.ok { color: #1a8b2b; font-weight: 600; }
+.dc-provider-name { font-size: .88rem; font-weight: 700; color: var(--ink); }
+.dc-provider-s { font-size: .74rem; color: var(--mid); margin-top: 2px; }
+.dc-provider-s.ok { color: #1a8b2b; font-weight: 600; }
 
 /* Behavior opts */
 .dc-bhv {
@@ -282,7 +282,7 @@ body { overflow-x: hidden; }
 .dc-bhv-name { font-size: .87rem; font-weight: 700; color: var(--ink); margin-bottom: .18rem; }
 .dc-bhv-desc { font-size: .76rem; color: var(--mid); line-height: 1.5; }
 
-/* Playgrounds */
+/* Markets */
 .dc-pg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-bottom: .75rem; }
 .dc-pg {
   display: flex; align-items: center; gap: .42rem;
@@ -384,10 +384,10 @@ body { overflow-x: hidden; }
 
 
 /* ===========================================
-   BROKER LOGOS
+   PROVIDER LOGOS
    =========================================== */
-.hp-brokers { background: var(--ink); padding: 2.5rem 0; }
-.hp-brokers-lbl {
+.hp-providers { background: var(--ink); padding: 2.5rem 0; }
+.hp-providers-lbl {
   text-align: center; font-size: .67rem; font-weight: 700;
   letter-spacing: .16em; text-transform: uppercase;
   color: rgba(255,255,255,.2); margin-bottom: 1.4rem;
@@ -400,13 +400,13 @@ body { overflow-x: hidden; }
 }
 @keyframes logos-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 .hp-logos-row:hover { animation-play-state: paused; }
-.hp-broker-logo img {
+.hp-provider-logo img {
   height: clamp(22px,3.5vw,38px); width: auto;
   filter: grayscale(100%) brightness(.5); opacity: .48;
   transition: opacity .3s, filter .3s;
 }
-.hp-broker-logo img:hover { opacity: .8; filter: grayscale(30%) brightness(.85); }
-.hp-brokers-note {
+.hp-provider-logo img:hover { opacity: .8; filter: grayscale(30%) brightness(.85); }
+.hp-providers-note {
   text-align: center; margin-top: 1.2rem; font-size: .73rem;
   color: rgba(255,255,255,.17); font-style: italic; padding: 0 1.25rem;
 }

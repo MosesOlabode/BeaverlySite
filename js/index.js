@@ -96,11 +96,11 @@ function initDemo() {
       const b = e.target; b.textContent = 'Connecting…'; b.disabled = true;
       setTimeout(() => {
         connected = true;
-        const s = document.getElementById('dcBrokerS');
+        const s = document.getElementById('dcProviderS');
         if (s) { s.textContent = 'Connected ✓'; s.classList.add('ok'); }
         const badge = document.createElement('div');
         badge.className = 'dc-connected-badge';
-        badge.innerHTML = '<span class="gdot"></span>Environment ready';
+        badge.innerHTML = '<span class="gdot"></span>Account ready';
         b.replaceWith(badge);
         syncNext();
       }, 1100);
@@ -114,7 +114,7 @@ function initDemo() {
     const bhv = e.target.closest('.dc-bhv');
     if (bhv) { document.querySelectorAll('.dc-bhv').forEach(x => x.classList.remove('sel')); bhv.classList.add('sel'); behavior = bhv.dataset.bhv; syncNext(); return; }
 
-    // Playground
+    // Market
     const pg = e.target.closest('.dc-pg');
     if (pg) { pg.classList.toggle('sel'); const c = pg.querySelector('.dc-pg-chk'); if (c) c.textContent = pg.classList.contains('sel') ? '✓' : ''; return; }
 
@@ -179,7 +179,7 @@ function initDemo() {
   function restart() {
     if (fTimer) clearTimeout(fTimer);
     connected = false; behavior = null; consented = false;
-    const s = document.getElementById('dcBrokerS'); if (s) { s.textContent = 'Not connected'; s.classList.remove('ok'); }
+    const s = document.getElementById('dcProviderS'); if (s) { s.textContent = 'Not connected'; s.classList.remove('ok'); }
     const badge = document.querySelector('#dc-step-1 .dc-connected-badge');
     if (badge) { const b = document.createElement('button'); b.className = 'dc-connect-btn'; b.id = 'dcConnectBtn'; b.textContent = 'Connect'; badge.replaceWith(b); }
     document.querySelectorAll('.dc-bhv').forEach(x => x.classList.remove('sel'));

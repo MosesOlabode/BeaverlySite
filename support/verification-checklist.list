@@ -56,7 +56,7 @@
               <li><code>Blce/mandate-settings.html</code>, <code>Blce/mandate-wizard.html</code>, and <code>Blce/js/mandate-settings.js</code> for instruction lifecycle controls.</li>
               <li><code>Blce/js/decision-flow.js</code> for Flow statuses, filters, replay scopes, and skip-reason wording.</li>
               <li><code>Blce/usage.html</code> and <code>Blce/js/usage.js</code> for capacity labels and reset behavior.</li>
-              <li><code>Blce/broker-settings.html</code> and <code>Blce/js/broker-settings.js</code> for environment state labels.</li>
+              <li><code>Blce/provider-settings.html</code> and <code>Blce/js/provider-settings.js</code> for account state labels.</li>
               <li><code>BeaverlySite/pricing.html</code> and <code>Blce/upgrade.html</code> for public/in-app tier displays.</li>
             </ul>
           </article>
@@ -64,10 +64,10 @@
           <article class="support-card">
             <h2>UI location verification</h2>
             <ul>
-              <li>Dashboard cards: <strong>Not connected yet</strong>, <strong>Instructions</strong>, <strong>Flow</strong>, <strong>Active Playgrounds</strong>.</li>
+              <li>Dashboard cards: <strong>Not connected yet</strong>, <strong>Instructions</strong>, <strong>Flow</strong>, <strong>Active Markets</strong>.</li>
               <li>Flow chips: <strong>All</strong>, <strong>Entry</strong>, <strong>Exit</strong>, <strong>Skip</strong>, <strong>Warn</strong>, <strong>Live</strong>.</li>
               <li>Instruction actions: <strong>Add</strong>, <strong>Update</strong>, <strong>Pause</strong>, <strong>Revoke</strong>.</li>
-              <li>Environment status labels: <strong>Automated</strong>, <strong>Connected</strong>, <strong>Disconnected</strong>, <strong>Active</strong>, <strong>Ready</strong>, <strong>Inactive</strong>.</li>
+              <li>Account status labels: <strong>Automated</strong>, <strong>Connected</strong>, <strong>Disconnected</strong>, <strong>Active</strong>, <strong>Ready</strong>, <strong>Inactive</strong>.</li>
               <li>Usage labels: <strong>Automation Capacity Used</strong>, <strong>Capacity Available</strong>, <strong>Daily Available</strong>.</li>
             </ul>
           </article>
@@ -76,7 +76,7 @@
             <h2>Plan and billing verification</h2>
             <ul>
               <li>Current plan names and public descriptions.</li>
-              <li>Environment connection limits by tier.</li>
+              <li>Account connection limits by tier.</li>
               <li>Current pricing and cadence details.</li>
               <li>Upgrade/downgrade timing behavior.</li>
               <li>Refund and billing dispute handling policy.</li>
@@ -98,7 +98,7 @@
             <ul>
               <li>No proprietary formulas or private decision internals disclosed.</li>
               <li>No advisory language or guarantee phrasing.</li>
-              <li>Terminology remains user-facing: behavior, comfort, environment, instruction, Flow.</li>
+              <li>Terminology remains user-facing: behavior, comfort, account, instruction, Flow.</li>
               <li>Non-custodial framing appears where relevant.</li>
             </ul>
           </article>

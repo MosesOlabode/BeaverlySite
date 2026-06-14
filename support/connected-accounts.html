@@ -33,10 +33,10 @@
       <header class="support-hero support-hero--light">
         <p class="support-kicker">Connected Trading Accounts</p>
         <h1 class="support-title">Connect an account and confirm readiness</h1>
-        <p class="support-subtitle">Trading accounts define where automation can run. Chilla stays account-scoped and does not hold your funds.</p>
+        <p class="support-subtitle">Trading accounts define where automation can run. Chilla stays account-scoped, uses your authorized connection, and does not hold your funds.</p>
         <div class="support-meta">
           <span class="support-chip"><i data-lucide="link"></i> Article type: Task + Troubleshooting</span>
-          <span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: March 12, 2026</span>
+          <span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: June 14, 2026</span>
         </div>
       </header>
 
@@ -51,6 +51,8 @@
           <a href="behaviors-markets.html">Behaviors and Markets</a>
           <a href="instructions-and-comfort.html">Instructions and Comfort</a>
           <a href="connected-accounts.html" aria-current="page">Connected Accounts</a>
+          <a href="deposits.html">Deposits</a>
+          <a href="withdrawals.html">Withdrawals</a>
           <a href="plans-billing-usage.html">Plans, Billing and Usage</a>
           <a href="troubleshooting.html">Troubleshooting</a>
           <a href="account-security.html">Account and Security</a>
@@ -82,19 +84,40 @@
           <article class="support-card">
             <h2>Before you connect</h2>
             <ul>
-              <li>Have access credentials for the target connected account.</li>
-              <li>Confirm you are using the correct account context.</li>
-              <li>Complete any required account-level verification steps.</li>
+              <li>Have access to the target connected account and any required provider verification flow.</li>
+              <li>Confirm whether you want a direct Deriv account or a cTrader account through a broker that supports cTrader.</li>
+              <li>Complete any required account-level verification steps before expecting deposits, withdrawals, or automation to be available.</li>
               <li>Check plan limits for number of account connections.</li>
             </ul>
+          </article>
+
+          <article class="support-card">
+            <h2>What a provider account means</h2>
+            <p>A provider account is the trading account you create and maintain with Deriv or with a broker that supports cTrader. Chilla connects to that account so your chosen behaviours can run within your authorized boundaries. Beaverly is not the provider, broker, bank, or custodian for the account.</p>
+          </article>
+
+          <article class="support-card">
+            <h2>Choose a connection path</h2>
+            <div class="support-table-wrap">
+              <table class="support-table">
+                <thead>
+                  <tr><th>Path</th><th>Best fit</th><th>Supported asset or behavior categories</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Deriv direct</td><td>Use this when you want a direct Deriv connection and Deriv is available for your region and account type.</td><td>Deriv-native categories such as Multipliers, Options, Accumulators, and similar Deriv-supported products.</td></tr>
+                  <tr><td>cTrader</td><td>Use this when you already have, or want to create, an account with a broker that provides cTrader access.</td><td>Categories can include Forex, Metals, Synthetic Indices, Stocks, Crypto, and Stock Indices. Availability depends on the broker and account you choose; not every cTrader broker supports every asset category.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>If both paths are available to you, choose based on the provider account you are comfortable opening and maintaining. Chilla does not recommend a broker, provider, account type, asset, or behavior.</p>
           </article>
 
           <article class="support-card">
             <h2>Connect an account</h2>
             <ol class="support-steps">
               <li><strong>Open Pick Connected Account.</strong> Use dashboard plus button or <strong>Connect Chilla</strong>.</li>
-              <li><strong>Select provider.</strong> Current options are <strong>Deriv</strong> and <strong>cTrader</strong>.</li>
-              <li><strong>Authorize provider login.</strong> Chilla returns to dashboard after callback.</li>
+              <li><strong>Select provider.</strong> Current paths are <strong>Deriv direct</strong> and <strong>cTrader</strong>.</li>
+              <li><strong>Authorize provider login.</strong> Complete the provider or cTrader authorization flow. Chilla returns to dashboard after callback.</li>
               <li><strong>Confirm connection state.</strong> Dashboard and account settings should show connected account details.</li>
               <li><strong>Set active account.</strong> Use <strong>Switch Account</strong> or account selector controls before creating/updating instructions.</li>
             </ol>
@@ -119,6 +142,31 @@
             </div>
           </article>
 
+          <article class="support-card">
+            <h2>Deposit basics</h2>
+            <ul>
+              <li>Deposit only through the provider or broker that holds the account.</li>
+              <li>Deposit methods, minimums, currencies, timing, and fees depend on your broker, provider, region, payment channel, and account verification status.</li>
+              <li>Typical deposit paths can include bank transfer, crypto, payment gateways, mobile money, cards, or local payment partners, depending on what your broker supports where you live.</li>
+              <li>Before committing to a deposit channel, check the expected withdrawal time and rules for that same channel because many brokers normally require withdrawals to go back through the original deposit channel.</li>
+              <li>Chilla may show account readiness, but it does not move money into the account or advise how much to deposit.</li>
+            </ul>
+            <p>For a focused checklist, see <a href="deposits.html">Depositing into connected accounts</a>.</p>
+          </article>
+
+          <article class="support-card">
+            <h2>Withdrawal basics</h2>
+            <ul>
+              <li>Withdrawals happen inside your provider or broker account, using that provider's own controls.</li>
+              <li>Brokers commonly route withdrawals back through the same channel used for deposits, which is why choosing the right deposit channel is an important setup decision.</li>
+              <li>Some users report crypto withdrawals as fast, but actual speed depends on the broker, region, verification status, network conditions, and provider review.</li>
+              <li>Beaverly cannot approve, speed up, reverse, or guarantee provider withdrawals.</li>
+              <li>Provider verification, payment-method rules, open positions, currency conversion, or regional rules can affect withdrawal availability.</li>
+              <li>If you plan to withdraw, review active instructions first and pause or revoke anything you do not want running while you manage the account.</li>
+            </ul>
+            <p>For a focused checklist, see <a href="withdrawals.html">Withdrawing from connected accounts</a>.</p>
+          </article>
+
           <article class="support-card support-faq">
             <h2>Account FAQ</h2>
             <details>
@@ -131,7 +179,11 @@
             </details>
             <details>
               <summary>Does Beaverly hold my funds after connection?</summary>
-              <p>No. Funds remain in your own connected account.</p>
+              <p>No. Funds remain in your own connected account with your provider or broker.</p>
+            </details>
+            <details>
+              <summary>Which assets and behaviors are supported?</summary>
+              <p>Deriv direct supports Deriv-native categories such as Multipliers, Options, Accumulators, and similar products. cTrader availability depends on the broker and account you create, and can include categories such as Forex, Metals, Synthetic Indices, Stocks, Crypto, and Stock Indices.</p>
             </details>
           </article>
 
@@ -139,6 +191,8 @@
             <h2>Related articles</h2>
             <div class="support-related">
               <a href="troubleshooting.html">Connection failed troubleshooting</a>
+              <a href="deposits.html">Depositing into connected accounts</a>
+              <a href="withdrawals.html">Withdrawing from connected accounts</a>
               <a href="plans-billing-usage.html">Plan-based connection limits</a>
               <a href="instructions-and-comfort.html">Instruction activation checks</a>
             </div>

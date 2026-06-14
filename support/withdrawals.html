@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enterprise and Organizations | Beaverly Support</title>
-  <meta name="description" content="Enterprise support for organizations using Beaverly automation infrastructure." />
-  <link rel="canonical" href="https://beaverlyai.com/support/enterprise.html" />
-  <meta property="og:title" content="Enterprise and Organizations | Beaverly Support" />
-  <meta property="og:description" content="Organization-level onboarding and support guidance." />
+  <title>Withdrawing from Connected Accounts | Beaverly Support</title>
+  <meta name="description" content="How withdrawals work for connected accounts in Chilla and where to resolve provider-specific withdrawal issues." />
+  <link rel="canonical" href="https://beaverlyai.com/support/withdrawals.html" />
+  <meta property="og:title" content="Withdrawing from Connected Accounts | Beaverly Support" />
+  <meta property="og:description" content="How withdrawals work for connected accounts in Chilla and where to resolve provider-specific withdrawal issues." />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://beaverlyai.com/support/enterprise.html" />
+  <meta property="og:url" content="https://beaverlyai.com/support/withdrawals.html" />
   <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -27,16 +27,16 @@
   <main class="support-page page--nav-offset">
     <div class="support-shell">
       <nav class="support-breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a><span>/</span><a href="index.html">Support</a><span>/</span><span>Enterprise</span>
+        <a href="/">Home</a><span>/</span><a href="index.html">Support</a><span>/</span><span>Withdrawals</span>
       </nav>
 
       <header class="support-hero support-hero--light">
-        <p class="support-kicker">Enterprise</p>
-        <h1 class="support-title">Support for organizations and institutions</h1>
-        <p class="support-subtitle">Enterprise is for teams that need custom automation capacity, tailored onboarding, and dedicated support channels.</p>
+        <p class="support-kicker">Withdrawals</p>
+        <h1 class="support-title">Withdraw through your provider or broker</h1>
+        <p class="support-subtitle">Withdrawals are managed by the provider or broker that holds your connected account, not by Beaverly.</p>
         <div class="support-meta">
-          <span class="support-chip"><i data-lucide="building-2"></i> Article type: Concept</span>
-          <span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: March 12, 2026</span>
+          <span class="support-chip"><i data-lucide="wallet"></i> Article type: Task</span>
+          <span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: June 14, 2026</span>
         </div>
       </header>
 
@@ -52,64 +52,54 @@
           <a href="instructions-and-comfort.html">Instructions and Comfort</a>
           <a href="connected-accounts.html">Connected Accounts</a>
           <a href="funding.html">Funding</a>
-          <a href="withdrawals.html">Withdrawals</a>
+          <a href="withdrawals.html" aria-current="page">Withdrawals</a>
           <a href="plans-billing-usage.html">Plans, Billing and Usage</a>
           <a href="troubleshooting.html">Troubleshooting</a>
           <a href="account-security.html">Account and Security</a>
-          <a href="enterprise.html" aria-current="page">Enterprise</a>
+          <a href="enterprise.html">Enterprise</a>
           <a href="contact.html">Contact and Escalation</a>
         </aside>
 
         <section class="support-content">
           <article class="support-card">
-            <h2>What Enterprise means</h2>
-            <p>Enterprise plans are designed for organizations that need broader automation scope, custom support paths, and provider coverage beyond standard plans.</p>
+            <h2>Where withdrawals happen</h2>
+            <p>Withdrawals happen inside your provider or broker account. Beaverly cannot approve, process, reverse, or guarantee withdrawals because Beaverly does not custody user funds.</p>
           </article>
 
           <article class="support-card">
-            <h2>When to contact Beaverly</h2>
+            <h2>Before you withdraw</h2>
+            <ol class="support-steps">
+              <li><strong>Review active behaviours.</strong> Pause or revoke instructions you do not want running while you manage the account.</li>
+              <li><strong>Use provider controls.</strong> Open your Deriv or broker account and follow that provider's withdrawal flow.</li>
+              <li><strong>Check provider rules.</strong> Verification, payment-method matching, open positions, currency conversion, regional rules, fees, or processing windows may affect availability.</li>
+              <li><strong>Return to Chilla after changes.</strong> Confirm the account remains connected and ready before resuming behaviours.</li>
+            </ol>
+          </article>
+
+          <article class="support-card">
+            <h2>If a withdrawal is not available</h2>
             <ul>
-              <li>Your organization requires custom onboarding.</li>
-              <li>You need dedicated support and escalation SLAs.</li>
-              <li>You need custom reporting or audit workflows.</li>
-              <li>You need tailored guardrail configuration in a managed rollout.</li>
+              <li>Check whether provider verification is complete.</li>
+              <li>Confirm whether there are open positions, pending provider reviews, or account restrictions.</li>
+              <li>Contact your provider or broker for account-specific withdrawal support.</li>
+              <li>Contact Beaverly support only if Chilla shows a connection or readiness issue after the provider account is otherwise available.</li>
             </ul>
           </article>
 
           <article class="support-card">
-            <h2>Public-safe enterprise scope</h2>
-            <ul>
-              <li>Custom automation capacity profile.</li>
-              <li>Expanded provider coverage.</li>
-              <li>Dedicated onboarding and account support path.</li>
-              <li>Custom deployment and reporting options at a high level.</li>
-            </ul>
-            <div class="support-callout support-callout--warn">
-              <strong>Disclosure guardrail:</strong> This page intentionally does not expose private implementation logic, thresholding details, or proprietary decision internals.
-            </div>
-          </article>
-
-          <article class="support-card">
-            <h2>Next step</h2>
-            <p>Contact the Beaverly team with organization details, use case summary, expected scope, and desired onboarding timeline.</p>
+            <h2>Related articles</h2>
             <div class="support-related">
-              <a href="mailto:hello@beaverlyai.com">hello@beaverlyai.com</a>
-              <a href="contact.html">Contact and escalation guide</a>
-              <a href="/pricing.html">Public plan comparison</a>
+              <a href="connected-accounts.html">Choosing and connecting accounts</a>
+              <a href="funding.html">Funding connected accounts</a>
+              <a href="instructions-and-comfort.html">Pause or revoke instructions</a>
             </div>
           </article>
         </section>
       </div>
     </div>
   </main>
-
-  
   <script src="/js/header-loader.js"></script>
   <script src="/js/footer-loader.js"></script>
   <script>if (window.lucide) { window.lucide.createIcons(); }</script>
 </body>
 </html>
-
-
-
-

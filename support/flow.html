@@ -48,8 +48,8 @@
           <a href="chilla-basics.html">Chilla Basics</a>
           <a href="flow.html" aria-current="page">Flow and Transparency</a>
           <a href="automation-capacity.html">Automation Capacity</a>
-          <a href="behaviors-markets.html">Behaviors and Markets</a>
-          <a href="instructions-and-comfort.html">Instructions and Comfort</a>
+          <a href="behaviors-markets.html">Styles and Markets</a>
+          <a href="instructions-and-comfort.html">Tasks and Comfort</a>
           <a href="connected-accounts.html">Connected Accounts</a>
           <a href="deposits.html">Deposits</a>
           <a href="withdrawals.html">Withdrawals</a>
@@ -63,7 +63,7 @@
         <section class="support-content">
           <article class="support-card">
             <h2>Where to find this</h2>
-            <p>Flow is the card titled <strong>Flow</strong> on the main dashboard (`dashboard.html`). It is visible directly under the <strong>Instructions</strong> card.</p>
+            <p>Flow is the card titled <strong>Flow</strong> on the main dashboard (`dashboard.html`). It is visible directly under the <strong>Tasks</strong> card.</p>
           </article>
 
           <article class="support-card">
@@ -91,9 +91,9 @@
                   <tr><th>Element</th><th>Meaning</th><th>What to do next</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Entry event</td><td>Automation opened a position within your instruction scope.</td><td>Confirm account and instruction are the expected ones.</td></tr>
-                  <tr><td>Exit event</td><td>A tracked position lifecycle ended and was closed.</td><td>Review sequence around the event if you need context.</td></tr>
-                  <tr><td>Passed event</td><td>System stepped aside with a specific reason such as comfort boundary, instruction scope, or account minimum.</td><td>Open event details and compare with instruction comfort and account readiness.</td></tr>
+                  <tr><td>Entry event</td><td>Automation opened a position within your task scope.</td><td>Confirm account and task are the expected ones.</td></tr>
+                  <tr><td>Exit event</td><td>A tracked position was closed.</td><td>Review sequence around the event if you need context.</td></tr>
+                  <tr><td>Passed event</td><td>System stepped aside with a specific reason such as comfort boundary, task scope, or account minimum.</td><td>Open event details and compare with task comfort and account readiness.</td></tr>
                   <tr><td>Warning event</td><td>Validation or account warning event was recorded.</td><td>Use troubleshooting steps and include the warning title in support requests.</td></tr>
                   <tr><td>Live event</td><td>Monitoring update without an entry/exit action.</td><td>No action needed unless the update conflicts with your expected setup.</td></tr>
                 </tbody>
@@ -111,7 +111,7 @@
                 <tbody>
                   <tr><td><code>insufficient_balance</code></td><td>Entry paused by available resources</td></tr>
                   <tr><td><code>broker_minimum</code></td><td>Entry paused by account minimum</td></tr>
-                  <tr><td><code>not_authorized</code></td><td>Entry paused by instruction scope</td></tr>
+                  <tr><td><code>not_authorized</code></td><td>Entry paused by task scope</td></tr>
                   <tr><td><code>validation_failed</code></td><td>Action paused by validation check</td></tr>
                   <tr><td><code>risk_cap_exhausted</code> / <code>risk_cap_approaching</code></td><td>Entry paused by comfort boundary</td></tr>
                 </tbody>
@@ -139,7 +139,7 @@
                   <li>What happened.</li>
                   <li>Why Chilla responded at a high level.</li>
                   <li>What action was taken or safely passed.</li>
-                  <li>Which instruction context was involved.</li>
+                  <li>Which task context was involved.</li>
                 </ul>
               </div>
               <div class="support-box">
@@ -158,7 +158,7 @@
             <h2>Flow FAQ</h2>
             <details>
               <summary>I expected activity but Flow is quiet. Is that a problem?</summary>
-              <p>Not always. A quiet period can mean no valid conditions, active monitoring, or step-aside behavior within your boundaries. Check instruction status, account readiness, and capacity first.</p>
+              <p>Not always. A quiet period can mean no valid conditions, active monitoring, or step-aside style within your boundaries. Check task status, account readiness, and capacity first.</p>
             </details>
             <details>
               <summary>Can Flow be used for support requests?</summary>
@@ -170,7 +170,7 @@
             <h2>Related articles</h2>
             <div class="support-related">
               <a href="troubleshooting.html">Troubleshooting no activity</a>
-              <a href="instructions-and-comfort.html">Instruction statuses</a>
+              <a href="instructions-and-comfort.html">Task statuses</a>
               <a href="automation-capacity.html">Capacity and passed actions</a>
             </div>
           </article>

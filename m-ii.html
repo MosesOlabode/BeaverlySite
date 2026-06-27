@@ -140,7 +140,7 @@
           <i data-lucide="cpu" class="power-card-icon"></i>
           <span class="tag">Live Now</span>
           <h3>Chilla</h3>
-          <p>M-II handles the full automation lifecycle for Chilla users — instruction intake, validation, automation, position monitoring, and real-time Flow output. Chilla presents the interface; M-II does the work.</p>
+          <p>M-II handles the full automation lifecycle for Chilla users — instruction intake, validation, automation, trade activity monitoring, and real-time Flow output. Chilla presents the interface; M-II does the work.</p>
         </div>
 
         <div class="power-card animate-on-scroll" style="transition-delay: 0.1s">
@@ -208,7 +208,7 @@
           <div class="cap-label">Comfort & Safety Boundaries</div>
           <h3>Every action checks its limits first.</h3>
           <p>Before any action is attempted, M-II runs a series of pre-automation checks: instruction status, account compatibility, plan and capacity eligibility, signal freshness, and duplicate protection.</p>
-          <p>Position sizing is determined by user comfort inputs, available account balance, optional monthly comfort caps, and account-specific minimum constraints. Actions that exceed defined boundaries are skipped safely — never forced.</p>
+          <p>Trade activity size is determined by user comfort inputs, available account balance, optional monthly comfort caps, and account-specific minimum constraints. Actions that exceed defined boundaries are skipped safely — never forced.</p>
         </div>
         <div class="cap-visual animate-on-scroll" style="transition-delay: 0.1s">
           <div class="cap-status-list">
@@ -262,16 +262,16 @@
             <div class="panel-lines">
               <div class="panel-line"><span class="comment">// Flow — live activity stream</span></div>
               <div class="panel-line">&nbsp;</div>
-              <div class="panel-line"><span class="ok">ENTRY</span>     <span class="val">Position opened</span></div>
+              <div class="panel-line"><span class="ok">ENTRY</span>     <span class="val">Trade activity opened</span></div>
               <div class="panel-line"><span class="comment">          Market conditions matched instruction scope.</span></div>
               <div class="panel-line">&nbsp;</div>
               <div class="panel-line"><span class="warn">PASSED</span>   <span class="val">Action deferred</span></div>
               <div class="panel-line"><span class="comment">          Monthly comfort approaching limit.</span></div>
               <div class="panel-line">&nbsp;</div>
-              <div class="panel-line"><span class="ok">MONITOR</span>   <span class="val">Position under observation</span></div>
+              <div class="panel-line"><span class="ok">MONITOR</span>   <span class="val">Trade activity under observation</span></div>
               <div class="panel-line"><span class="comment">          Protective adjustment evaluated.</span></div>
               <div class="panel-line">&nbsp;</div>
-              <div class="panel-line"><span class="ok">EXIT</span>      <span class="val">Position closed</span></div>
+              <div class="panel-line"><span class="ok">EXIT</span>      <span class="val">Trade activity closed</span></div>
               <div class="panel-line"><span class="comment">          Lifecycle complete. Account provider confirmed.</span></div>
             </div>
           </div>

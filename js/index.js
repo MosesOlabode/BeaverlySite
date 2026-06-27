@@ -143,15 +143,15 @@ function initDemo() {
   function startFlow() {
     const el = document.getElementById('dcFlowList'); if (!el) return; el.innerHTML = '';
     const events = [
-      { t:'ok',   i:'check',  tx:'Instruction accepted',       mx:'Authorization verified — scope locked' },
-      { t:'info', i:'bolt',   tx:'Behavior initialized',       mx:'Momentum Follow active on EURUSD, XAUUSD' },
+      { t:'ok',   i:'check',  tx:'Task accepted',       mx:'Authorization verified — scope locked' },
+      { t:'info', i:'bolt',   tx:'Style running',       mx:'Momentum Follow active on EURUSD, XAUUSD' },
       { t:'info', i:'globe',  tx:'Market observation started', mx:'Evaluating conditions…' },
       { t:'mon',  i:'eye',    tx:'Conditions evaluated',       mx:'No action yet — waiting for clarity' },
       { t:'ok',   i:'check',  tx:'Conditions matched',         mx:'Integrity & risk checks passed' },
-      { t:'ok',   i:'target', tx:'Position opened',            mx:'EURUSD — within comfort and risk bounds' },
-      { t:'mon',  i:'eye',    tx:'Monitoring position',        mx:'Active lifecycle observation' },
-      { t:'ok',   i:'check',  tx:'Position closed',            mx:'Exit conditions met — lifecycle complete' },
-      { t:'info', i:'pause',  tx:'Awaiting next opportunity',  mx:'Instruction remains active' },
+      { t:'ok',   i:'target', tx:'Activity opened',            mx:'EURUSD — within comfort and risk bounds' },
+      { t:'mon',  i:'eye',    tx:'Monitoring activity',        mx:'Active monitoring' },
+      { t:'ok',   i:'check',  tx:'Activity completed',            mx:'Exit conditions met — provider confirmed' },
+      { t:'info', i:'pause',  tx:'Awaiting next arrangement',  mx:'Task remains active' },
     ];
     let i = 0;
     (function tick() {

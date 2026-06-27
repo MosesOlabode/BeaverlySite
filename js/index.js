@@ -148,9 +148,9 @@ function initDemo() {
       { t:'info', i:'globe',  tx:'Market observation started', mx:'Evaluating conditions…' },
       { t:'mon',  i:'eye',    tx:'Conditions evaluated',       mx:'No action yet — waiting for clarity' },
       { t:'ok',   i:'check',  tx:'Conditions matched',         mx:'Integrity & risk checks passed' },
-      { t:'ok',   i:'target', tx:'Trade activity opened',            mx:'EURUSD — within comfort and risk bounds' },
-      { t:'mon',  i:'eye',    tx:'Monitoring trade activity',        mx:'Active monitoring' },
-      { t:'ok',   i:'check',  tx:'Trade activity closed',            mx:'Exit conditions met — trade activity complete' },
+      { t:'ok',   i:'target', tx:'Trade opened',            mx:'EURUSD — within comfort and risk bounds' },
+      { t:'mon',  i:'eye',    tx:'Monitoring active trade',        mx:'Active monitoring' },
+      { t:'ok',   i:'check',  tx:'Trade completed',            mx:'Exit conditions met — provider confirmed' },
       { t:'info', i:'pause',  tx:'Awaiting next opportunity',  mx:'Task remains active' },
     ];
     let i = 0;

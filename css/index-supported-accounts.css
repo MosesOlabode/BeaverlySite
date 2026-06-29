@@ -53,6 +53,7 @@
   height: 22px;
   object-fit: contain;
   display: block;
+  border-radius: 6px;
 }
 
 .hp-infra-tag {

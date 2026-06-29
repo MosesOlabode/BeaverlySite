@@ -540,6 +540,25 @@ body { overflow-x: hidden; }
   border: 1px solid var(--border); border-radius: 100px; padding: .26rem .72rem; color: var(--mid);
 }
 .hp-pill svg { width: 10px; height: 10px; }
+.hp-product-shot-wrap {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  line-height: 0;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 70px rgba(0,0,0,.08);
+}
+.hp-product-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-lg);
+}
+@media (max-width:840px) {
+  .hp-product-shot-wrap { order: -1; }
+}
+
 
 /* Code visual panel */
 .hp-code-panel {

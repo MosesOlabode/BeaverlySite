@@ -339,11 +339,6 @@
   white-space: nowrap;
 }
 
-/* Enterprise card */
-.pricing-card--enterprise {
-  background: var(--cream);
-}
-
 /* ─── PLAN HEADER ───────────────────────────────── */
 .plan-header {
   margin-bottom: 1.5rem;
@@ -1233,7 +1228,6 @@ details[open] .prc-faq-q .fqi {
   .comparison-table tbody td:nth-child(3)::before { content: "Chill Mode"; }
   .comparison-table tbody td:nth-child(4)::before { content: "Deep Chill"; }
   .comparison-table tbody td:nth-child(5)::before { content: "Peak Chill"; }
-  .comparison-table tbody td:nth-child(6)::before { content: "Enterprise"; }
 
   .comparison-table .cell-yes {
     justify-content: flex-start;

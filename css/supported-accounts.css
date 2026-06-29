@@ -437,6 +437,34 @@ body {
   background: var(--amber);
 }
 
+.sa-icard-brand {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sa-provider-logo {
+  width: auto;
+  height: 100%;
+  max-width: 132px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.sa-deriv-ctrader-note {
+  font-size: 0.8rem;
+  color: var(--mid);
+  line-height: 1.6;
+  margin: -0.75rem 0 1.5rem;
+}
+
+@media (max-width: 760px) {
+  .sa-icard-brand {
+    height: 26px;
+  }
+}
+
 .sa-icard h3 {
   font-size: 1.3rem;
   font-weight: 700;

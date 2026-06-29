@@ -48,6 +48,13 @@
   margin-bottom: 1rem;
 }
 
+.hp-infra-logo {
+  width: auto;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
 .hp-infra-tag {
   display: inline-flex;
   align-items: center;
@@ -201,6 +208,10 @@
 }
 
 @media (max-width: 600px) {
+  .hp-infra-logo {
+    height: 19px;
+  }
+
   .hp-accounts-cta {
     flex-direction: column;
     align-items: flex-start;

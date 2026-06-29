@@ -58,10 +58,12 @@ body {
   background: var(--black);
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   position: relative;
   overflow: hidden;
-  padding: clamp(7rem, 14vw, 12rem) 0 clamp(5rem, 10vw, 8rem);
+  padding: clamp(7rem, 14vw, 12rem) 0 0;
 }
 
 /* Calm atmospheric background — handled by .bv-dark-bg in beaverly-bg.css */
@@ -124,6 +126,41 @@ body {
   max-width: 520px;
   margin: 0 auto 2.75rem;
   line-height: 1.6;
+}
+
+
+.hero-art-wrap {
+  position: relative;
+  width: min(100%, 1440px);
+  margin-top: clamp(1.5rem, 4vw, 3rem);
+  overflow: hidden;
+  line-height: 0;
+  background: var(--black);
+}
+.hero-art-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0 0 auto 0;
+  height: clamp(70px, 12vw, 220px);
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    var(--black) 0%,
+    rgba(10, 10, 10, 0.96) 28%,
+    rgba(10, 10, 10, 0.55) 62%,
+    rgba(10, 10, 10, 0) 100%
+  );
+}
+.hero-art {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .scroll-cue {

@@ -450,6 +450,7 @@ body {
   max-width: 132px;
   object-fit: contain;
   object-position: left center;
+  border-radius: 8px;
 }
 
 .sa-deriv-ctrader-note {

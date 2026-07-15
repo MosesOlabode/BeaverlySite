@@ -133,6 +133,13 @@ body { overflow-x: hidden; }
   margin: 0 auto 3rem; line-height: 1.72;
 }
 
+.hp-hero-market {
+  font-size: clamp(0.84rem,1.7vw,0.96rem);
+  color: rgba(255,255,255,.62);
+  margin: -2.1rem auto 3rem;
+  letter-spacing: .01em;
+}
+
 .hp-hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
 .hp-hero-art-wrap {
   position: relative;

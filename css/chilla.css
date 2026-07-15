@@ -1002,10 +1002,7 @@ body {
 .plan-card.featured .plan-name,
 .plan-card.featured .plan-period,
 .plan-card.featured .plan-note,
-.plan-card.featured .plan-features li,
-.contrast-desc,
-.flow-desc,
-.flow-time {
+.plan-card.featured .plan-features li {
   color: rgba(255,255,255,0.70);
 }
 .hero-badge,

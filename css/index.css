@@ -720,3 +720,66 @@ details[open] .hp-faq-q .fqi { transform:rotate(45deg); }
   .hp-demo-copy .btn-row { flex-direction:column; }
   .hp-demo-copy .btn-row a { width:100%; max-width:300px; }
 }
+
+/* Dark-background legibility refinements */
+.eyebrow-inv,
+.hp-badge,
+.hp-trust-item,
+.hp-stat-lbl,
+.hp-mii-text p,
+.hp-mii-link,
+.hp-cta-inner p,
+.hp-cta-note {
+  color: rgba(255,255,255,.72);
+}
+.hp-h1 .dim,
+.hp-plan.featured .hp-plan-name {
+  color: rgba(255,255,255,.82);
+}
+.hp-hero-sub {
+  color: rgba(255,255,255,.78);
+  font-weight: 400;
+}
+.btn-ghost-inv,
+.btn-ol-inv {
+  color: rgba(255,255,255,.78);
+  border-color: rgba(255,255,255,.26);
+}
+.hp-badge,
+.hp-guar,
+.hp-plan.featured {
+  border-color: rgba(255,255,255,.18);
+}
+.hp-guar {
+  background: rgba(255,255,255,.045);
+}
+.hp-g-ico,
+.hp-plan.featured .hp-pf svg {
+  color: rgba(255,255,255,.72);
+}
+.hp-guar p,
+.hp-plan.featured .hp-plan-per,
+.hp-plan.featured .hp-plan-note,
+.hp-plan.featured .hp-pf {
+  color: rgba(255,255,255,.70);
+}
+.hp-popular-tag,
+.hp-plan-name,
+.hp-plan-note,
+.hp-pf,
+.hp-trust-item,
+.hp-guar p,
+.hp-cta-note {
+  font-size: max(0.82rem, 13px);
+}
+.hp-badge {
+  font-size: max(0.74rem, 12px);
+}
+@media (max-width: 480px) {
+  .hp-hero-sub,
+  .hp-mii-text p,
+  .hp-cta-inner p { font-size: 1.05rem; }
+  .hp-trust-item,
+  .hp-guar p,
+  .hp-pf { font-size: 0.86rem; }
+}

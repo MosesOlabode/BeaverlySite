@@ -969,3 +969,61 @@ body {
 @media (max-width: 480px) {
   .step-num { font-size: 2rem; }
 }
+
+/* Dark-background legibility refinements */
+.eyebrow-light,
+.hero-badge,
+.hero-title .italic,
+.hero-subtitle,
+.mii-text p,
+.mii-link,
+.mii-prop-icon,
+.mii-prop-body p,
+.cta-inner p {
+  color: rgba(255,255,255,0.74);
+}
+.hero-title .italic {
+  color: rgba(255,255,255,0.82);
+}
+.hero-badge,
+.mii-props,
+.mii-prop,
+.btn-ghost {
+  border-color: rgba(255,255,255,0.18);
+}
+.hero-badge .dot {
+  background: rgba(255,255,255,0.68);
+}
+.mii-prop {
+  background: rgba(255,255,255,0.045);
+}
+.bento-card.dark p,
+.bento-card.dark .card-tag,
+.plan-card.featured .plan-name,
+.plan-card.featured .plan-period,
+.plan-card.featured .plan-note,
+.plan-card.featured .plan-features li,
+.contrast-desc,
+.flow-desc,
+.flow-time {
+  color: rgba(255,255,255,0.70);
+}
+.hero-badge,
+.mii-prop-body p,
+.bento-card.dark p,
+.bento-card.dark .card-tag,
+.plan-card.featured .plan-note,
+.plan-card.featured .plan-features li,
+.contrast-desc,
+.flow-desc,
+.flow-time {
+  font-size: max(0.82rem, 13px);
+}
+@media (max-width: 480px) {
+  .hero-subtitle,
+  .mii-text p,
+  .cta-inner p { font-size: 1.05rem; }
+  .mii-prop-body p,
+  .contrast-desc,
+  .flow-desc { font-size: 0.86rem; }
+}

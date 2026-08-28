@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plans, Billing and Usage | Beaverly Support</title>
-  <meta name="description" content="Compare plan tiers, understand billing basics, and read usage metrics inside Chilla." />
+  <title>Tiers, Billing and Usage | Beaverly Support</title>
+  <meta name="description" content="Compare Chilla tiers, understand billing cadence, and read capacity usage inside Chilla." />
   <link rel="canonical" href="https://beaverlyai.com/support/plans-billing-usage.html" />
-  <meta property="og:title" content="Plans, Billing and Usage | Beaverly Support" />
-  <meta property="og:description" content="Tier overview and in-app usage interpretation." />
+  <meta property="og:title" content="Tiers, Billing and Usage | Beaverly Support" />
+  <meta property="og:description" content="Tier overview, billing cadence, account allowances, and capacity usage." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://beaverlyai.com/support/plans-billing-usage.html" />
   <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
@@ -27,16 +27,16 @@
   <main class="support-page page--nav-offset">
     <div class="support-shell">
       <nav class="support-breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a><span>/</span><a href="index.html">Support</a><span>/</span><span>Plans, Billing and Usage</span>
+        <a href="/">Home</a><span>/</span><a href="index.html">Support</a><span>/</span><span>Tiers, Billing and Usage</span>
       </nav>
 
       <header class="support-hero support-hero--light">
-        <p class="support-kicker">Plans, Billing and Usage</p>
-        <h1 class="support-title">Understand tiers, billing cadence, and usage</h1>
-        <p class="support-subtitle">Use this page to compare plan scope, find billing controls, and interpret usage without exposing private system internals.</p>
+        <p class="support-kicker">Tiers, Billing and Usage</p>
+        <h1 class="support-title">Understand tiers, billing cadence, and capacity</h1>
+        <p class="support-subtitle">Use this page to compare Chilla tiers, understand account allowances, and read the capacity percentage you see in Chilla.</p>
         <div class="support-meta">
           <span class="support-chip"><i data-lucide="credit-card"></i> Article type: Concept + Reference</span>
-          <span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: March 12, 2026</span>
+          <span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: August 29, 2026</span>
         </div>
       </header>
 
@@ -50,8 +50,8 @@
           <a href="automation-capacity.html">Automation Capacity</a>
           <a href="behaviors-markets.html">Styles and Markets</a>
           <a href="instructions-and-comfort.html">Tasks and Comfort</a>
-          <a href="connected-accounts.html">Trading Accounts</a>
-          <a href="plans-billing-usage.html" aria-current="page">Plans, Billing and Usage</a>
+          <a href="connected-accounts.html">Connected Accounts</a>
+          <a href="plans-billing-usage.html" aria-current="page">Tiers, Billing and Usage</a>
           <a href="troubleshooting.html">Troubleshooting</a>
           <a href="account-security.html">Account and Security</a>
           <a href="enterprise.html">Enterprise</a>
@@ -62,78 +62,62 @@
           <article class="support-card">
             <h2>Where to find this</h2>
             <ul>
-              <li>Public plan catalog: <a href="/pricing.html">Pricing page</a>.</li>
-              <li>In-app usage: sidebar <strong>Usage</strong> -> <strong>Usage & Capacity</strong> (`usage.html`).</li>
-              <li>In-app plan upgrade: sidebar <strong>Upgrade</strong> or <strong>Upgrade Plan</strong> button from usage page -> `upgrade.html`.</li>
-            </ul>
-            <div class="support-callout">
-              <strong>Public pricing source:</strong> <a href="/pricing.html">Pricing page</a>.
-            </div>
-          </article>
-
-          <article class="support-card">
-            <h2>What you can do here</h2>
-            <ul>
-              <li>Check your current tier and included scope.</li>
-              <li>Review daily usage and capacity indicators.</li>
-              <li>Switch billing cadence on upgrade page with <strong>Monthly</strong> / <strong>Annual</strong> toggle.</li>
-              <li>Open the upgrade flow and select a paid tier that matches your current usage.</li>
+              <li>Public tier catalog: <a href="/pricing.html">Pricing</a>.</li>
+              <li>In Chilla: open the usage area to see your current capacity percentage and tier.</li>
+              <li>Upgrade controls let you compare monthly and annual billing.</li>
             </ul>
           </article>
 
           <article class="support-card">
-            <h2>Plan overview</h2>
+            <h2>Tier overview</h2>
             <div class="support-table-wrap">
               <table class="support-table">
-                <thead>
-                  <tr><th>Tier</th><th>What it is for</th><th>High-level scope</th></tr>
-                </thead>
+                <thead><tr><th>Tier</th><th>Capacity</th><th>Live accounts</th></tr></thead>
                 <tbody>
-                  <tr><td>Chill Architect</td><td>Limited weekly automation capacity for setup and first use.</td><td>Free tier with limited weekly automation capacity.</td></tr>
-                  <tr><td>Chill Mode</td><td>Daily automation capacity for regular use.</td><td>Daily automation capacity tier.</td></tr>
-                  <tr><td>Deep Chill</td><td>Broader multi-account usage.</td><td>Higher paid tier for scale and support.</td></tr>
-                  <tr><td>Peak Chill</td><td>Maximum ongoing automation scope.</td><td>Highest self-serve paid tier.</td></tr>
-                  <tr><td>Enterprise</td><td>Organization-level needs.</td><td>Custom enterprise package via Beaverly contact.</td></tr>
+                  <tr><td>Chill Architect</td><td>Limited weekly</td><td>1</td></tr>
+                  <tr><td>Chill Mode</td><td>Standard daily</td><td>1</td></tr>
+                  <tr><td>Deep Chill</td><td>Expanded daily</td><td>Up to 5</td></tr>
+                  <tr><td>Peak Chill</td><td>Highest daily</td><td>Up to 12</td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="support-footnote">In-app upgrade cards currently render paid tiers as <code>chill mode</code>, <code>deep chill</code>, and <code>peak chill</code>.</p>
+            <p class="support-footnote">The current public prices and annual billing amounts are always shown on <a href="/pricing.html">Pricing</a>.</p>
+          </article>
+
+          <article class="support-card">
+            <h2>How usage is shown</h2>
+            <p>Capacity is presented as a percentage. Beaverly keeps the underlying workload counters internal.</p>
+            <ul>
+              <li><strong>Capacity available:</strong> the percentage of room remaining in the current capacity window.</li>
+              <li><strong>Capacity tier:</strong> the amount of automation room included with your current tier.</li>
+              <li><strong>Reset window:</strong> weekly for Chill Architect and daily for paid tiers.</li>
+              <li><strong>Connected accounts:</strong> the maximum live accounts included with the tier.</li>
+            </ul>
           </article>
 
           <article class="support-card">
             <h2>Billing basics</h2>
             <ul>
-              <li>Upgrade page includes <strong>Monthly</strong> and <strong>Annual</strong> billing toggle states.</li>
-              <li>Usage page includes direct upgrade CTAs when capacity is high or reached.</li>
-              <li>Billing timing, proration, and refund policy are handled by support; include billing timestamps and plan name in requests.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>Usage page walk-through</h2>
-            <ul>
-              <li><strong>Used Today:</strong> percentage indicator in the circular progress block.</li>
-              <li><strong>Automation Capacity Used:</strong> used value with backend-provided display formatting.</li>
-              <li><strong>Capacity Available:</strong> remaining value for the same day.</li>
-              <li><strong>Daily Available:</strong> full daily limit for the account tier.</li>
-              <li><strong>x suffix:</strong> automation capacity units, not financial outcome units.</li>
-              <li><strong>Your Plan Includes:</strong> Trading Accounts, Active Markets, Active Styles.</li>
+              <li>Paid tiers support monthly and annual billing.</li>
+              <li>Use the billing toggle on Pricing or in the upgrade flow to compare the two cadences.</li>
+              <li>Changing tier does not change the account provider that holds your funds.</li>
+              <li>For billing support, include your account email, tier name, date, and issue summary.</li>
             </ul>
           </article>
 
           <article class="support-card support-faq">
-            <h2>Plans and billing FAQ</h2>
+            <h2>Tiers and billing FAQ</h2>
             <details>
               <summary>Can I start free and upgrade later?</summary>
-              <p>Yes. Chill Architect supports setup, understanding, and limited weekly automation capacity before moving to daily automation capacity in another tier.</p>
+              <p>Yes. Chill Architect gives you limited weekly capacity before you choose a paid tier with daily capacity.</p>
             </details>
             <details>
-              <summary>Where do I ask a billing question?</summary>
-              <p>Use the support contact path and include account email, plan name, date, and issue summary.</p>
+              <summary>Why does Chilla show a percentage instead of a large capacity number?</summary>
+              <p>The percentage is the useful user-facing view. Internal workload units are implementation details and are not needed to manage your tier.</p>
             </details>
             <details>
-              <summary>Does a higher tier guarantee outcomes?</summary>
-              <p>No. Tiers increase automation room and support scope, not outcome certainty.</p>
+              <summary>Does a higher tier change the way a style works?</summary>
+              <p>No. Higher tiers provide more capacity room and larger account allowances; they do not turn a style into a different style.</p>
             </details>
           </article>
 
@@ -141,8 +125,8 @@
             <h2>Related articles</h2>
             <div class="support-related">
               <a href="automation-capacity.html">Automation capacity</a>
-              <a href="contact.html">Billing escalation</a>
-              <a href="troubleshooting.html">Upgrade not reflected</a>
+              <a href="connected-accounts.html">Connected accounts</a>
+              <a href="contact.html">Billing support</a>
             </div>
           </article>
         </section>
@@ -150,13 +134,8 @@
     </div>
   </main>
 
-  
   <script src="/js/header-loader.js"></script>
   <script src="/js/footer-loader.js"></script>
   <script>if (window.lucide) { window.lucide.createIcons(); }</script>
 </body>
 </html>
-
-
-
-

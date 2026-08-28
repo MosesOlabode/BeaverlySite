@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Automation Capacity | Beaverly Support</title>
-  <meta name="description" content="Understand automation capacity, daily reset style, percent used, and values like 12,000x." />
+  <meta name="description" content="Understand Chilla automation capacity, capacity percentages, and capacity tiers." />
   <link rel="canonical" href="https://beaverlyai.com/support/automation-capacity.html" />
   <meta property="og:title" content="Automation Capacity | Beaverly Support" />
-  <meta property="og:description" content="How daily automation room is measured and displayed in Chilla." />
+  <meta property="og:description" content="How Chilla shows available automation room as a percentage." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://beaverlyai.com/support/automation-capacity.html" />
   <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
@@ -32,11 +32,11 @@
 
       <header class="support-hero support-hero--light">
         <p class="support-kicker">Automation Capacity</p>
-        <h1 class="support-title">Understanding capacity values and usage</h1>
-        <p class="support-subtitle">Capacity shows how much automation room is available in a 24-hour window. It is designed for transparency, not pressure.</p>
+        <h1 class="support-title">Understanding your available capacity</h1>
+        <p class="support-subtitle">Capacity shows how much room Chilla still has to work within your current capacity window. Chilla presents that room as a percentage rather than exposing internal metering units.</p>
         <div class="support-meta">
           <span class="support-chip"><i data-lucide="gauge"></i> Article type: Concept + Reference</span>
-          <span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: March 12, 2026</span>
+          <span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: August 29, 2026</span>
         </div>
       </header>
 
@@ -53,7 +53,7 @@
           <a href="connected-accounts.html">Connected Accounts</a>
           <a href="deposits.html">Deposits</a>
           <a href="withdrawals.html">Withdrawals</a>
-          <a href="plans-billing-usage.html">Plans, Billing and Usage</a>
+          <a href="plans-billing-usage.html">Tiers, Billing and Usage</a>
           <a href="troubleshooting.html">Troubleshooting</a>
           <a href="account-security.html">Account and Security</a>
           <a href="enterprise.html">Enterprise</a>
@@ -62,95 +62,80 @@
 
         <section class="support-content">
           <article class="support-card">
-            <h2>Where to find this</h2>
-            <p>From the dashboard sidebar, click <strong>Usage</strong> to open <strong>Usage & Capacity</strong> (`usage.html`).</p>
-          </article>
-
-          <article class="support-card">
-            <h2>What you will see on Usage & Capacity</h2>
+            <h2>What capacity means</h2>
+            <p>Capacity is the room available for Chilla to keep doing automated work for your active tasks. Beaverly measures several kinds of work underneath, but you do not need to manage those internal units.</p>
             <ul>
-              <li>Progress ring with <strong>Used Today</strong> percentage.</li>
-              <li>Stat rows: <strong>Automation Capacity Used</strong>, <strong>Capacity Available</strong>, <strong>Daily Available</strong>.</li>
-              <li>Daily reset notice: capacity resets at <strong>midnight UTC</strong>.</li>
-              <li>Plan limits section titled <strong>Your Plan Includes</strong> with <strong>Connected Accounts</strong>, <strong>Active Markets</strong>, and <strong>Active Styles</strong>.</li>
+              <li><strong>100% available</strong> means the full capacity for the current window is still available.</li>
+              <li>As Chilla works, the available percentage decreases.</li>
+              <li>When the capacity window resets, the available percentage returns for the new window.</li>
+              <li>Capacity is workload room. It is not a score, outcome estimate, or market signal.</li>
             </ul>
           </article>
 
           <article class="support-card">
-            <h2>What you can do here</h2>
+            <h2>What you will see in Chilla</h2>
             <ul>
-              <li>See current daily usage at a glance.</li>
-              <li>Check whether usage is normal for your active style mix.</li>
-              <li>Compare remaining room with expected activity windows.</li>
-              <li>Review plan options if your tasks have grown.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>What values like 12,000x mean</h2>
-            <p>The <code>x</code> suffix represents individual automation cycles — each one a discrete piece of work Chilla completes while your task remains active. 10,000× means 10,000 automation runs available that day. Most users with active styles find their daily allocation more than comfortable.</p>
-            <ul>
-              <li><strong>Daily Available:</strong> full daily capacity allocation.</li>
-              <li><strong>Automation Capacity Used:</strong> units consumed so far today.</li>
-              <li><strong>Capacity Available:</strong> units remaining before daily reset.</li>
-              <li><strong>Percent used:</strong> current share of daily capacity consumed.</li>
+              <li>Your <strong>capacity available</strong> as a percentage.</li>
+              <li>Your current <strong>capacity tier</strong>.</li>
+              <li>The relevant reset window for that tier.</li>
+              <li>Your connected-account allowance and other tier limits where relevant.</li>
             </ul>
             <div class="support-callout support-callout--success">
-              <strong>Normal style:</strong> Usage resets daily. Temporary peaks do not carry over as penalties to the next day.
+              <strong>Simple by design:</strong> Chilla shows the percentage you can act on. Internal capacity counters stay internal.
             </div>
           </article>
 
           <article class="support-card">
-            <h2>Why usage can differ across styles</h2>
-            <p>Different styles and monitoring contexts can consume different amounts of capacity. Chilla handles this automatically while your task remains active.</p>
+            <h2>Capacity tiers</h2>
+            <p>Higher Chilla tiers provide more room for automated work and, on higher tiers, more connected live accounts.</p>
             <ul>
-              <li>Some actions are lighter.</li>
-              <li>Some are heavier in high-activity windows.</li>
-              <li>Watching multiple markets can increase activity volume.</li>
+              <li><strong>Chill Architect:</strong> limited weekly capacity.</li>
+              <li><strong>Chill Mode:</strong> standard daily capacity.</li>
+              <li><strong>Deep Chill:</strong> expanded daily capacity.</li>
+              <li><strong>Peak Chill:</strong> the highest daily capacity tier.</li>
+            </ul>
+            <p>See the current prices and account allowances on the <a href="/pricing.html">Pricing page</a>.</p>
+          </article>
+
+          <article class="support-card">
+            <h2>Why capacity use can differ</h2>
+            <p>Different tasks can require different amounts of work. Chilla handles that measurement automatically.</p>
+            <ul>
+              <li>Some styles monitor more frequently than others.</li>
+              <li>Watching more markets can create more automated work.</li>
+              <li>Periods with more market activity can create more work than quiet periods.</li>
+              <li>Multiple connected accounts can increase the amount of work Chilla is doing.</li>
             </ul>
           </article>
 
           <article class="support-card">
-            <h2>What "unlimited with guardrails" means</h2>
-            <p>Usage can show <strong>Unlimited</strong> for some tier limits, while system guardrails still apply in the background for reliability.</p>
-            <ul>
-              <li>Guardrails do not change task boundaries.</li>
-              <li>Guardrails do not move funds outside your trading account.</li>
-              <li>Guardrail internals are not exposed in support docs or Flow logs.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>Capacity alerts in the app</h2>
-            <ul>
-              <li><strong>High Automation Load</strong>: shown when usage reaches warning range.</li>
-              <li><strong>Daily Capacity Reached</strong>: shown when daily limit is fully consumed.</li>
-              <li>Both alert states include an <strong>Upgrade</strong> action that routes to `upgrade.html`.</li>
-            </ul>
+            <h2>When capacity gets low</h2>
+            <p>Chilla can surface a warning when available capacity is getting low and can stop starting new work when the current capacity window is exhausted. Existing safety and task boundaries remain in force.</p>
+            <p>If your normal workload regularly needs more room, you can compare higher capacity tiers from Pricing.</p>
           </article>
 
           <article class="support-card support-faq">
             <h2>Capacity FAQ</h2>
             <details>
-              <summary>Capacity looks low. Should I panic?</summary>
-              <p>No. Check active tasks, market coverage, and current event activity first. Then compare with your plan profile.</p>
+              <summary>Why don't I see the old large capacity numbers anymore?</summary>
+              <p>Those values are internal metering details. Chilla now presents capacity as a percentage so you can understand available room without learning Beaverly's internal accounting units.</p>
             </details>
             <details>
-              <summary>Does low capacity mean bad outcomes?</summary>
-              <p>No. Capacity is an automation workload measure, not an outcome predictor.</p>
+              <summary>Does lower available capacity mean worse outcomes?</summary>
+              <p>No. Capacity only describes how much automation room remains in the current window.</p>
             </details>
             <details>
-              <summary>What happens near limits?</summary>
-              <p>Automation can pause or step aside gracefully until capacity resets. Use Flow to see event-level context.</p>
+              <summary>Do all tiers reset the same way?</summary>
+              <p>No. Chill Architect uses a limited weekly capacity model, while paid tiers use daily capacity. Chilla shows the relevant window for your tier.</p>
             </details>
           </article>
 
           <article class="support-card">
             <h2>Related articles</h2>
             <div class="support-related">
-              <a href="plans-billing-usage.html">Plans and usage page</a>
-              <a href="flow.html">Flow passed events</a>
-              <a href="troubleshooting.html">Capacity looks low troubleshooting</a>
+              <a href="plans-billing-usage.html">Tiers, billing and usage</a>
+              <a href="flow.html">Flow and transparency</a>
+              <a href="troubleshooting.html">Capacity troubleshooting</a>
             </div>
           </article>
         </section>
@@ -158,11 +143,8 @@
     </div>
   </main>
 
-  
   <script src="/js/header-loader.js"></script>
   <script src="/js/footer-loader.js"></script>
   <script>if (window.lucide) { window.lucide.createIcons(); }</script>
 </body>
 </html>
-
-

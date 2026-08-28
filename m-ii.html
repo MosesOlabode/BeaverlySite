@@ -137,7 +137,7 @@
           <div class="mii3-path-row">
             <span class="mii3-path-dot">03</span>
             <h3>Validation</h3>
-            <p>Freshness, duplicate protection, account compatibility, capacity, and execution eligibility are checked before action.</p>
+            <p>M-II checks that the action is current, eligible, compatible, and within the required execution conditions before it proceeds.</p>
           </div>
           <div class="mii3-path-row">
             <span class="mii3-path-dot">04</span>
@@ -172,10 +172,10 @@
         </div>
 
         <div class="mii3-refusal-list">
-          <div class="mii3-refusal-row"><span>01</span><strong>Stale</strong><p>The event is no longer fresh enough for the intended action.</p></div>
-          <div class="mii3-refusal-row"><span>02</span><strong>Duplicate</strong><p>The system detects a repeat path that should not execute again.</p></div>
-          <div class="mii3-refusal-row"><span>03</span><strong>Wrong lane</strong><p>Account, symbol, scope, or workload compatibility does not match.</p></div>
-          <div class="mii3-refusal-row"><span>04</span><strong>Outside bounds</strong><p>Capacity, account constraints, or user-defined financial boundaries would be exceeded.</p></div>
+          <div class="mii3-refusal-row"><span>01</span><strong>Not current</strong><p>The conditions for the intended action are no longer current enough to proceed.</p></div>
+          <div class="mii3-refusal-row"><span>02</span><strong>Outside scope</strong><p>The action does not fit the active authorization or work context.</p></div>
+          <div class="mii3-refusal-row"><span>03</span><strong>Not compatible</strong><p>The required account, market, or execution conditions do not align.</p></div>
+          <div class="mii3-refusal-row"><span>04</span><strong>Outside bounds</strong><p>The action would exceed required account or user-defined financial boundaries.</p></div>
         </div>
       </div>
     </section>
@@ -213,16 +213,16 @@
         <div class="mii3-copy v3-reveal">
           <p class="v3-kicker">Platform controls</p>
           <h2 id="security-title">Security is part of the path.</h2>
-          <p>M-II’s execution controls sit alongside platform protections for sessions, sensitive requests, abuse prevention, and operational visibility.</p>
+          <p>M-II’s execution controls sit alongside platform protections for authenticated access, sensitive operations, abuse resistance, protected data, and service monitoring.</p>
           <a class="mii3-security-link" href="/security.html" data-track="mii_security">Security &amp; Infrastructure →</a>
         </div>
 
         <div class="mii3-security-list v3-reveal">
-          <div class="mii3-security-row"><span>Session and token verification</span><span>Access stays authenticated</span></div>
-          <div class="mii3-security-row"><span>CSRF and rate limiting</span><span>Sensitive flows are guarded</span></div>
-          <div class="mii3-security-row"><span>Suspicious activity controls</span><span>Abuse paths can be constrained</span></div>
-          <div class="mii3-security-row"><span>Sensitive value redaction</span><span>Logs avoid exposing protected values</span></div>
-          <div class="mii3-security-row"><span>Runtime health monitoring</span><span>Operational state remains observable</span></div>
+          <div class="mii3-security-row"><span>Authenticated access</span><span>Protected operations require verified access</span></div>
+          <div class="mii3-security-row"><span>Sensitive operations</span><span>Important actions pass platform safeguards</span></div>
+          <div class="mii3-security-row"><span>Abuse resistance</span><span>Suspicious behavior can be constrained</span></div>
+          <div class="mii3-security-row"><span>Protected operational data</span><span>Sensitive information is handled with restricted exposure</span></div>
+          <div class="mii3-security-row"><span>Operational monitoring</span><span>Service health and execution state remain observable</span></div>
         </div>
       </div>
     </section>

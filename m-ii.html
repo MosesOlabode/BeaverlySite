@@ -1,467 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>M-II by Beaverly® – The AI Brain Behind Chilla</title>
-  <meta name="description" content="M-II is the AI brain behind Chilla. It helps Chilla follow your chosen style and boundaries, keep tasks separate, and explain activity through Flow.">
-  <meta name="keywords" content="m-ii, beaverly, beaverly ai, chilla, trading, trading bot, chilla ai brain, trading task automation, flow transparency">
-  <link rel="icon" href="https://beaverlyai.com/attached_assets/beaverly_lodo.png" type="image/png">
 
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <title>M-II™ by Beaverly® — Financial Execution, Engineered</title>
+  <meta name="description" content="M-II is Beaverly's financial execution system underneath Chilla: authorization, validation, scoped execution, provider communication, lifecycle control, and traceability." />
+  <link rel="canonical" href="https://beaverlyai.com/m-ii.html" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="M-II by Beaverly® – The AI Brain Behind Chilla">
-  <meta property="og:description" content="M-II is the AI brain behind Chilla, helping it follow user choices and explain activity clearly through Flow.">
-  <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://beaverlyai.com/m-ii.html">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-  <!-- Fonts -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"></noscript>
+  <meta property="og:title" content="M-II™ by Beaverly® — Financial Execution, Engineered" />
+  <meta property="og:description" content="The financial execution system underneath Chilla: authorization, validation, execution, lifecycle control, and traceability." />
+  <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://beaverlyai.com/m-ii.html" />
 
-  <!-- Site CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/m-ii.css" />
-  <link rel="stylesheet" href="css/beaverly-bg.css" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="M-II™ by Beaverly® — Financial Execution, Engineered" />
+  <meta name="twitter:description" content="The financial execution system underneath Chilla." />
+  <meta name="twitter:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
 
-  <!-- Google tag (gtag.js) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('beaverly-theme');
+        var theme = saved === 'dark' || saved === 'light'
+          ? saved
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (_) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Inter+Tight:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/v3-home.css" />
+  <link rel="stylesheet" href="/css/v3-mii.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "M-II",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Cloud",
+    "url": "https://beaverlyai.com/m-ii.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Beaverly",
+      "url": "https://beaverlyai.com"
+    },
+    "description": "Beaverly's financial execution system underneath Chilla."
+  }
+  </script>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-83PFRQ3WQ6"></script>
-  <script src="js/gtag-init.js"></script>
+  <script src="/js/gtag-init.js"></script>
 </head>
 
-<body>
-
-  <!-- Header injected by js/header-loader.js -->
-
-  <!-- ══════════════════════════════════════
-       HERO
-       ══════════════════════════════════════ -->
-  <section class="hero bv-atm">
-    <div class="container">
-      <div class="hero-content" id="heroContent">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Powering Chilla
-        </div>
-        <div class="hero-wordmark">M-II</div>
-        <p class="hero-title">
-          The AI brain behind Chilla.<br>
-          Built to follow your choices and explain what happens.
-        </p>
-      </div>
-    </div>
-
-    <div class="hero-art-wrap">
-      <picture class="hero-art">
-        <source media="(max-width: 640px)" srcset="attached_assets/M-II_hero_mobile.png">
-        <img src="attached_assets/M-II_hero_desktop.png" alt="M-II intelligence interface with task checks, safety boundaries, and Flow transparency screens.">
-      </picture>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       INTRO STATEMENT
-       ══════════════════════════════════════ -->
-  <section class="intro-section">
-    <div class="container">
-      <div class="intro-inner animate-on-scroll">
-        <p class="intro-statement">
-          M-II is the AI brain behind Chilla<br>
-          and the technology that helps it run reliably.
-          <em> It does not choose for you. It makes sure Chilla follows what you chose — clearly, safely, and with full transparency.</em>
-        </p>
-        <p class="intro-sub">
-          M-II turns your Chilla choices into a task it can run, checks the boundaries you set before anything happens, keeps your connected account secure, and reports activity through Flow.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       SYSTEM GUARANTEES
-       ══════════════════════════════════════ -->
-  <section class="guarantees-section">
-    <div class="container">
-      <div class="guarantees-header animate-on-scroll">
-        <span class="eyebrow">How M-II Supports Chilla</span>
-        <h2>Four things M-II helps Chilla do.</h2>
-        <p>These commitments keep Chilla clear, bounded, and under your control.</p>
-      </div>
-
-      <div class="guarantees-grid stagger">
-        <div class="guarantee-cell animate-on-scroll" style="--i:0">
-          <div class="guarantee-number">01</div>
-          <i data-lucide="shield-check" class="guarantee-icon"></i>
-          <h3>User Choices Only</h3>
-          <p>M-II helps Chilla run only the task a user approved. It stays within the chosen style, market, account, and boundaries.</p>
+<body class="v3-page">
+  <main>
+    <section class="mii3-hero" aria-labelledby="mii-title">
+      <div class="v3-shell mii3-hero-grid">
+        <div class="mii3-hero-copy v3-reveal">
+          <p class="v3-kicker">M-II by Beaverly</p>
+          <h1 id="mii-title">Financial execution, engineered.</h1>
+          <p class="mii3-hero-sub">Chilla can understand a goal and talk with you. When work goes live, M-II is the system underneath that enforces authorization, validates each action, routes it to the right account, and records what happened.</p>
+          <div class="mii3-hero-links">
+            <a class="mii3-primary" href="#path" data-track="mii_hero_path">See the execution path</a>
+            <a class="mii3-secondary" href="/chilla.html" data-track="mii_hero_chilla">Explore Chilla</a>
+          </div>
         </div>
 
-        <div class="guarantee-cell animate-on-scroll" style="--i:1">
-          <div class="guarantee-number">02</div>
-          <i data-lucide="check-circle" class="guarantee-icon"></i>
-          <h3>Safety Before Action</h3>
-          <p>Every potential action is checked against account compatibility, comfort, and safety boundaries first. Anything outside those boundaries is skipped.</p>
-        </div>
-
-        <div class="guarantee-cell animate-on-scroll" style="--i:2">
-          <div class="guarantee-number">03</div>
-          <i data-lucide="activity" class="guarantee-icon"></i>
-          <h3>Transparent Activity</h3>
-          <p>All system activity generates human-readable output in the Flow interface. Users can see exactly what happened, what was skipped, and why — in plain language, in real time.</p>
-        </div>
-
-        <div class="guarantee-cell animate-on-scroll" style="--i:3">
-          <div class="guarantee-number">04</div>
-          <i data-lucide="lock" class="guarantee-icon"></i>
-          <h3>Connected Account Boundaries</h3>
-          <p>Chilla runs only on the connected account the user selected. Funds stay in the user's own trading account.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       WHAT M-II POWERS
-       ══════════════════════════════════════ -->
-  <section class="powers-section section">
-    <div class="container">
-      <div class="powers-header animate-on-scroll">
-        <span class="eyebrow">What M-II Powers</span>
-        <h2>The AI brain behind<br>Chilla.</h2>
-        <p>M-II is the technology that lets Chilla run multiple styles and tasks reliably, keep them separate, and explain activity clearly through Flow.</p>
-      </div>
-
-      <div class="powers-grid">
-        <div class="power-card animate-on-scroll">
-          <i data-lucide="cpu" class="power-card-icon"></i>
-          <span class="tag">Live Now</span>
-          <h3>Chilla</h3>
-          <p>M-II turns Chilla choices into tasks it can run, checks boundaries before action, monitors activity, and sends clear updates to Flow.</p>
-        </div>
-
-        <div class="power-card animate-on-scroll" style="transition-delay: 0.1s">
-          <i data-lucide="layers" class="power-card-icon"></i>
-          <span class="tag">Platform</span>
-          <h3>Account and Task Support</h3>
-          <p>Sign-in, consent, capacity, account connections, and plan access all rely on M-II so Chilla can keep each user's tasks clear and separate.</p>
-        </div>
-
-        <div class="power-card animate-on-scroll" style="transition-delay: 0.2s">
-          <i data-lucide="zap" class="power-card-icon"></i>
-          <span class="tag">Future Modules</span>
-          <h3>Next Beaverly Products</h3>
-          <p>M-II is designed so future Beaverly products can use the same clear, bounded approach without changing what Chilla users control today.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       CORE CAPABILITY SECTIONS
-       ══════════════════════════════════════ -->
-  <section class="capabilities-section">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="eyebrow">Core Capabilities</span>
-        <h2>How M-II operates.</h2>
-        <p>Every function M-II performs is designed around the same principle: automate only what is authorized, and never skip the checks.</p>
-      </div>
-
-      <!-- 1. Task Setup -->
-      <div class="cap-group">
-        <div class="cap-text animate-on-scroll">
-          <div class="cap-label">Task Creation</div>
-          <h3>From intent to authorized action.</h3>
-          <p>M-II manages the complete path of a user task — from draft review and activation to updates, multiple active tasks, and stopping a task.</p>
-          <p>Before any task becomes active, the system checks user authorization, consent, account compatibility, and plan eligibility. Only fully checked tasks are allowed to run.</p>
-        </div>
-        <div class="cap-visual animate-on-scroll" style="transition-delay: 0.1s">
-          <div class="cap-panel">
-            <div class="panel-bar">
-              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-            </div>
-            <div class="panel-lines">
-              <div class="panel-line"><span class="comment">// Pre-activation validation</span></div>
-              <div class="panel-line"><span class="key">authorization</span>  <span class="val">verified</span>  <span class="ok">✓</span></div>
-              <div class="panel-line"><span class="key">consent_version</span> <span class="val">current</span>   <span class="ok">✓</span></div>
-              <div class="panel-line"><span class="key">account_compat</span>  <span class="val">confirmed</span> <span class="ok">✓</span></div>
-              <div class="panel-line"><span class="key">plan_eligibility</span> <span class="val">within_cap</span> <span class="ok">✓</span></div>
-              <div class="panel-line">&nbsp;</div>
-              <div class="panel-line"><span class="comment">// Task Saved</span></div>
-              <div class="panel-line"><span class="key">status</span>          <span class="ok">ACTIVE</span></div>
-              <div class="panel-line"><span class="key">type</span>         <span class="val">New</span></div>
-              <div class="panel-line"><span class="key">boundary</span>           <span class="val">user_boundaries</span></div>
-            </div>
+        <div class="mii3-pipeline v3-reveal" aria-label="M-II live work pipeline">
+          <div class="mii3-pipeline-head">
+            <span>M-II / live work</span>
+            <span class="mii3-pipeline-state">Controlled</span>
+          </div>
+          <div class="mii3-pipeline-body">
+            <div class="mii3-stage"><span class="mii3-stage-num">01</span><span class="mii3-stage-name">Authorized</span><span class="mii3-stage-status">scope verified</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">02</span><span class="mii3-stage-name">Scoped</span><span class="mii3-stage-status">correct lane</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">03</span><span class="mii3-stage-name">Validated</span><span class="mii3-stage-status">gates passed</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">04</span><span class="mii3-stage-name">Sized</span><span class="mii3-stage-status">bounds checked</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">05</span><span class="mii3-stage-name">Submitted</span><span class="mii3-stage-status">provider route</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">06</span><span class="mii3-stage-name">Confirmed</span><span class="mii3-stage-status">response captured</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">07</span><span class="mii3-stage-name">Recorded</span><span class="mii3-stage-status">trace retained</span></div>
+            <p class="mii3-stop-note">If a required gate fails, the path stops before submission.</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <hr class="rule" style="margin-bottom: 6rem;">
-
-      <!-- 2. Comfort & Safety -->
-      <div class="cap-group reverse">
-        <div class="cap-text animate-on-scroll">
-          <div class="cap-label">Comfort & Safety Boundaries</div>
-          <h3>Every action checks its limits first.</h3>
-          <p>Before any action is attempted, M-II runs a series of pre-automation checks: task status, account compatibility, plan and capacity eligibility, signal freshness, and duplicate protection.</p>
-          <p>Action size is determined by user comfort inputs, available account balance, optional monthly comfort caps, and account-specific minimum constraints. Actions that exceed defined boundaries are skipped safely — never forced.</p>
+    <section class="mii3-section" aria-labelledby="separation-title">
+      <div class="v3-shell mii3-split">
+        <div class="mii3-copy v3-reveal">
+          <p class="v3-kicker">Separation of responsibilities</p>
+          <h2 id="separation-title">Not a language model with broker access.</h2>
+          <p>Conversation and financial execution are separate responsibilities. Chilla handles the relationship with you. M-II handles authorized live work through an engineered execution path.</p>
         </div>
-        <div class="cap-visual animate-on-scroll" style="transition-delay: 0.1s">
-          <div class="cap-status-list">
-            <div class="status-row">
-              <span class="sr-label">Task active</span>
-              <span class="status-badge pass">Verified</span>
-            </div>
-            <div class="status-row">
-              <span class="sr-label">Account compatibility</span>
-              <span class="status-badge pass">Confirmed</span>
-            </div>
-            <div class="status-row">
-              <span class="sr-label">Capacity eligibility</span>
-              <span class="status-badge pass">Within limits</span>
-            </div>
-            <div class="status-row">
-              <span class="sr-label">Data freshness</span>
-              <span class="status-badge pass">Current</span>
-            </div>
-            <div class="status-row">
-              <span class="sr-label">Duplicate protection</span>
-              <span class="status-badge pass">No repeat detected</span>
-            </div>
-            <div class="status-row">
-              <span class="sr-label">Comfort sizing</span>
-              <span class="status-badge pass">Within comfort</span>
-            </div>
-            <div class="status-row">
-              <span class="sr-label">Monthly cap</span>
-              <span class="status-badge monitor">Monitoring</span>
-            </div>
+
+        <div class="mii3-separation v3-reveal">
+          <div class="mii3-separation-row">
+            <span class="mii3-separation-label">Chilla</span>
+            <p>Understands what you’re working towards, talks with you, explains, checks in, and reports back.</p>
+          </div>
+          <div class="mii3-separation-row">
+            <span class="mii3-separation-label">M-II</span>
+            <p>Receives authorized work, keeps it scoped, checks it, executes it through the right provider lane, and maintains the trace.</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <hr class="rule" style="margin-bottom: 6rem;">
-
-      <!-- 3. Flow & Transparency -->
-      <div class="cap-group">
-        <div class="cap-text animate-on-scroll">
-          <div class="cap-label">Transparency & Flow</div>
-          <h3>Everything M-II does, you can read.</h3>
-          <p>M-II generates human-readable activity updates for every meaningful event: entries, exits, skipped actions, warnings, and monitoring updates. These appear in the Flow interface in real time and remain queryable historically.</p>
-          <p>Flow entries are bounded to the relevant user and task context. Users can filter by event type, review a specific time window, export activity logs, and expand individual events for full context.</p>
+    <section class="mii3-section mii3-section--soft" id="path" aria-labelledby="path-title">
+      <div class="v3-shell">
+        <div class="mii3-path-head v3-reveal">
+          <p class="v3-kicker">Execution path</p>
+          <h2 id="path-title">Every live action has a path.</h2>
         </div>
-        <div class="cap-visual animate-on-scroll" style="transition-delay: 0.1s">
-          <div class="cap-panel">
-            <div class="panel-bar">
-              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-            </div>
-            <div class="panel-lines">
-              <div class="panel-line"><span class="comment">// Flow — live activity stream</span></div>
-              <div class="panel-line">&nbsp;</div>
-              <div class="panel-line"><span class="ok">ENTRY</span>     <span class="val">Activity opened</span></div>
-              <div class="panel-line"><span class="comment">          Market conditions matched task boundary.</span></div>
-              <div class="panel-line">&nbsp;</div>
-              <div class="panel-line"><span class="warn">PASSED</span>   <span class="val">Action deferred</span></div>
-              <div class="panel-line"><span class="comment">          Monthly comfort approaching limit.</span></div>
-              <div class="panel-line">&nbsp;</div>
-              <div class="panel-line"><span class="ok">MONITOR</span>   <span class="val">Activity under observation</span></div>
-              <div class="panel-line"><span class="comment">          Protective adjustment evaluated.</span></div>
-              <div class="panel-line">&nbsp;</div>
-              <div class="panel-line"><span class="ok">EXIT</span>      <span class="val">Activity closed</span></div>
-              <div class="panel-line"><span class="comment">          Lifecycle complete. Trading account confirmed.</span></div>
-            </div>
+
+        <div class="mii3-path v3-reveal">
+          <div class="mii3-path-row">
+            <span class="mii3-path-dot">01</span>
+            <h3>Authorization</h3>
+            <p>M-II confirms that live work is active and authorized before execution remains eligible.</p>
+          </div>
+          <div class="mii3-path-row">
+            <span class="mii3-path-dot">02</span>
+            <h3>Scope</h3>
+            <p>The work stays attached to the correct user, account, market, and active workload.</p>
+          </div>
+          <div class="mii3-path-row">
+            <span class="mii3-path-dot">03</span>
+            <h3>Validation</h3>
+            <p>Freshness, duplicate protection, account compatibility, capacity, and execution eligibility are checked before action.</p>
+          </div>
+          <div class="mii3-path-row">
+            <span class="mii3-path-dot">04</span>
+            <h3>Sizing</h3>
+            <p>Account balance, user boundaries, caps, and executable provider limits are resolved before submission.</p>
+          </div>
+          <div class="mii3-path-row">
+            <span class="mii3-path-dot">05</span>
+            <h3>Submission</h3>
+            <p>The instruction is routed to the selected provider and account, with confirmation and error paths captured.</p>
+          </div>
+          <div class="mii3-path-row">
+            <span class="mii3-path-dot">06</span>
+            <h3>Lifecycle</h3>
+            <p>Opened positions are registered, monitored through their lifecycle, and handled through closure.</p>
+          </div>
+          <div class="mii3-path-row">
+            <span class="mii3-path-dot">07</span>
+            <h3>Trace</h3>
+            <p>Execution and status transitions remain available for Flow, history, and operational review.</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <hr class="rule" style="margin-bottom: 6rem;">
-
-      <!-- 4. Operational Reliability -->
-      <div class="cap-group reverse">
-        <div class="cap-text animate-on-scroll">
-          <div class="cap-label">Operational Reliability</div>
-          <h3>Built to run without intervention.</h3>
-          <p>M-II monitors platform health, maintains account connectivity, synchronizes account status, and enforces entitlements continuously. Automation eligibility is constrained or halted automatically when integrity conditions are not met.</p>
-          <p>The system maintains auditable records for task lifecycle, automation activity, comfort usage, capacity consumption, and operational status changes. Historical activity is reviewable by time window and event type.</p>
+    <section class="mii3-section" aria-labelledby="refuse-title">
+      <div class="v3-shell mii3-refusal v3-reveal">
+        <div class="mii3-large">
+          <p class="v3-kicker">Integrity before activity</p>
+          <h2 id="refuse-title">Built to refuse work.</h2>
+          <p>A serious execution system needs a reliable way to say no. M-II can defer or block an action when required execution conditions are not intact.</p>
         </div>
-        <div class="cap-visual animate-on-scroll" style="transition-delay: 0.1s">
-          <div class="cap-stat-grid">
-            <div class="cap-stat">
-              <div class="num">24/7</div>
-              <div class="lbl">Continuous market observation</div>
-            </div>
-            <div class="cap-stat">
-              <div class="num">≥1</div>
-              <div class="lbl">Concurrent tasks supported</div>
-            </div>
-            <div class="cap-stat">
-              <div class="num">Full</div>
-              <div class="lbl">Task lifecycle traceability</div>
-            </div>
-            <div class="cap-stat">
-              <div class="num">Auto</div>
-              <div class="lbl">Integrity-triggered interruption</div>
-            </div>
-          </div>
+
+        <div class="mii3-refusal-list">
+          <div class="mii3-refusal-row"><span>01</span><strong>Stale</strong><p>The event is no longer fresh enough for the intended action.</p></div>
+          <div class="mii3-refusal-row"><span>02</span><strong>Duplicate</strong><p>The system detects a repeat path that should not execute again.</p></div>
+          <div class="mii3-refusal-row"><span>03</span><strong>Wrong lane</strong><p>Account, symbol, scope, or workload compatibility does not match.</p></div>
+          <div class="mii3-refusal-row"><span>04</span><strong>Outside bounds</strong><p>Capacity, account constraints, or user-defined financial boundaries would be exceeded.</p></div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section class="mii3-section mii3-section--soft" aria-labelledby="lane-title">
+      <div class="v3-shell mii3-large v3-reveal">
+        <p class="v3-kicker">Isolation</p>
+        <h2 id="lane-title">Each workload stays in its lane.</h2>
+        <p>M-II supports multiple active workloads without letting one overwrite another. Routing preserves the user, account, market, and authorized work context all the way to execution.</p>
 
-  <!-- ══════════════════════════════════════
-       PLATFORM PRINCIPLES
-       ══════════════════════════════════════ -->
-  <section class="principles-section">
-    <div class="container">
-      <div class="principles-inner">
-        <div class="principles-text animate-on-scroll">
-          <span class="eyebrow">Platform Principles</span>
-          <h2>How M-II is designed to treat users and their assets.</h2>
-          <p>These are not policy statements. They are architectural commitments reflected in how M-II was built — and what it is designed to never do.</p>
-        </div>
-        <div class="principles-list">
-          <div class="principle-item animate-on-scroll">
-            <i data-lucide="user-check" class="pi-icon"></i>
-            <div class="pi-body">
-              <h4>User-Configured</h4>
-              <p>Users configure, activate, pause, and stop their tasks at any time. M-II does not modify task scope on its own.</p>
-            </div>
-          </div>
-          <div class="principle-item animate-on-scroll">
-            <i data-lucide="building-2" class="pi-icon"></i>
-            <div class="pi-body">
-              <h4>Non-Custodial</h4>
-              <p>Funds remain with the user-selected trading account. M-II submits authorized actions to the connected account — it holds nothing directly.</p>
-            </div>
-          </div>
-          <div class="principle-item animate-on-scroll">
-            <i data-lucide="file-text" class="pi-icon"></i>
-            <div class="pi-body">
-              <h4>Task-Bound</h4>
-              <p>Chilla activity is always bounded by the user-approved task. M-II does not infer, extend, or act beyond the defined scope.</p>
-            </div>
-          </div>
-          <div class="principle-item animate-on-scroll">
-            <i data-lucide="eye" class="pi-icon"></i>
-            <div class="pi-body">
-              <h4>Transparent by Default</h4>
-              <p>Every meaningful system event produces a human-readable Flow entry. Nothing significant happens silently.</p>
-            </div>
-          </div>
-          <div class="principle-item animate-on-scroll">
-            <i data-lucide="shield" class="pi-icon"></i>
-            <div class="pi-body">
-              <h4>Guardrail-Enforced</h4>
-              <p>Safety checks are mandatory, not optional. Comfort boundaries, account constraints, and capacity limits are always enforced before action.</p>
-            </div>
-          </div>
+        <div class="mii3-lane" aria-label="M-II execution scope">
+          <span>User</span><i></i><span>Account</span><i></i><span>Workload</span><i></i><span>Market</span><i></i><span>Action</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════
-       COMPARISON
-       ══════════════════════════════════════ -->
-  <section class="comparison-section">
-    <div class="container">
-      <div class="comparison-header animate-on-scroll">
-        <span class="eyebrow">Smarter by Design</span>
-        <h2>Instruction-driven technology<br>vs. traditional automation.</h2>
-        <p>Most automation tools are reactive. M-II is built around authorization, validation, and accountability at every layer.</p>
-      </div>
+    <section class="mii3-section" aria-labelledby="life-title">
+      <div class="v3-shell mii3-large v3-reveal">
+        <p class="v3-kicker">Lifecycle</p>
+        <h2 id="life-title">Execution does not end at submit.</h2>
+        <p>M-II captures provider responses, registers live positions, monitors ongoing state, handles protection changes where required, and maintains the path through closure and history.</p>
 
-      <div class="comparison-table animate-on-scroll">
-        <div class="ct-head">
-          <div>Capability</div>
-          <div>Traditional</div>
-          <div class="highlight">M-II</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-cell" style="font-weight:500;color:var(--black)">Automation model</div>
-          <div class="ct-cell dim">Static scripts, manual triggers</div>
-          <div class="ct-cell highlight"><i data-lucide="check" class="check"></i> Choice-aware, dynamic</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-cell" style="font-weight:500;color:var(--black)">Pre-action validation</div>
-          <div class="ct-cell dim">None or minimal</div>
-          <div class="ct-cell highlight"><i data-lucide="check" class="check"></i> Mandatory multi-layer checks</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-cell" style="font-weight:500;color:var(--black)">Comfort enforcement</div>
-          <div class="ct-cell dim">Operator-configured, optional</div>
-          <div class="ct-cell highlight"><i data-lucide="check" class="check"></i> Balance-aware, always on</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-cell" style="font-weight:500;color:var(--black)">Activity transparency</div>
-          <div class="ct-cell dim">Logs, if any</div>
-          <div class="ct-cell highlight"><i data-lucide="check" class="check"></i> Real-time, human-readable Flow</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-cell" style="font-weight:500;color:var(--black)">Failure handling</div>
-          <div class="ct-cell dim">Error or retry blindly</div>
-          <div class="ct-cell highlight"><i data-lucide="check" class="check"></i> Safe skip with Flow notice</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-cell" style="font-weight:500;color:var(--black)">Scope boundaries</div>
-          <div class="ct-cell dim">Asset-specific or global</div>
-          <div class="ct-cell highlight"><i data-lucide="check" class="check"></i> Connected-account bounded per task</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-cell" style="font-weight:500;color:var(--black)">Traceability</div>
-          <div class="ct-cell dim">Partial or absent</div>
-          <div class="ct-cell highlight"><i data-lucide="check" class="check"></i> Full lifecycle audit records</div>
+        <div class="mii3-lifecycle">
+          <div class="mii3-life"><span class="mii3-life-num">01</span><h3>Open</h3><p>Provider response captured.</p></div>
+          <div class="mii3-life"><span class="mii3-life-num">02</span><h3>Monitor</h3><p>Live state remains under observation.</p></div>
+          <div class="mii3-life"><span class="mii3-life-num">03</span><h3>Protect</h3><p>Runtime protection updates are applied when required.</p></div>
+          <div class="mii3-life"><span class="mii3-life-num">04</span><h3>Close</h3><p>The position lifecycle is carried through completion.</p></div>
+          <div class="mii3-life"><span class="mii3-life-num">05</span><h3>Record</h3><p>Status and execution history remain traceable.</p></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════
-       MANIFESTO
-       ══════════════════════════════════════ -->
-  <section class="manifesto-section bv-atm">
-    <div class="container">
-      <div class="manifesto-inner animate-on-scroll">
-        <blockquote class="manifesto-quote">
-          The future isn't platforms.<br>
-          <em>It's technology that knows what it's authorized to do,</em><br>
-          checks before it acts,<br>
-          and tells you exactly what happened.
-        </blockquote>
-      </div>
-    </div>
-  </section>
+    <section class="mii3-section mii3-section--soft" aria-labelledby="security-title">
+      <div class="v3-shell mii3-split">
+        <div class="mii3-copy v3-reveal">
+          <p class="v3-kicker">Platform controls</p>
+          <h2 id="security-title">Security is part of the path.</h2>
+          <p>M-II’s execution controls sit alongside platform protections for sessions, sensitive requests, abuse prevention, and operational visibility.</p>
+          <a class="mii3-security-link" href="/security.html" data-track="mii_security">Security &amp; Infrastructure →</a>
+        </div>
 
-  <!-- ══════════════════════════════════════
-       CTA
-       ══════════════════════════════════════ -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-inner animate-on-scroll">
-        <span class="eyebrow">Ready to explore</span>
-        <h2>See M-II in action<br>through Chilla.</h2>
-        <p>Chilla is the user-facing layer built on M-II. Set up your tasks, connect your trading account, and let the technology handle the rest.</p>
-        <div class="cta-buttons">
-          <a href="index.html" class="btn btn-secondary">← Back to Ecosystem</a>
-          <a href="chilla.html" class="btn btn-primary">Explore Chilla →</a>
+        <div class="mii3-security-list v3-reveal">
+          <div class="mii3-security-row"><span>Session and token verification</span><span>Access stays authenticated</span></div>
+          <div class="mii3-security-row"><span>CSRF and rate limiting</span><span>Sensitive flows are guarded</span></div>
+          <div class="mii3-security-row"><span>Suspicious activity controls</span><span>Abuse paths can be constrained</span></div>
+          <div class="mii3-security-row"><span>Sensitive value redaction</span><span>Logs avoid exposing protected values</span></div>
+          <div class="mii3-security-row"><span>Runtime health monitoring</span><span>Operational state remains observable</span></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Scripts -->
-  <script src="js/m-ii-animations.js"></script>
-  <script src="/js/header-loader.js"></script>
-  <script src="/js/footer-loader.js"></script>
+    <section class="mii3-final" aria-labelledby="mii-final-title">
+      <div class="v3-shell v3-reveal">
+        <p class="v3-kicker">M-II + Chilla</p>
+        <h2 id="mii-final-title">You talk to Chilla.<br />M-II handles the machinery.</h2>
+        <p>Simple where you interact. Serious where financial work gets executed.</p>
+        <a class="mii3-primary" href="/chilla.html" data-track="mii_final_chilla">Explore Chilla</a>
+      </div>
+    </section>
+  </main>
 
-  
+  <script src="/js/analytics.js"></script>
+  <script src="/js/v3-chilla.js"></script>
 </body>
 </html>

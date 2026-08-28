@@ -1,512 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>Chilla™ by Beaverly® – Trading, but for non-traders.</title>
-  <meta name="description" content="Skip charts, trading courses, bots and signal groups. Choose what you’re comfortable with. Chilla runs it and reports back in words you understand.">
-  <meta name="keywords" content="chilla, beaverly, market automation, trading account automation, non-custodial, flow transparency">
-  <link rel="icon" href="https://beaverlyai.com/attached_assets/beaverly_lodo.png" type="image/png">
 
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <title>Chilla™ by Beaverly® — Your Financial Worker</title>
+  <meta name="description" content="Tell Chilla what you're working towards. Chilla works toward your goals in the financial markets, keeps you informed, and reports back." />
+  <link rel="canonical" href="https://beaverlyai.com/chilla.html" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Chilla™ by Beaverly® – Trading, but for non-traders.">
-  <meta property="og:description" content="Skip charts, trading courses, bots and signal groups. Choose what you’re comfortable with. Chilla runs it and reports back in words you understand.">
-  <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://beaverlyai.com/chilla.html">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-  <!-- Fonts: Outfit (matches site) + Fraunces for editorial punch -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,300;0,700;1,300;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,300;0,700;1,300;1,700&display=swap"></noscript>
+  <meta property="og:title" content="Chilla™ by Beaverly® — Your Financial Worker" />
+  <meta property="og:description" content="Tell Chilla what you're working towards. Chilla works toward your goals in the financial markets and reports back." />
+  <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://beaverlyai.com/chilla.html" />
 
-  <!-- Site CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/chilla.css" />
-  <link rel="stylesheet" href="css/beaverly-bg.css" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chilla™ by Beaverly® — Your Financial Worker" />
+  <meta name="twitter:description" content="Tell Chilla what you're working towards. Chilla works toward your goals in the financial markets and reports back." />
+  <meta name="twitter:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
 
-  <!-- Google tag -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('beaverly-theme');
+        var theme = saved === 'dark' || saved === 'light'
+          ? saved
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (_) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Inter+Tight:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/v3-home.css" />
+  <link rel="stylesheet" href="/css/v3-chilla.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Chilla",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "url": "https://chilla.beaverlyai.com",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Beaverly",
+      "url": "https://beaverlyai.com"
+    },
+    "description": "A financial worker that works toward user goals in the financial markets and reports back."
+  }
+  </script>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-83PFRQ3WQ6"></script>
-  <script src="js/gtag-init.js"></script>
+  <script src="/js/gtag-init.js"></script>
 </head>
 
-<body>
-
-  <!-- Header injected by js/header-loader.js -->
-
-  <!-- ══════════════════════════════════════
-       HERO
-       ══════════════════════════════════════ -->
-  <section class="hero bv-atm">
-    <div class="hero-glow"></div>
-    <div class="container">
-      <div class="hero-content" id="heroContent">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Trading, but for non-traders.
-        </div>
-        <h1 class="hero-title">
-          You Chill.<br><span class="italic">Chilla Works.</span>
-        </h1>
-        <p class="hero-subtitle">
-          Skip charts, trading courses, bots and signal groups. Choose what you’re comfortable with. Chilla runs it and reports back in words you understand.
-        </p>
-        <div class="hero-cta-row">
-          <a href="https://chilla.beaverlyai.com" class="btn btn-primary">Open Chilla</a>
-          <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
-        </div>
-      </div>
-    </div>
-    <div class="hero-art-wrap">
-      <picture class="hero-art">
-        <source media="(max-width: 640px)" srcset="attached_assets/Chilla_hero_mobile.png">
-        <img src="attached_assets/Chilla_hero_desktop.png" alt="Chilla dashboard, Flow and active task screens.">
-      </picture>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       POSITIONING STATEMENT
-       ══════════════════════════════════════ -->
-  <section class="statement-section">
-    <div class="container">
-      <div class="statement-inner animate-on-scroll">
-        <p class="statement-copy">
-          Trading, but for non-traders.
-        </p>
-        <p class="statement-sub">
-          Chilla gives non-traders a simpler way to trade global markets without learning charts, following signals, taking courses or figuring out trading bots.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       HOW CHILLA WORKS
-       ══════════════════════════════════════ -->
-  <section class="journey-section" id="how-it-works">
-    <div class="container">
-      <div class="journey-header animate-on-scroll">
-        <span class="eyebrow">How Chilla Works</span>
-        <h2>Three steps to let Chilla handle it.</h2>
-        <p>You choose what feels comfortable. Nothing runs until you confirm it.</p>
-      </div>
-
-      <div class="journey-art-wrap animate-on-scroll">
-        <img class="journey-art" src="attached_assets/Chilla_task_steps.png" alt="Chilla setup, account connection and Flow screens.">
-      </div>
-
-      <div class="journey-steps">
-
-        <div class="journey-step animate-on-scroll">
-          <div class="step-num">01</div>
-          <div class="step-text">
-            <h3>Connect your trading account</h3>
-            <p>Authorize your account through a secure connection flow. You fund that account normally, then connect Chilla to automate only the task you approved on the account you select. Your funds remain in your trading account throughout.</p>
-          </div>
-          <div class="step-detail">
-            <div class="step-detail-item">
-              <i data-lucide="link" class="ic"></i>
-              Secure account authorization flow
-            </div>
-            <div class="step-detail-item">
-              <i data-lucide="layers" class="ic"></i>
-              Multi-account support from one dashboard
-            </div>
-            <div class="step-detail-item">
-              <i data-lucide="toggle-right" class="ic"></i>
-              Automation toggle per account
-            </div>
-            <div class="step-detail-item">
-              <i data-lucide="activity" class="ic"></i>
-              Account health visible on dashboard
-            </div>
+<body class="v3-page">
+  <main>
+    <section class="ch3-hero" aria-labelledby="chilla-title">
+      <div class="v3-shell ch3-hero-grid">
+        <div class="ch3-hero-copy v3-reveal">
+          <p class="v3-kicker">Chilla by Beaverly</p>
+          <h1 id="chilla-title">A financial worker you can talk to.</h1>
+          <p class="ch3-hero-sub">Tell Chilla what you’re working towards. It works toward your goals in the financial markets, keeps you informed, and stays available when you want to ask, change, or check anything.</p>
+          <div class="ch3-actions">
+            <a class="ch3-primary" href="https://chilla.beaverlyai.com" data-track="chilla_hero_open">Open Chilla</a>
+            <a class="ch3-secondary" href="#how" data-track="chilla_hero_how">See how it works</a>
           </div>
         </div>
 
-        <div class="journey-step animate-on-scroll">
-          <div class="step-num">02</div>
-          <div class="step-text">
-            <h3>Choose your style and boundaries</h3>
-            <p>See available ways Chilla can run, and choose your style. Set your comfort level and optional monthly cap. Chilla shows what those boundaries mean before anything is turned on.</p>
+        <div class="ch3-conversation v3-reveal" aria-label="Example Chilla conversation">
+          <div class="ch3-conversation-top">
+            <span>Chilla</span>
+            <span class="ch3-online">Working</span>
           </div>
-          <div class="step-detail">
-            <div class="step-detail-item">
-              <i data-lucide="search" class="ic"></i>
-              Available ways Chilla can run
+          <div class="ch3-thread">
+            <div class="ch3-message user">
+              <p>I want to grow this account steadily without spending my day watching markets.</p>
             </div>
-            <div class="step-detail-item">
-              <i data-lucide="sliders" class="ic"></i>
-              Comfort per activity
+            <div class="ch3-message chilla">
+              <span class="ch3-msg-label">Chilla</span>
+              <p>Got it. I’ll work towards that with you. I’ll show you what I’m planning before anything goes live.</p>
             </div>
-            <div class="step-detail-item">
-              <i data-lucide="shield" class="ic"></i>
-              Optional monthly comfort budget cap
+            <div class="ch3-message chilla">
+              <p>We can start in demo first. Connect an account whenever you’re ready for live work.</p>
             </div>
-            <div class="step-detail-item">
-              <i data-lucide="eye" class="ic"></i>
-              Comfort implication preview before activation
-            </div>
-          </div>
-        </div>
-
-        <div class="journey-step animate-on-scroll">
-          <div class="step-num">03</div>
-          <div class="step-text">
-            <h3>Start Chilla. Watch Flow.</h3>
-            <p>Chilla runs your task in the background and explains every important action in plain English, in real time.</p>
-          </div>
-          <div class="step-detail">
-            <div class="step-detail-item">
-              <i data-lucide="file-check" class="ic"></i>
-              Authorization required before activation
-            </div>
-            <div class="step-detail-item">
-              <i data-lucide="activity" class="ic"></i>
-              Flow feed with entries, exits, skips, and warnings
-            </div>
-            <div class="step-detail-item">
-              <i data-lucide="edit-3" class="ic"></i>
-              Edit or stop tasks at any time
-            </div>
-            <div class="step-detail-item">
-              <i data-lucide="check-circle" class="ic"></i>
-              Full pre-check boundary review
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       WHY CHILLA FEELS DIFFERENT
-       ══════════════════════════════════════ -->
-  <section class="different-section">
-    <div class="container">
-      <div class="different-inner">
-        <div class="different-text animate-on-scroll">
-          <span class="eyebrow">Why It's Different</span>
-          <h2>No charts. No signals. No courses. No confusion.</h2>
-          <p>Choose what feels comfortable. Chilla handles the task and explains every important action in plain English.</p>
-
-        </div>
-        <div class="contrast-list animate-on-scroll" style="transition-delay:0.1s">
-          <div class="contrast-row">
-            <i data-lucide="x-circle" class="contrast-icon neg"></i>
-            <div class="contrast-body">
-              <div class="contrast-label dim">Signal apps</div>
-              <div class="contrast-desc">You wait for alerts, then act manually. You're still the bottleneck.</div>
-            </div>
-          </div>
-          <div class="contrast-row">
-            <i data-lucide="x-circle" class="contrast-icon neg"></i>
-            <div class="contrast-body">
-              <div class="contrast-label dim">Copy trading</div>
-              <div class="contrast-desc">You copy someone else’s decisions, including their mistakes, without always knowing why they acted.</div>
-            </div>
-          </div>
-          <div class="contrast-row">
-            <i data-lucide="x-circle" class="contrast-icon neg"></i>
-            <div class="contrast-body">
-              <div class="contrast-label dim">Trading bots</div>
-              <div class="contrast-desc">You install a black box and hope it behaves. Little context. Little control.</div>
-            </div>
-          </div>
-          <div class="contrast-row">
-            <i data-lucide="check-circle" class="contrast-icon pos"></i>
-            <div class="contrast-body">
-              <div class="contrast-label">Chilla</div>
-              <div class="contrast-desc">Your account. Your comfort level. Clear updates. Pause or stop anytime.</div>
+            <div class="ch3-mini-composer">
+              <span>Ask Chilla anything…</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 19V5M6.5 10.5 12 5l5.5 5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════
-       CORE PRODUCT EXPERIENCE (Bento)
-       ══════════════════════════════════════ -->
-  <section class="product-section">
-    <div class="container">
-      <div class="product-header animate-on-scroll">
-        <span class="eyebrow">Product Experience</span>
-        <h2>Simple on the surface.<br>Serious underneath.</h2>
-        <p>Every part of Chilla is designed to give you the right amount of flexibility — and no more complexity than you need.</p>
-      </div>
-
-      <div class="product-bento">
-        <div class="bento-card wide animate-on-scroll">
-          <i data-lucide="layout-dashboard" class="card-icon"></i>
-          <h3>Live Dashboard</h3>
-          <p>Your dashboard surfaces real-time status cards for every connected account. See your active task count, current styles, comfort usage, and market status — all in one view. No digging required.</p>
-          <span class="card-tag">Real-time</span>
+    <section class="ch3-section" id="how" aria-labelledby="ongoing-title">
+      <div class="v3-shell ch3-section-grid">
+        <div class="ch3-section-copy v3-reveal">
+          <p class="v3-kicker">How Chilla works</p>
+          <h2 id="ongoing-title">One conversation. Ongoing work.</h2>
+          <p>You don’t build a workflow before Chilla can help. Start with what you’re working towards. The rest of the relationship stays conversational.</p>
         </div>
 
-        <div class="bento-card animate-on-scroll" style="transition-delay:0.1s">
-          <i data-lucide="git-commit" class="card-icon"></i>
-          <h3>Task Setup</h3>
-          <p>Choose, check, activate, edit, or stop tasks at any point. Task is tracked and auditable. Stopping a task requires explicit confirmation — nothing turns off without your intent.</p>
-          <span class="card-tag">Tracked & Auditable</span>
-        </div>
-
-        <div class="bento-card dark animate-on-scroll" style="transition-delay:0.1s">
-          <i data-lucide="sliders" class="card-icon"></i>
-          <h3>Comfort Settings</h3>
-          <p>Set your comfort level. Add an optional monthly comfort cap. Chilla shows you what these settings mean before you activate.</p>
-          <span class="card-tag">User-defined</span>
-        </div>
-
-        <div class="bento-card animate-on-scroll" style="transition-delay:0.15s">
-          <i data-lucide="compass" class="card-icon"></i>
-          <h3>Available Styles</h3>
-          <p>See available ways Chilla can run. Choose your style.</p>
-          <span class="card-tag">Filterable</span>
-        </div>
-
-        <div class="bento-card animate-on-scroll" style="transition-delay:0.2s">
-          <i data-lucide="bar-chart-2" class="card-icon"></i>
-          <h3>Usage & Plan Limits</h3>
-          <p>Chilla shows your daily automation capacity, tier-aware limits across accounts and tasks, and alerts when you approach a ceiling. Upgrade options are always one tap away.</p>
-          <span class="card-tag">Plan-aware</span>
-        </div>
-
-        <div class="bento-card animate-on-scroll" style="transition-delay:0.2s">
-          <i data-lucide="smartphone" class="card-icon"></i>
-          <h3>Install on Your Device</h3>
-          <p>Chilla is a Progressive Web App. Install it on your phone or tablet for a native-like experience with full dashboard access from anywhere.</p>
-          <span class="card-tag">PWA</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       FLOW — VISIBILITY & CLARITY
-       ══════════════════════════════════════ -->
-  <section class="flow-section">
-    <div class="container">
-      <div class="flow-inner">
-        <div class="flow-text animate-on-scroll">
-          <span class="eyebrow">Flow — Transparency Feed</span>
-          <h2>You always know what just happened.</h2>
-          <p>Flow is Chilla's real-time activity stream. Every meaningful event the system generates — entries, exits, skipped actions, warnings, monitoring updates — appears in plain language, in the order it happened.</p>
-          <p>Filter by event type. Replay history. Export your log. Expand any event for full context. Chilla doesn't act silently. Flow makes sure of that.</p>
-        </div>
-        <div class="animate-on-scroll" style="transition-delay:0.1s">
-          <div class="flow-feed">
-            <div class="flow-bar">
-              <span class="flow-bar-title">Flow</span>
-              <span class="flow-bar-live"><span class="blink"></span>Live</span>
+        <div class="ch3-steps v3-reveal">
+          <div class="ch3-step">
+            <span class="ch3-step-num">01</span>
+            <div>
+              <h3>Tell Chilla the goal.</h3>
+              <p>Say what you’re working towards in your own words. Chilla starts from the goal, not from a setup screen.</p>
             </div>
-            <div class="flow-item">
-              <span class="flow-type ft-entry">Entry</span>
-              <div class="flow-body">
-                <div class="flow-title">Action opened</div>
-                <div class="flow-desc">Market conditions matched your chosen style. Comfort and safety checks passed.</div>
-              </div>
-              <span class="flow-time">just now</span>
+          </div>
+          <div class="ch3-step">
+            <span class="ch3-step-num">02</span>
+            <div>
+              <h3>Chilla gets to work.</h3>
+              <p>It works toward the goal in the financial markets and keeps going without needing you to sit there managing every step.</p>
             </div>
-            <div class="flow-item">
-              <span class="flow-type ft-mon">Monitor</span>
-              <div class="flow-body">
-                <div class="flow-title">Activity under review</div>
-                <div class="flow-desc">Active monitoring. Protective adjustment evaluated.</div>
-              </div>
-              <span class="flow-time">2m ago</span>
-            </div>
-            <div class="flow-item">
-              <span class="flow-type ft-skip">Passed</span>
-              <div class="flow-body">
-                <div class="flow-title">Action deferred</div>
-                <div class="flow-desc">Monthly comfort budget approaching limit. Moment passed safely.</div>
-              </div>
-              <span class="flow-time">14m ago</span>
-            </div>
-            <div class="flow-item">
-              <span class="flow-type ft-exit">Exit</span>
-              <div class="flow-body">
-                <div class="flow-title">Activity completed</div>
-                <div class="flow-desc">Trading account confirmation received and recorded.</div>
-              </div>
-              <span class="flow-time">1h ago</span>
-            </div>
-            <div class="flow-item">
-              <span class="flow-type ft-entry">Entry</span>
-              <div class="flow-body">
-                <div class="flow-title">Activity opened</div>
-                <div class="flow-desc">Task active. All pre-automation checks passed.</div>
-              </div>
-              <span class="flow-time">3h ago</span>
+          </div>
+          <div class="ch3-step">
+            <span class="ch3-step-num">03</span>
+            <div>
+              <h3>Ask. Change. Check.</h3>
+              <p>Come back to ask what happened, change direction, check progress, or understand why Chilla did — or didn’t do — something.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════
-       USER FLEXIBILITY GRID
-       ══════════════════════════════════════ -->
-  <section class="control-section">
-    <div class="container">
-      <div class="control-header animate-on-scroll">
-        <span class="eyebrow">Your Flexibility</span>
-        <h2>You're never locked in.</h2>
-        <p>Chilla is built around the principle that you can change your mind at any time. All key options are always accessible.</p>
-      </div>
-      <div class="control-grid">
-        <div class="control-card animate-on-scroll">
-          <i data-lucide="pause-circle" class="cc-icon"></i>
-          <h4>Pause Anytime</h4>
-          <p>Toggle automation off per account without disconnecting your account or losing your tasks.</p>
-        </div>
-        <div class="control-card animate-on-scroll" style="transition-delay:0.07s">
-          <i data-lucide="edit-3" class="cc-icon"></i>
-          <h4>Edit Tasks</h4>
-          <p>Modify active tasks. Chilla tracks what changed and when.</p>
-        </div>
-        <div class="control-card animate-on-scroll" style="transition-delay:0.14s">
-          <i data-lucide="trash-2" class="cc-icon"></i>
-          <h4>Stop with Confirmation</h4>
-          <p>Stop any task with an explicit confirmation step. Nothing is removed without your intent.</p>
-        </div>
-        <div class="control-card animate-on-scroll" style="transition-delay:0.21s">
-          <i data-lucide="link-2-off" class="cc-icon"></i>
-          <h4>Disconnect Accounts</h4>
-          <p>Disconnect individual accounts without removing other account setups.</p>
+    <section class="ch3-section ch3-section--soft" aria-labelledby="demo-title">
+      <div class="v3-shell ch3-demo-statement v3-reveal">
+        <p class="v3-kicker">Begin calmly</p>
+        <h2 class="ch3-big-line" id="demo-title">Start before you connect anything.</h2>
+        <p>Chilla can begin with you in demo. See how it works with your goal first. When you’re ready for live work, connect an account and authorize it.</p>
+        <div class="ch3-demo-note">
+          <strong>Your money stays where it is.</strong>
+          <span>Beaverly does not hold your funds. Live work happens through the account you choose to connect.</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════
-       BUILT FOR PEOPLE WHO
-       ══════════════════════════════════════ -->
-  <section class="personas-section">
-    <div class="container">
-      <div class="personas-header animate-on-scroll">
-        <span class="eyebrow">Who It's Built For</span>
-        <h2>Built for people who want<br>to trade without becoming traders.</h2>
-        <p>Chilla is built for people with full lives who still want meaningful, structured activity on their terms.</p>
-      </div>
-      <div class="builtfor-grid">
-        <div class="builtfor-item animate-on-scroll">
-          <i data-lucide="clock" class="builtfor-icon"></i>
-          <p>People who <strong>don't have time</strong> to monitor things manually — but want automation they've personally chosen and can read back in plain language.</p>
+    <section class="ch3-section" aria-labelledby="reports-title">
+      <div class="v3-shell ch3-section-grid">
+        <div class="ch3-section-copy v3-reveal">
+          <p class="v3-kicker">Reports back</p>
+          <h2 id="reports-title">Answers first. Source when you want it.</h2>
+          <p>Chilla tells you what matters in plain language. When you want the underlying trail, Flow keeps the work available to inspect.</p>
         </div>
-        <div class="builtfor-item animate-on-scroll" style="transition-delay:0.07s">
-          <i data-lucide="sliders" class="builtfor-icon"></i>
-          <p>People who <strong>want clarity</strong> without complexity — who care about what's authorized to run, what comfort boundaries are defined, and being able to pause or stop a task at any moment.</p>
-        </div>
-        <div class="builtfor-item animate-on-scroll" style="transition-delay:0.14s">
-          <i data-lucide="eye" class="builtfor-icon"></i>
-          <p>People who <strong>value transparency</strong> — who want to see exactly what happened, what was skipped, and why, without digging through logs or trusting a black box.</p>
-        </div>
-        <div class="builtfor-item animate-on-scroll" style="transition-delay:0.21s">
-          <i data-lucide="globe" class="builtfor-icon"></i>
-          <p>People <strong>anywhere in the world</strong> who want structured exposure to familiar and global market categories through their own trading account — non-custodial, connected-account bounded, and fully within their approved boundaries.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ══════════════════════════════════════
-       BUILT ON M-II
-       ══════════════════════════════════════ -->
-  <section class="mii-section bv-atm">
-    <div class="container">
-      <div class="mii-inner">
-        <div class="mii-text animate-on-scroll">
-          <span class="eyebrow eyebrow-light">Powered By</span>
-          <h2>Powered by M-II.</h2>
-          <p>Chilla is the experience layer. M-II is the automation technology underneath it — handling task boundary checks, comfort enforcement, automation integrity, and real-time transparency output.</p>
-          <p>You don't see M-II. But every Chilla commitment is backed by it.</p>
-          <a href="m-ii.html" class="mii-link">
-            Explore M-II <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
-          </a>
-        </div>
-        <div class="mii-props animate-on-scroll" style="transition-delay:0.1s">
-          <div class="mii-prop">
-            <i data-lucide="shield-check" class="mii-prop-icon"></i>
-            <div class="mii-prop-body">
-              <h4>Approved Tasks Only</h4>
-              <p>M-II only acts within scope you've approved in Chilla. No inference beyond intent.</p>
-            </div>
+        <div class="ch3-report v3-reveal" aria-label="Example Chilla report">
+          <div class="ch3-report-line">
+            <span class="ch3-report-label">Today</span>
+            <p>I stayed out. Conditions didn’t fit the way we’re working toward your goal.</p>
           </div>
-          <div class="mii-prop">
-            <i data-lucide="check-circle" class="mii-prop-icon"></i>
-            <div class="mii-prop-body">
-              <h4>Safety Before Every Action</h4>
-              <p>Every potential action passes comfort, compatibility, and integrity checks before automation.</p>
-            </div>
+          <div class="ch3-report-line">
+            <span class="ch3-report-label">What changed</span>
+            <p>Nothing needs your attention right now. I’m still watching.</p>
           </div>
-          <div class="mii-prop">
-            <i data-lucide="activity" class="mii-prop-icon"></i>
-            <div class="mii-prop-body">
-              <h4>Transparent Activity</h4>
-              <p>All system activity generates the human-readable Flow entries you see in Chilla.</p>
-            </div>
-          </div>
-          <div class="mii-prop">
-            <i data-lucide="lock" class="mii-prop-icon"></i>
-            <div class="mii-prop-body">
-              <h4>Account-Scoped Operation</h4>
-              <p>Automation runs strictly within the connected account you selected. Funds stay in your trading account.</p>
-            </div>
+          <div class="ch3-report-line">
+            <span class="ch3-report-label">Source</span>
+            <p>Flow keeps the underlying activity trail when you want to inspect the work.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════
-       MANIFESTO
-       ══════════════════════════════════════ -->
-  <section class="manifesto-section">
-    <div class="container">
-      <div class="manifesto-inner animate-on-scroll">
-        <blockquote class="manifesto-quote">
-          "The future of trading is not watching charts all day.<br>
-          <span>It is calm automation that follows your style —<br>
-          quietly, continuously, and only within your approved boundaries.</span><br>
-          That's what Chilla is. That's why it exists."
-        </blockquote>
-      </div>
-    </div>
-  </section>
+    <section class="ch3-section ch3-section--soft ch3-mii" aria-labelledby="mii-title">
+      <div class="v3-shell ch3-mii-copy v3-reveal">
+        <p class="v3-kicker">M-II</p>
+        <h2 id="mii-title">Friendly on the surface. Engineered underneath.</h2>
+        <p>When work goes live, Chilla does not hand financial execution to a language model. M-II is Beaverly’s financial execution system underneath: it enforces authorization, validates actions, communicates with providers, reconciles what happened, and keeps work separated.</p>
 
-  <!-- ══════════════════════════════════════
-       CTA
-       ══════════════════════════════════════ -->
-  <section class="cta-section bv-atm">
-    <div class="container">
-      <div class="cta-inner animate-on-scroll">
-        <h2>Trading, but for non-traders.</h2>
-        <p>Choose what you’re comfortable with. Let Chilla handle it.</p>
-        <div class="cta-buttons">
-          <a href="https://chilla.beaverlyai.com" class="btn btn-primary">Open Chilla</a>
-          <a href="index.html" class="btn btn-ghost">← Back to Ecosystem</a>
+        <div class="ch3-mii-rail" aria-label="M-II execution responsibilities">
+          <span>Authorization</span>
+          <span>Validation</span>
+          <span>Execution</span>
+          <span>Reconciliation</span>
         </div>
+
+        <a class="ch3-mii-link" href="/m-ii.html" data-track="chilla_mii_learn">Explore M-II →</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Scripts -->
-  <script src="js/chilla-animations.js"></script>
-  <script src="/js/header-loader.js"></script>
-  <script src="/js/footer-loader.js"></script>
+    <section class="ch3-final" aria-labelledby="chilla-final-title">
+      <div class="v3-shell v3-reveal">
+        <p class="v3-kicker">Chilla</p>
+        <h2 id="chilla-final-title">You Chill.<br />Chilla Works.</h2>
+        <p>Tell Chilla what you’re working towards.</p>
+        <a class="ch3-primary" href="https://chilla.beaverlyai.com" data-track="chilla_final_open">Open Chilla</a>
+      </div>
+    </section>
+  </main>
 
-
+  <script src="/js/analytics.js"></script>
+  <script src="/js/v3-chilla.js"></script>
 </body>
 </html>

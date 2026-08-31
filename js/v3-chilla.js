@@ -106,10 +106,99 @@
     items.forEach(item => observer.observe(item));
   }
 
+  function wireConversationDemo() {
+    const thread = document.querySelector('.ch3-conversation .ch3-thread');
+    if (!thread || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const composer = thread.querySelector('.ch3-mini-composer');
+    const originalMessages = Array.from(thread.querySelectorAll('.ch3-message'));
+    if (!composer || originalMessages.length < 3) return;
+
+    const sleep = ms => new Promise(resolve => window.setTimeout(resolve, ms));
+    let cycle = 0;
+
+    function typingIndicator() {
+      const el = document.createElement('div');
+      el.className = 'ch3-message chilla ch3-typing ch3-demo-dynamic';
+      el.setAttribute('aria-hidden', 'true');
+      el.innerHTML = '<span></span><span></span><span></span>';
+      thread.insertBefore(el, composer);
+      requestAnimationFrame(() => el.classList.add('is-shown'));
+      return el;
+    }
+
+    function dynamicMessage(kind, text, label) {
+      const el = document.createElement('div');
+      el.className = `ch3-message ${kind} ch3-demo-dynamic`;
+      if (label) {
+        const tag = document.createElement('span');
+        tag.className = 'ch3-msg-label';
+        tag.textContent = label;
+        el.appendChild(tag);
+      }
+      const p = document.createElement('p');
+      p.textContent = text;
+      el.appendChild(p);
+      thread.insertBefore(el, composer);
+      requestAnimationFrame(() => el.classList.add('is-shown'));
+      return el;
+    }
+
+    async function show(el, delay) {
+      await sleep(delay);
+      el.classList.add('is-shown');
+    }
+
+    async function run() {
+      while (document.body.contains(thread)) {
+        cycle += 1;
+        thread.querySelectorAll('.ch3-demo-dynamic').forEach(el => el.remove());
+        originalMessages.forEach(el => el.classList.remove('is-shown'));
+        composer.classList.remove('is-active');
+
+        await sleep(cycle === 1 ? 450 : 1100);
+        composer.classList.add('is-active');
+        await sleep(650);
+        composer.classList.remove('is-active');
+
+        await show(originalMessages[0], 220);
+        let typing = typingIndicator();
+        await sleep(850);
+        typing.remove();
+        await show(originalMessages[1], 80);
+
+        typing = typingIndicator();
+        await sleep(720);
+        typing.remove();
+        await show(originalMessages[2], 80);
+
+        await sleep(1900);
+        composer.classList.add('is-active');
+        await sleep(520);
+        composer.classList.remove('is-active');
+        dynamicMessage('user', 'What happened today?');
+
+        typing = typingIndicator();
+        await sleep(780);
+        typing.remove();
+        dynamicMessage('chilla', 'I stayed out. Conditions didn’t fit the way we’re working toward your goal.', 'Chilla');
+
+        await sleep(650);
+        dynamicMessage('chilla', 'Nothing needs your attention right now. I’m still watching.');
+
+        await sleep(4300);
+      }
+    }
+
+    originalMessages.forEach(el => el.classList.add('ch3-demo-sequenced'));
+    run();
+  }
+
   async function init() {
     await loadShell();
     wireShell();
     wireReveals();
+    wireConversationDemo();
   }
 
   if (document.readyState === 'loading') {

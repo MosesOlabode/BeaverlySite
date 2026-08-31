@@ -92,6 +92,71 @@
     window.addEventListener('scroll', syncHeader, { passive: true });
   }
 
+  function wireHomeDemo() {
+    const demo = document.querySelector('[data-home-demo]');
+    if (!demo || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const status = demo.querySelector('[data-home-demo-status]');
+    const state = demo.querySelector('[data-home-demo-state]');
+    const sleep = ms => new Promise(resolve => window.setTimeout(resolve, ms));
+    let started = false;
+
+    function setStage(stage) {
+      demo.classList.remove('is-goal', 'is-working', 'is-report', 'is-resetting');
+      demo.classList.add(`is-${stage}`);
+
+      if (stage === 'goal') {
+        if (status) status.textContent = 'Goal';
+        if (state) state.textContent = 'Given to Chilla';
+      } else if (stage === 'working') {
+        if (status) status.textContent = 'Working';
+        if (state) state.textContent = 'Chilla is on it';
+      } else {
+        if (status) status.textContent = 'Report';
+        if (state) state.textContent = 'Chilla reports back';
+      }
+    }
+
+    async function run() {
+      demo.classList.add('is-animated');
+
+      while (document.body.contains(demo)) {
+        setStage('goal');
+        await sleep(5200);
+
+        setStage('working');
+        await sleep(3000);
+
+        setStage('report');
+        await sleep(7200);
+
+        demo.classList.add('is-resetting');
+        await sleep(500);
+      }
+    }
+
+    function start() {
+      if (started) return;
+      started = true;
+      run();
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      start();
+      return;
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        observer.disconnect();
+        start();
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(demo);
+  }
+
   function wireHomepage() {
     const composerText = document.querySelector('[data-composer-text]');
     const prompts = document.querySelectorAll('[data-prompt]');
@@ -129,6 +194,7 @@
     await loadShell();
     wireShell();
     wireHomepage();
+    wireHomeDemo();
   }
 
   if (document.readyState === 'loading') {

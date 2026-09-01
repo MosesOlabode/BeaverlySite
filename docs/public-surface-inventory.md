@@ -76,6 +76,24 @@ The current non-Support V3 estate now uses the deployed `www.beaverlyai.com` hos
 
 No additional non-Support HTML redirect aliases were found in the current public estate. The known HTML refresh aliases are confined to Support and remain untouched until the Support pass.
 
+## Final non-Support QA — completed 2026-09-01
+
+A code-level responsive and interaction audit was completed across the V3 marketing, editorial, policy/legal, pricing, compatibility, and miscellaneous surfaces. Support was intentionally excluded.
+
+- Shared V3 touch behavior now suppresses browser-default tap highlighting across links, buttons, form controls, summaries, and button-like controls. Taps use the site's own subdued active response instead of a blue browser flash.
+- Visited links inherit the surrounding V3 color instead of falling back to browser-default visited colors.
+- Keyboard focus uses a visible monochrome V3 focus ring; the legal index no longer suppresses that focus indicator.
+- Desktop hover treatments are constrained to hover-capable fine pointers so touch devices do not retain sticky hover states.
+- Reduced-motion behavior was checked across the homepage, Chilla conversation demo, M-II, Notes, legal/policy, and miscellaneous shells. The shared V3 rule now also prevents infinite animations from rapidly repeating when reduced motion is requested.
+- Mobile and tablet breakpoints were reviewed for the shared header/footer, homepage, Chilla, M-II, Notes, legal/policy, Pricing, Compatibility, and 404 layouts. The homepage action row now wraps safely on narrow widths.
+- The shared mobile navigation now synchronizes its visual state with `aria-expanded`, `aria-hidden`, `aria-controls`, and an Open/Close accessible label.
+- Pricing billing-period controls now expose `aria-pressed`; tier CTA analytics were restored with tier terminology, and billing-period changes are tracked separately.
+- Shared CTA, scroll-depth, and 30-second engagement analytics remain delegated/active after the V3 shell is injected.
+- Non-Support internal destinations referenced by the V3 header/footer and current V3 pages were checked against the repository. Support links remain present but their content is outside this pass.
+- No stale `--v3-*` design-token references remain in the current repository search; V3 pages use the shared light/dark token system.
+
+This was a source-level/code-level QA pass. A future real-device/browser visual check can still catch rendering differences that static repository inspection cannot.
+
 ## Legacy asset/style candidates
 
 The repository still contains pre-V3 CSS such as `style.css`, `navbar.css`, `blog.css`, `cards.css`, older page-specific styles, and older image assets. Some may now be orphaned, while others are still used by Support.
@@ -86,4 +104,4 @@ Do not mass-delete them. After Support is rebuilt, run a reference-based dead-as
 
 1. Support truth and visual migration.
 2. Reference-based legacy CSS/asset cleanup after Support no longer depends on them.
-3. Final responsive, light/dark, reduced-motion, interaction, analytics, and broken-link QA.
+3. One post-Support whole-site browser/device sweep to catch rendering or link regressions introduced by the Support migration.

@@ -1,49 +1,51 @@
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>Page Not Found - Beaverly</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      background-color: #f8f9fa;
-      color: #333;
-      padding: 4rem 1rem;
-    }
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    a {
-      text-decoration: none;
-      background: #000;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-    }
-  </style>
-</head>
-<body>
-  <h1 style="display:flex;align-items:center;justify-content:center;gap:0.5em;">
-    404
-    <i data-lucide="alert-triangle" style="width:1.5em;height:1.5em;vertical-align:middle;"></i>
-  </h1>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Beaverly®</title>
+  <meta name="description" content="The Beaverly page you requested could not be found." />
+  <meta name="robots" content="noindex,follow" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
   <script>
-    if (window.lucide) lucide.createIcons();
-    else window.addEventListener('DOMContentLoaded', function() { if (window.lucide) lucide.createIcons(); });
+    (function () {
+      try {
+        var saved = localStorage.getItem('beaverly-theme');
+        var theme = saved === 'dark' || saved === 'light'
+          ? saved
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (_) {}
+    })();
   </script>
-  <p>This page doesn’t exist or is chilling somewhere else.</p>
-  <a href="https://beaverlyai.com">Go Home</a>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Inter+Tight:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/v3-home.css" />
+  <link rel="stylesheet" href="/css/v3-misc.css" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-83PFRQ3WQ6"></script>
+  <script src="/js/gtag-init.js"></script>
+</head>
+<body class="v3-page">
+  <main class="misc3-main">
+    <section class="v3-shell misc3-error v3-reveal" aria-labelledby="not-found-title">
+      <p class="misc3-code">404 · Page not found</p>
+      <h1 id="not-found-title">That page isn’t here.</h1>
+      <p class="misc3-error-copy">The link may be old, mistyped, or pointing to something that moved. Beaverly and Chilla are still right where they should be.</p>
+      <div class="misc3-actions">
+        <a class="misc3-primary" href="/" data-track="404_home">Go home</a>
+        <a class="misc3-secondary" href="/chilla.html" data-track="404_chilla">Meet Chilla</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/analytics.js"></script>
+  <script src="/js/v3-chilla.js"></script>
 </body>
 </html>

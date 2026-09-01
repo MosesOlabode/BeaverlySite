@@ -128,17 +128,19 @@
       demo.classList.add('is-animated');
 
       while (document.body.contains(demo)) {
+        // Move quickly enough that an impatient visitor immediately notices
+        // the proof is animated, while leaving the actual copy readable.
         setStage('goal');
-        await sleep(5200);
+        await sleep(2800);
 
         setStage('working');
-        await sleep(3000);
+        await sleep(1400);
 
         setStage('report');
-        await sleep(7200);
+        await sleep(5000);
 
         demo.classList.add('is-resetting');
-        await sleep(500);
+        await sleep(350);
       }
     }
 

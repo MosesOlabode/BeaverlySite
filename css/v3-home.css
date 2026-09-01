@@ -57,17 +57,33 @@ body.v3-page {
   transition: background-color 220ms ease, color 220ms ease;
 }
 
-body.v3-page a {
+body.v3-page a,
+body.v3-page a:visited {
   color: inherit;
 }
 
 body.v3-page button,
-body.v3-page input {
+body.v3-page input,
+body.v3-page select,
+body.v3-page textarea {
   font: inherit;
 }
 
-body.v3-page button {
+body.v3-page :where(a[href], button, input, select, textarea, summary, [role="button"]) {
   -webkit-tap-highlight-color: transparent;
+}
+
+body.v3-page :where(a[href], button:not(:disabled), summary, [role="button"]) {
+  touch-action: manipulation;
+}
+
+body.v3-page :where(a[href], button, input, select, textarea, summary, [role="button"]):focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--text) 72%, transparent);
+  outline-offset: 3px;
+}
+
+body.v3-page :where(a[href], button:not(:disabled), summary, [role="button"]):active {
+  opacity: 0.72;
 }
 
 .v3-shell {
@@ -138,6 +154,7 @@ body.v3-page button {
   font-size: 0.98rem;
   font-weight: 650;
   letter-spacing: -0.025em;
+  transition: opacity 150ms ease;
 }
 
 .v3-brand-mark {
@@ -159,12 +176,7 @@ body.v3-page button {
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 500;
-  transition: color 150ms ease;
-}
-
-.v3-nav-links a:hover,
-.v3-mobile-links a:hover {
-  color: var(--text);
+  transition: color 150ms ease, opacity 150ms ease;
 }
 
 .v3-nav-actions {
@@ -186,10 +198,11 @@ body.v3-page button {
   background: transparent;
   color: var(--text);
   cursor: pointer;
+  transition: background-color 150ms ease, opacity 150ms ease;
 }
 
-.v3-theme-toggle:hover,
-.v3-menu-toggle:hover {
+.v3-theme-toggle:active,
+.v3-menu-toggle:active {
   background: var(--surface-soft);
 }
 
@@ -223,11 +236,7 @@ html[data-theme="dark"] .v3-icon-sun,
   font-size: 0.87rem;
   font-weight: 650;
   letter-spacing: -0.01em;
-}
-
-.v3-nav-cta:hover,
-.v3-primary-link:hover {
-  opacity: 0.86;
+  transition: opacity 150ms ease;
 }
 
 .v3-menu-toggle {
@@ -306,6 +315,7 @@ html[data-theme="dark"] .v3-icon-sun,
 .v3-hero-actions {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 18px;
   margin-top: 34px;
 }
@@ -315,6 +325,7 @@ html[data-theme="dark"] .v3-icon-sun,
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
   font-size: 0.92rem;
+  transition: color 150ms ease, opacity 150ms ease;
 }
 
 .v3-wave {
@@ -382,6 +393,7 @@ html[data-theme="dark"] .v3-icon-sun,
   background: var(--button);
   color: var(--button-text);
   cursor: pointer;
+  transition: opacity 150ms ease;
 }
 
 .v3-composer-go svg {
@@ -404,10 +416,9 @@ html[data-theme="dark"] .v3-icon-sun,
   padding: 9px 13px;
   cursor: pointer;
   font-size: 0.79rem;
-  transition: color 140ms ease, border-color 140ms ease, background 140ms ease;
+  transition: color 140ms ease, border-color 140ms ease, background 140ms ease, opacity 140ms ease;
 }
 
-.v3-prompt:hover,
 .v3-prompt.is-active {
   color: var(--text);
   border-color: var(--line-strong);
@@ -672,6 +683,7 @@ html[data-theme="dark"] .v3-icon-sun,
   text-decoration: none;
   border-bottom: 1px solid var(--line-strong);
   padding-bottom: 3px;
+  transition: border-color 150ms ease, opacity 150ms ease;
 }
 
 /* Final */
@@ -729,6 +741,8 @@ html[data-theme="dark"] .v3-icon-sun,
   color: var(--muted);
   text-decoration: none;
   font-size: 0.82rem;
+  line-height: 1.4;
+  transition: color 150ms ease, opacity 150ms ease;
 }
 
 .v3-footer-bottom {
@@ -745,6 +759,40 @@ html[data-theme="dark"] .v3-icon-sun,
 
 .v3-footer-bottom p {
   margin: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .v3-brand:hover {
+    opacity: 0.78;
+  }
+
+  .v3-nav-links a:hover,
+  .v3-mobile-links a:hover,
+  .v3-text-link:hover,
+  .v3-footer-links a:hover {
+    color: var(--text);
+  }
+
+  .v3-theme-toggle:hover,
+  .v3-menu-toggle:hover,
+  .v3-prompt:hover {
+    background: var(--surface-soft);
+  }
+
+  .v3-prompt:hover {
+    color: var(--text);
+    border-color: var(--line-strong);
+  }
+
+  .v3-nav-cta:hover,
+  .v3-primary-link:hover,
+  .v3-composer-go:hover {
+    opacity: 0.86;
+  }
+
+  .v3-inline-link:hover {
+    border-bottom-color: var(--text);
+  }
 }
 
 /* Entrance motion */
@@ -764,6 +812,7 @@ html[data-theme="dark"] .v3-icon-sun,
     scroll-behavior: auto !important;
     transition-duration: 0.001ms !important;
     animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
   }
   .v3-reveal {
     opacity: 1;

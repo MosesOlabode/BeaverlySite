@@ -1,196 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why I Built BEAVERLY | BEAVERLY Blog</title>
-  <meta name="description" content="From ghosted developers to global technology - The raw, unfiltered story behind building BEAVERLY, the intelligent automation technology that's changing how people trade financial markets.">
-  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
-  <link rel="stylesheet" href="../../css/style.css">
-  <link rel="stylesheet" href="../../css/navbar.css">
-  <link rel="stylesheet" href="../../css/blog.css">
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why I Built Beaverly — Moses Olabode</title>
+  <meta name="description" content="Moses Olabode on trading, failed handoffs, learning to build, and the question that eventually became Beaverly and Chilla." />
+  <link rel="canonical" href="https://beaverlyai.com/blog/why-i-built-beaverly/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <meta property="og:title" content="Why I Built Beaverly — Moses Olabode" />
+  <meta property="og:description" content="A founder story about trading, failed handoffs, learning to build, and the question that became Chilla." />
+  <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://beaverlyai.com/blog/why-i-built-beaverly/" />
+  <script>(function(){try{var saved=localStorage.getItem('beaverly-theme');var theme=saved==='dark'||saved==='light'?saved:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',theme)}catch(_){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Inter+Tight:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/v3-home.css" />
+  <link rel="stylesheet" href="/css/v3-blog.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why I Built Beaverly","description":"Moses Olabode on trading, failed handoffs, learning to build, and the question that eventually became Beaverly and Chilla.","author":{"@type":"Person","name":"Moses Olabode"},"publisher":{"@type":"Organization","name":"Beaverly"},"datePublished":"2025-01-15","dateModified":"2026-09-01","mainEntityOfPage":"https://beaverlyai.com/blog/why-i-built-beaverly/"}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-83PFRQ3WQ6"></script><script src="/js/gtag-init.js"></script>
 </head>
-<body>
-  <!-- Header will be injected here -->
-  <!-- Back Navigation -->
-  <section class="section-small">
-    <div class="container-narrow">
-      <a href="../" class="btn-back">
-        <i data-lucide="arrow-left" style="width: 18px; height: 18px;"></i>
-        Back to Blog
-      </a>
-    </div>
-  </section>
-
-  <!-- Article Header -->
-  <section class="section-small">
-    <div class="container-narrow">
-      <div class="blog-header">
-        <div class="blog-header-tags">
-          <span class="blog-header-tag">FOUNDER STORY</span>
-          <span class="blog-header-tag">INSIGHTS</span>
-        </div>
-        
-        <h1 class="blog-header-title">Why I Built BEAVERLY</h1>
-        
-        <p class="blog-header-description">
-          From ghosted developers to global technology - The raw, unfiltered story behind building BEAVERLY, the intelligent automation technology that's changing how people trade financial markets.
-        </p>
-        
-        <div class="blog-header-meta">
-          <span class="blog-header-meta-item">
-            <i data-lucide="calendar" style="width: 18px; height: 18px;"></i>
-            January 15, 2025
-          </span>
-          <span class="blog-header-meta-item">
-            <i data-lucide="clock" style="width: 18px; height: 18px;"></i>
-            4 min read
-          </span>
-          <span class="blog-header-meta-item">
-            <i data-lucide="user" style="width: 18px; height: 18px;"></i>
-            Beverly
-          </span>
-        </div>
+<body class="v3-page">
+  <main class="blog3-main">
+    <header class="blog3-article-hero">
+      <div class="v3-shell v3-reveal">
+        <a class="blog3-back" href="/blog/">← Notes from Beaverly</a>
+        <p class="blog3-eyebrow">Founder story</p>
+        <h1>Why I built Beaverly</h1>
+        <p class="blog3-article-dek">I started from inside the problem: years around financial markets, too much work living on screens, and a growing conviction that software should be able to carry more of the burden.</p>
+        <div class="blog3-article-meta"><span>By Moses Olabode</span><span>January 15, 2025</span><span>Updated September 1, 2026</span></div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Article Content -->
-  <article class="section">
-    <div class="container-narrow blog-content">
-      <h2>From ghosted developers to global technology</h2>
+    <article class="blog3-article"><div class="v3-shell"><div class="blog3-prose">
+      <p>I did not begin Beaverly because I wanted to build an “AI startup.” I began with a much more practical frustration: financial-market work demanded too much operating from the person trying to use it.</p>
 
-      <img src="../../attached_assets/blog-images/Person_relaxing_with_trading_tech_e20abb04.png" alt="Person relaxing with trading technology" loading="lazy">
+      <p>I knew that experience personally. Trading had become a major part of my life, but the work around it was exhausting: watching markets, managing decisions, staying disciplined, dealing with tools that assumed the user wanted to become a full-time operator.</p>
 
-      <p>I didn't build BEAVERLY because I wanted to join the "AI startup" bandwagon. I built it because I was desperate. Desperate for freedom. Desperate for a system that didn't keep me chained to screens, stressed out by charts, and left behind by the tools that only seemed designed for a privileged few… with nothing but a MiFi, sleepless nights, and fire on my chest.</p>
+      <p>I kept coming back to one question: <strong>how much of this work could dependable software carry without taking control away from the person using it?</strong></p>
 
-      <p>And honestly? I was broke.</p>
+      <h2>I first tried to hand the problem off</h2>
+      <p>I was not a software engineer when this started. I hired developers and tried to turn the idea into a product through other people. Some of those attempts stalled or failed. Eventually the cost of waiting became higher than the cost of learning.</p>
 
-      <img src="../../attached_assets/blog-images/IMG_2533_1757777062401.JPEG" alt="Personal struggle - Part 1" loading="lazy">
-      <img src="../../attached_assets/blog-images/IMG_2536_1757777062402.JPEG" alt="Personal struggle - Part 2" loading="lazy">
+      <p>So I started building.</p>
 
-      <blockquote>
-        <p><strong>"Not 'budget tight' broke; sell-my-phone-four-times broke."</strong></p>
-      </blockquote>
+      <p>AI tools became part of that learning process. They helped me understand unfamiliar code, debug, compare approaches, and move faster. But the useful lesson was never “AI can build everything for you.” It was that implementation had become cheaper while judgment, architecture, testing, and knowing what should exist remained very human responsibilities.</p>
 
-      <p>I ended up phoneless, running life with just a MiFi, an epileptic power supply here in Nigeria and a PC. Every kobo mattered. Every mistake stung. I wasn't even a developer when I started. I hired developers, but many ghosted or left projects half-done.</p>
+      <blockquote><p>The product kept teaching me what the company actually needed to become.</p></blockquote>
 
-      <p>Eventually, I realized I had no option but to learn and build it myself — as the only developer among my founding team. Line by line, mistake by mistake, I taught myself to code while building Beaverly from the ground up. The hardship didn't break me; it made me more relentless.</p>
+      <h2>The first versions were much more mechanical</h2>
+      <p>Early Chilla asked users to operate the product: connect an account, choose styles, choose markets, set boundaries, activate work, then inspect the results.</p>
 
-      <p>So I turned to ChatGPT and Claude — not as gimmicks, but as assistants. They helped me accelerate my learning curve. I wasn't a traditional coder, but with AI as my co-pilot, I was able to debug, learn, and push forward faster than I could have alone. That's how a first-time developer built enterprise-grade, secure technology in just four months.</p>
+      <p>That was already useful automation, but it still left too much complexity with the user. We had moved work out of the market terminal and into a nicer interface, but the user was still operating the machinery.</p>
 
-      <hr>
+      <p>The direction became clearer over time: the product should start with the person’s goal, not with the configuration needed to pursue it.</p>
 
-      <h2>The spark: automation, not replacement</h2>
+      <h2>That is how Chilla became a financial worker</h2>
+      <p>Today the product idea is much simpler to explain: tell Chilla what you are working towards. Chilla can reason over the supported ways it can work, prepare something concrete, let you inspect and change it, and ask for explicit approval before material live work becomes active.</p>
 
-      <img src="../../attached_assets/blog-images/Human_AI_collaboration_diagram_8bd2fa87.png" alt="Human AI Collaboration Diagram" loading="lazy">
+      <p>Then it works and reports back.</p>
 
-      <p>I didn't set out to build a machine that replaces people or makes decisions for them. That's not the dream of automation.</p>
+      <p>That is a very different relationship from a dashboard, a trading bot, or an AI chat that happens to have a broker tool attached.</p>
 
-      <p>The dream is <strong>automation without exhaustion</strong>.<br>
-      The dream is <strong>freedom from the screen</strong>.</p>
+      <h2>Why M-II exists separately</h2>
+      <p>Making Chilla easier to talk to should not make financial execution less rigorous. That is why the conversational intelligence and the execution machinery are separate.</p>
 
-      <p>BEAVERLY is about handling the repetitive automation work so humans can focus on higher-value things: strategy, life, and well… actually living.</p>
+      <p>M-II is the engineered system underneath authorized live work. It owns the deterministic responsibilities that should not depend on a language model improvising correctly: authorization, validation, account scope, provider communication, lifecycle state, reconciliation, and traceability.</p>
 
-      <p>Participants shouldn't be chained to screens for hours. Everyday people shouldn't feel like trading is a gated castle they'll never enter. And no one should have to choose between discipline and burnout.</p>
+      <p>You talk to Chilla. M-II handles the machinery.</p>
 
-      <p>I wanted to bring disciplined trading to <em>everyone</em>—in a way that's designed for them to succeed without the stress.</p>
+      <h2>The company thesis became larger than trading UX</h2>
+      <p>The more Beaverly developed, the more obvious the underlying mission became. People should not have to become operators of increasingly complicated software just because software became more powerful.</p>
 
-      <hr>
+      <p>Good software should absorb complexity. It should let the person express intent, keep important control explicit, do the repeatable work dependably, and surface the parts that deserve attention.</p>
 
-      <h2>What BEAVERLY really is</h2>
+      <p>Financial markets are where Beaverly is applying that idea first.</p>
 
-      <p>BEAVERLY is the <strong>Orchestration Layer for Modern Finance</strong>.</p>
+      <blockquote><p>Move financial work from something people operate to something software can carry.</p></blockquote>
 
-      <p>That might sound big, but it breaks down into two clear layers:</p>
+      <h2>What has not changed</h2>
+      <p>The core motivation is still freedom from unnecessary operating work. Chilla should not demand that someone stare at charts all day to prove they are taking their finances seriously. It also should not hide risk, promise outcomes, or make important choices disappear behind “AI.”</p>
 
-      <h3>CHILLA™: Your Market Co-Pilot</h3>
+      <p>The standard is harder than that: make the experience calmer while the systems underneath become more disciplined.</p>
 
-      <img src="../../attached_assets/blog-images/Chilla_trading_interface_mockup_bf377fd7.png" alt="Chilla Interface Mockup" loading="lazy">
+      <p>That is what I am still building.</p>
 
-      <p><strong>CHILLA™</strong>: your market co-pilot. Non-discretionary, yet powerful. It's designed to give everyday people a chill, accessible way to run trading tasks they approve. You choose the style and boundaries, and Chilla follows them faithfully.</p>
-
-      <h3>M-II™: Market Intelligence Technology</h3>
-
-      <p><strong>M-II™ (Market Infra Intelligence)</strong>: the automation engine powering everything. This is the technology that does the heavy lifting—the engine that financial institutions, brokerages, prop firms, and fintech platforms can license to offer disciplined automation to their users.</p>
-
-      <p>CHILLA™ is for <em>everyone</em>.<br>
-      M-II™ is for the institutions empowering them.</p>
-
-      <p>And here's the key difference: <strong>Chilla isn't a decision-making bot.</strong> It connects to your provider, never touches your funds, and never makes choices for you. You instruct, Chilla automates. That's it.</p>
-
-      <p>Together, they make BEAVERLY not just another app, but a system that lets you trade the markets without becoming a trader.</p>
-
-      <hr>
-
-      <h2>From struggle to vision</h2>
-
-      <img src="../../attached_assets/blog-images/Late_night_vision_and_struggle_5638c672.png" alt="Late night vision and struggle" loading="lazy">
-
-      <p>When I was sitting there with no phone, just my MiFi and PC, epileptic power supply + 3am commits, wondering if this dream would ever become real, sleeping from 7am to 1pm daily for four months straight, I held on to one belief: <strong>the markets should be for all of us, and I felt chosen to do it.</strong></p>
-
-      <blockquote>
-        <p><em>The irony is, building what became Beaverly wasn't supposed to be a one-man job. By every industry estimate, a build like this would normally take a team that looks like this:</em></p>
-
-        <ul>
-          <li><em>1 senior backend engineer for automation infra & provider integrations</em></li>
-          <li><em>1 quant / quant developer for strategies and backtesting</em></li>
-          <li><em>1 frontend/product engineer for dashboard and onboarding</em></li>
-          <li><em>1 product manager/designer for flow & compliance coordination</em></li>
-          <li><em>1 brand designer for UX and positioning</em></li>
-          <li><em>DevOps / SRE support, at least part-time</em></li>
-          <li><em>And a data scientist to even begin exploring adaptive models</em></li>
-          <li><em>Plus a veteran security/compliance lead to pass audits (that's where Kolawole came in).</em></li>
-        </ul>
-
-        <p><em>Instead? It was just me. I wasn't even a developer when I started. I had to become the backend, the frontend, the quant, the product manager, and the DevOps. I compressed an entire team into one stubborn human — at the cost of my health. At one point, I fell sick for two weeks from the grind. But I kept pushing. And by the time Kolawole locked down our security and Godsfavour kept the business side alive, Beaverly had gone from a desperate idea to a working, audited system.</em></p>
-      </blockquote>
-
-      <img src="../../attached_assets/blog-images/images_1757777062410.jfif" alt="Struggle meme" loading="lazy">
-
-      <p>Not just for the "pros" with their ten monitors. Not just for the privileged with wealth managers on call. Not just for the lucky few with access to advanced systems. Not just for the "financially literate" online gurus.</p>
-
-      <p>I wanted to build  technology that finally levels the field. A way for anyone who believes in the prosperity of the online financial markets to access it; in a form designed for them to succeed and experience freedom.</p>
-
-      <p><strong>That's BEAVERLY.</strong></p>
-    </div>
-  </article>
-
-  <!-- Footer CTA -->
-  <section class="section section-alt">
-    <div class="container-narrow" style="text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Ready to Experience the Freedom?</h2>
-      <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;">
-        See how BEAVERLY can change how market activity fits into your life.
-      </p>
-      <div class="hero-actions">
-        <a href="../../chilla.html" class="btn btn-primary">Try Chilla</a>
-        <a href="../" class="btn btn-ghost">← Back to Blog</a>
+      <div class="blog3-end">
+        <p>For the current company and product direction:</p>
+        <div class="blog3-end-links"><a href="/company.html">About Beaverly →</a><a href="/chilla.html">Meet Chilla →</a><a href="/m-ii.html">Explore M-II →</a></div>
       </div>
-    </div>
-  </section>
-
-  <!-- Load shared header/footer -->
-  <script src="/js/header-loader.js"></script>
-  <script src="/js/footer-loader.js"></script>
-  
-  <!-- Initialize Lucide Icons and Image Loading -->
-  <script>
-    lucide.createIcons();
-    
-    // Image lazy loading
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    images.forEach(img => {
-      if (img.complete) {
-        img.classList.add('loaded');
-      } else {
-        img.addEventListener('load', () => {
-          img.classList.add('loaded');
-        });
-      }
-    });
-  </script>
+    </div></div></article>
+  </main>
+  <script src="/js/analytics.js"></script><script src="/js/v3-chilla.js"></script>
 </body>
 </html>

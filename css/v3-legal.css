@@ -79,13 +79,12 @@
   text-decoration: none;
   font-size: 0.82rem;
   line-height: 1.35;
-  transition: color 140ms ease;
+  transition: color 140ms ease, opacity 140ms ease;
 }
 
 .legal3-index a:hover,
 .legal3-index a:focus-visible {
   color: var(--text) !important;
-  outline: none;
 }
 
 .legal3-content {

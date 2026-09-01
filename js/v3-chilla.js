@@ -179,40 +179,42 @@
         composer.classList.remove('is-active');
         viewport.scrollTop = 0;
 
-        await sleep(cycle === 1 ? 900 : 1500);
+        // Signal motion almost immediately, then keep each real message on
+        // screen long enough to read without making the demo feel static.
+        await sleep(cycle === 1 ? 400 : 700);
         composer.classList.add('is-active');
-        await sleep(900);
+        await sleep(450);
         composer.classList.remove('is-active');
 
-        await show(originalMessages[0], 350, false);
-        await sleep(3000);
+        await show(originalMessages[0], 150, false);
+        await sleep(2200);
 
         let typing = typingIndicator();
-        await sleep(1350);
+        await sleep(700);
         typing.remove();
-        await show(originalMessages[1], 150, true);
-        await sleep(3900);
-
-        typing = typingIndicator();
-        await sleep(1200);
-        typing.remove();
-        await show(originalMessages[2], 150, true);
-        await sleep(4200);
-
-        composer.classList.add('is-active');
-        await sleep(900);
-        composer.classList.remove('is-active');
-        dynamicMessage('user', 'What happened today?');
+        await show(originalMessages[1], 100, true);
         await sleep(2600);
 
         typing = typingIndicator();
-        await sleep(1350);
+        await sleep(650);
+        typing.remove();
+        await show(originalMessages[2], 100, true);
+        await sleep(2600);
+
+        composer.classList.add('is-active');
+        await sleep(450);
+        composer.classList.remove('is-active');
+        dynamicMessage('user', 'What happened today?');
+        await sleep(1600);
+
+        typing = typingIndicator();
+        await sleep(700);
         typing.remove();
         dynamicMessage('chilla', 'I stayed out. Conditions didn’t fit the way we’re working toward your goal.', 'Chilla');
-        await sleep(4400);
+        await sleep(3000);
 
         dynamicMessage('chilla', 'Nothing needs your attention right now. I’m still watching.');
-        await sleep(6500);
+        await sleep(3000);
       }
     }
 

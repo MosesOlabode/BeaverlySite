@@ -62,12 +62,19 @@ Known legacy redirect aliases such as `support/environments.html` and `support/b
 
 Support currently still depends on the older shared stylesheet/header system. Do not delete legacy shared CSS or header/footer infrastructure until the support migration proves those files have no remaining public consumers.
 
-## Miscellaneous public surface still pending
+## Technical SEO — completed 2026-09-01
 
-- `/404.html` — visibly pre-V3 and should be rebuilt in the V3 shell.
-- `/sitemap.xml` — requires refreshed `lastmod` values, Company inclusion, and a final route audit.
-- `/robots.txt` — currently simple and valid in shape; verify alongside sitemap/SEO pass.
-- `.well-known/` — preserve and inspect only as part of a targeted platform/verification audit.
+The current non-Support V3 estate now uses the deployed `www.beaverlyai.com` host consistently for canonical/OG/schema URLs. The sitemap includes Company, refreshed V3/legal/editorial modification dates, and preserves older Support dates until that dedicated pass is complete.
+
+`robots.txt` remains intentionally simple and points to the canonical sitemap.
+
+## Miscellaneous public surfaces — completed 2026-09-01
+
+- `/404.html` — rebuilt in the V3 shell, marked `noindex,follow`, and linked back to Home and Chilla without a third-party icon dependency.
+- `/.well-known/security.txt` — retained and completed with Contact, Expires, Preferred-Languages, Canonical, and Policy fields.
+- `/sitemap.xml`, `/robots.txt`, and `CNAME` — verified as part of the SEO/miscellaneous pass.
+
+No additional non-Support HTML redirect aliases were found in the current public estate. The known HTML refresh aliases are confined to Support and remain untouched until the Support pass.
 
 ## Legacy asset/style candidates
 
@@ -78,7 +85,5 @@ Do not mass-delete them. After Support is rebuilt, run a reference-based dead-as
 ## Remaining site sequence
 
 1. Support truth and visual migration.
-2. Technical SEO: sitemap, canonicals, metadata, structured data, internal links, stale route checks.
-3. 404 and miscellaneous public surfaces.
-4. Reference-based legacy CSS/asset cleanup after Support no longer depends on them.
-5. Final responsive, light/dark, reduced-motion, interaction, analytics, and broken-link QA.
+2. Reference-based legacy CSS/asset cleanup after Support no longer depends on them.
+3. Final responsive, light/dark, reduced-motion, interaction, analytics, and broken-link QA.

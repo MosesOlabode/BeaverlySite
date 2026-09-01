@@ -9,18 +9,32 @@
   // Delegated click tracking keeps working for shared header/footer content
   // that is injected after DOMContentLoaded.
   document.addEventListener('click', (event) => {
-    const tierTarget = event.target.closest('[data-tier]');
+    const origin = event.target instanceof Element ? event.target : null;
+    if (!origin) return;
+
+    const tierTarget = origin.closest('[data-tier]');
     if (tierTarget) {
       const tier = tierTarget.getAttribute('data-tier');
       if (tier) {
         sendEvent('tier_click', {
           event_category: 'pricing',
-          event_label: `Selected ${tier} Plan`
+          event_label: `Selected ${tier} Tier`
         });
       }
     }
 
-    const trackedTarget = event.target.closest('[data-track]');
+    const periodTarget = origin.closest('[data-period]');
+    if (periodTarget) {
+      const period = periodTarget.getAttribute('data-period');
+      if (period) {
+        sendEvent('pricing_period_change', {
+          event_category: 'pricing',
+          event_label: period
+        });
+      }
+    }
+
+    const trackedTarget = origin.closest('[data-track]');
     if (trackedTarget) {
       const label = trackedTarget.getAttribute('data-track');
       if (label) {

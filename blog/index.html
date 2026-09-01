@@ -1,173 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | BEAVERLY - Thoughts on Building the Future</title>
-  <meta name="description" content="Insights and stories from building BEAVERLY - thoughts on AI, trading, technology, and founder life.">
-  <link rel="icon" type="image/x-icon" href="../favicon.ico">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="../css/blog.css">
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes from Beaverly®</title>
+  <meta name="description" content="Product thinking, founder notes, and clear explanations of how Chilla and Beaverly are built." />
+  <link rel="canonical" href="https://beaverlyai.com/blog/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <meta property="og:title" content="Notes from Beaverly®" />
+  <meta property="og:description" content="Product thinking, founder notes, and clear explanations of how Chilla and Beaverly are built." />
+  <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://beaverlyai.com/blog/" />
+  <script>(function(){try{var saved=localStorage.getItem('beaverly-theme');var theme=saved==='dark'||saved==='light'?saved:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',theme)}catch(_){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Inter+Tight:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/v3-home.css" />
+  <link rel="stylesheet" href="/css/v3-blog.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-83PFRQ3WQ6"></script>
+  <script src="/js/gtag-init.js"></script>
 </head>
-<body>
-  <!-- Header will be injected here -->
-  <!-- Hero Section -->
-  <section class="hero-large fade-in">
-    <div class="hero-content container">
-      <h1 class="hero-title">From the Founder's Desk</h1>
-      <p class="hero-subtitle">Insights, stories, and lessons from building BEAVERLY - thoughts on AI, autonomous trading, and the future of financial technology.</p>
-      <div class="hero-actions">
-        <a href="#featured" class="btn btn-secondary">Start Reading</a>
-        <a href="../" class="btn btn-ghost">← Back to Home</a>
+<body class="v3-page">
+  <main class="blog3-main">
+    <section class="blog3-hero" aria-labelledby="blog-title">
+      <div class="v3-shell blog3-hero-copy v3-reveal">
+        <p class="v3-kicker">From Beaverly</p>
+        <h1 id="blog-title">Notes on building software that does the work.</h1>
+        <p class="blog3-hero-sub">Product thinking, founder notes, and plain-language explanations of Chilla, M-II, and the ideas underneath Beaverly.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Featured Article Section -->
-  <section id="featured" class="section">
-    <div class="container">
-      <h2 style="margin-bottom: 2rem;">Featured</h2>
-      
-      <!-- Featured Post Card -->
-      <a href="./why-i-built-beaverly/" class="card card-large hover-lift fade-in-up" style="text-decoration: none;">
-        <div class="card-tags">
-          <span class="card-tag">FOUNDER STORY</span>
-          <span class="card-tag">INSIGHTS</span>
-        </div>
-        <div class="card-header">
-          <h3 class="card-title">Why I Built BEAVERLY</h3>
-          <p class="card-description">From ghosted developers to global technology, I'm solving the problem I faced as an emerging fund manager - the impossible hunt for trustworthy algo trading help.</p>
-        </div>
-        <div class="card-meta">
-          <span class="card-meta-item">
-            <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
-            January 15, 2025
-          </span>
-          <span class="card-meta-item">
-            <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
-            4 min read
-          </span>
-          <span class="card-meta-item">
-            <i data-lucide="user" style="width: 16px; height: 16px;"></i>
-            Beverly
-          </span>
-          <span class="card-meta-item" style="margin-left: auto;">
-            <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
-          </span>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- Recent Articles Section -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 style="margin-bottom: 2rem;">Recent Articles</h2>
-      
-      <div class="grid-blog">
-        <!-- How Chilla Works -->
-        <a href="./how-chilla-works/" class="card hover-lift fade-in-up delay-100" style="text-decoration: none;">
-          <div class="card-tags">
-            <span class="card-tag">PRODUCT</span>
+    <section class="blog3-list" aria-label="Articles">
+      <div class="v3-shell">
+        <a class="blog3-list-row v3-reveal" href="/blog/how-chilla-works/" data-track="blog_how_chilla_works">
+          <div class="blog3-list-meta">Product · 6 min</div>
+          <div class="blog3-list-copy">
+            <h2>How Chilla works</h2>
+            <p>Start with a goal. Review the work Chilla prepares. Approve what should run. Then let Chilla work and report back.</p>
           </div>
-          <div class="card-header">
-            <h3 class="card-title">How Chilla Works</h3>
-            <p class="card-description">Chilla lets you trade the global markets without becoming a trader. Here's how it actually works behind the scenes.</p>
-          </div>
-          <div class="card-meta">
-            <span class="card-meta-item">
-              <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
-              January 20, 2025
-            </span>
-            <span class="card-meta-item">
-              <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
-              6 min read
-            </span>
-          </div>
+          <span class="blog3-list-arrow" aria-hidden="true">↗</span>
         </a>
 
-        <!-- Is AI Trading Safe -->
-        <a href="./is-ai-trading-safe/" class="card hover-lift fade-in-up delay-200" style="text-decoration: none;">
-          <div class="card-tags">
-            <span class="card-tag">SAFETY</span>
-            <span class="card-tag">AI</span>
+        <a class="blog3-list-row v3-reveal" href="/blog/is-ai-trading-safe/" data-track="blog_ai_safety">
+          <div class="blog3-list-meta">Safety · 5 min</div>
+          <div class="blog3-list-copy">
+            <h2>Is AI trading safe? That is not the whole question.</h2>
+            <p>Markets are risky and software can fail. The useful question is how intelligence, authorization, execution, and user control are separated.</p>
           </div>
-          <div class="card-header">
-            <h3 class="card-title">Is AI Trading Safe?</h3>
-            <p class="card-description">Let's talk honestly about safety, control, and what "AI trading" actually means in 2025. Spoiler: It's not what you think.</p>
-          </div>
-          <div class="card-meta">
-            <span class="card-meta-item">
-              <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
-              January 18, 2025
-            </span>
-            <span class="card-meta-item">
-              <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
-              5 min read
-            </span>
-          </div>
+          <span class="blog3-list-arrow" aria-hidden="true">↗</span>
         </a>
 
-        <!-- The Plug and Chill Life -->
-        <a href="./the-plug-and-chill-life/" class="card hover-lift fade-in-up delay-300" style="text-decoration: none;">
-          <div class="card-tags">
-            <span class="card-tag">LIFESTYLE</span>
+        <a class="blog3-list-row v3-reveal" href="/blog/why-i-built-beaverly/" data-track="blog_founder_story">
+          <div class="blog3-list-meta">Founder · 6 min</div>
+          <div class="blog3-list-copy">
+            <h2>Why I built Beaverly</h2>
+            <p>A founder story about trading, failed handoffs, learning to build, and the question that eventually became Chilla.</p>
           </div>
-          <div class="card-header">
-            <h3 class="card-title">The Plug and Chill Life</h3>
-            <p class="card-description">What happens when you remove the noise, anxiety, and FOMO from trading activity? You get the plug and chill life.</p>
+          <span class="blog3-list-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="blog3-list-row v3-reveal" href="/blog/the-plug-and-chill-life/" data-track="blog_plug_chill">
+          <div class="blog3-list-meta">Philosophy · 4 min</div>
+          <div class="blog3-list-copy">
+            <h2>What “You Chill. Chilla Works.” actually means</h2>
+            <p>Not a promise to ignore your finances. A product philosophy about delegation, explicit control, and software carrying repetitive work.</p>
           </div>
-          <div class="card-meta">
-            <span class="card-meta-item">
-              <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
-              January 22, 2025
-            </span>
-            <span class="card-meta-item">
-              <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
-              4 min read
-            </span>
-          </div>
+          <span class="blog3-list-arrow" aria-hidden="true">↗</span>
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="section">
-    <div class="container-narrow" style="text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Ready to Experience BEAVERLY?</h2>
-      <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;">
-        Explore Chilla
-      </p>
-      <div class="hero-actions">
-        <a href="../chilla.html" class="btn btn-primary">Try Chilla</a>
-        <a href="../m-ii.html" class="btn btn-secondary">Explore M-II</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Load shared header/footer -->
-  <script src="/js/header-loader.js"></script>
-  <script src="/js/footer-loader.js"></script>
-  
-  <!-- Initialize Lucide Icons -->
-  <script>
-    lucide.createIcons();
-    
-    // Image lazy loading
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    images.forEach(img => {
-      if (img.complete) {
-        img.classList.add('loaded');
-      } else {
-        img.addEventListener('load', () => {
-          img.classList.add('loaded');
-        });
-      }
-    });
-  </script>
+    </section>
+  </main>
+  <script src="/js/analytics.js"></script>
+  <script src="/js/v3-chilla.js"></script>
 </body>
 </html>

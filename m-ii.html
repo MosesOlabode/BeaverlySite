@@ -88,12 +88,11 @@
           </div>
           <div class="mii3-pipeline-body">
             <div class="mii3-stage"><span class="mii3-stage-num">01</span><span class="mii3-stage-name">Authorized</span><span class="mii3-stage-status">scope verified</span></div>
-            <div class="mii3-stage"><span class="mii3-stage-num">02</span><span class="mii3-stage-name">Scoped</span><span class="mii3-stage-status">correct lane</span></div>
-            <div class="mii3-stage"><span class="mii3-stage-num">03</span><span class="mii3-stage-name">Validated</span><span class="mii3-stage-status">gates passed</span></div>
-            <div class="mii3-stage"><span class="mii3-stage-num">04</span><span class="mii3-stage-name">Sized</span><span class="mii3-stage-status">bounds checked</span></div>
-            <div class="mii3-stage"><span class="mii3-stage-num">05</span><span class="mii3-stage-name">Submitted</span><span class="mii3-stage-status">provider route</span></div>
-            <div class="mii3-stage"><span class="mii3-stage-num">06</span><span class="mii3-stage-name">Confirmed</span><span class="mii3-stage-status">response captured</span></div>
-            <div class="mii3-stage"><span class="mii3-stage-num">07</span><span class="mii3-stage-name">Recorded</span><span class="mii3-stage-status">trace retained</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">02</span><span class="mii3-stage-name">Validated</span><span class="mii3-stage-status">gates passed</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">03</span><span class="mii3-stage-name">Sized</span><span class="mii3-stage-status">bounds checked</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">04</span><span class="mii3-stage-name">Submitted</span><span class="mii3-stage-status">provider route</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">05</span><span class="mii3-stage-name">Confirmed</span><span class="mii3-stage-status">response captured</span></div>
+            <div class="mii3-stage"><span class="mii3-stage-num">06</span><span class="mii3-stage-name">Recorded</span><span class="mii3-stage-status">trace retained</span></div>
             <p class="mii3-stop-note">If a required gate fails, the path stops before submission.</p>
           </div>
         </div>
@@ -115,7 +114,7 @@
           </div>
           <div class="mii3-separation-row">
             <span class="mii3-separation-label">M-II</span>
-            <p>Receives authorized work, keeps it scoped, checks it, executes it through the right provider lane, and maintains the trace.</p>
+            <p>Receives authorized work, checks it, pushes it to the right provider, and maintains the trace.</p>
           </div>
         </div>
       </div>
@@ -136,31 +135,26 @@
           </div>
           <div class="mii3-path-row">
             <span class="mii3-path-dot">02</span>
-            <h3>Scope</h3>
-            <p>The work stays attached to the correct user, account, market, and active workload.</p>
-          </div>
-          <div class="mii3-path-row">
-            <span class="mii3-path-dot">03</span>
             <h3>Validation</h3>
             <p>M-II checks that the action is current, eligible, compatible, and within the required execution conditions before it proceeds.</p>
           </div>
           <div class="mii3-path-row">
-            <span class="mii3-path-dot">04</span>
+            <span class="mii3-path-dot">03</span>
             <h3>Sizing</h3>
             <p>Account balance, user boundaries, caps, and executable provider limits are resolved before submission.</p>
           </div>
           <div class="mii3-path-row">
-            <span class="mii3-path-dot">05</span>
+            <span class="mii3-path-dot">04</span>
             <h3>Submission</h3>
             <p>The instruction is routed to the selected provider and account, with confirmation and error paths captured.</p>
           </div>
           <div class="mii3-path-row">
-            <span class="mii3-path-dot">06</span>
+            <span class="mii3-path-dot">05</span>
             <h3>Lifecycle</h3>
             <p>Opened positions are registered, monitored through their lifecycle, and handled through closure.</p>
           </div>
           <div class="mii3-path-row">
-            <span class="mii3-path-dot">07</span>
+            <span class="mii3-path-dot">06</span>
             <h3>Trace</h3>
             <p>Execution and status transitions remain available for Flow, history, and operational review.</p>
           </div>

@@ -17,7 +17,7 @@
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.beaverlyai.com/blog/why-i-built-beaverly/" />
   <meta property="article:published_time" content="2025-01-15" />
-  <meta property="article:modified_time" content="2026-09-02" />
+  <meta property="article:modified_time" content="2026-09-12" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Why I Built Beaverly — Moses Olabode" />
   <meta name="twitter:description" content="A founder story about building Beaverly through constraint, learning systems by shipping with AI, and refusing to wait for permission." />
@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Inter+Tight:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/v3-home.css" />
   <link rel="stylesheet" href="/css/v3-blog.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://www.beaverlyai.com/blog/why-i-built-beaverly/#article","headline":"Why I Built Beaverly","description":"Moses Olabode on financial markets, failed handoffs, building through extreme constraints, becoming a post-AI systems engineer, and the question that became Beaverly and Chilla.","image":"https://www.beaverlyai.com/attached_assets/og-cover.png","author":{"@type":"Person","name":"Moses Olabode"},"publisher":{"@type":"Organization","name":"Beaverly","@id":"https://www.beaverlyai.com/#organization"},"datePublished":"2025-01-15","dateModified":"2026-09-02","mainEntityOfPage":"https://www.beaverlyai.com/blog/why-i-built-beaverly/","isPartOf":{"@id":"https://www.beaverlyai.com/blog/#blog"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://www.beaverlyai.com/blog/why-i-built-beaverly/#article","headline":"Why I Built Beaverly","description":"Moses Olabode on financial markets, failed handoffs, building through extreme constraints, becoming a post-AI systems engineer, and the question that became Beaverly and Chilla.","image":"https://www.beaverlyai.com/attached_assets/og-cover.png","author":{"@type":"Person","name":"Moses Olabode"},"publisher":{"@type":"Organization","name":"Beaverly","@id":"https://www.beaverlyai.com/#organization"},"datePublished":"2025-01-15","dateModified":"2026-09-12","mainEntityOfPage":"https://www.beaverlyai.com/blog/why-i-built-beaverly/","isPartOf":{"@id":"https://www.beaverlyai.com/blog/#blog"}}</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-83PFRQ3WQ6"></script><script src="/js/gtag-init.js"></script>
 </head>
 <body class="v3-page">
@@ -39,7 +39,7 @@
         <p class="blog3-eyebrow">Founder story</p>
         <h1>Why I built Beaverly</h1>
         <p class="blog3-article-dek">I started from inside the problem: years around financial markets, too much work living on screens, failed attempts to hand the problem off, and eventually a simple conclusion — if this was going to exist, I had to build regardless.</p>
-        <div class="blog3-article-meta"><span>By Moses Olabode</span><span>January 15, 2025</span><span>Updated September 2, 2026</span></div>
+        <div class="blog3-article-meta"><span>By Moses Olabode</span><span>January 15, 2025</span><span>Updated September 12, 2026</span></div>
       </div>
     </header>
 
@@ -85,9 +85,9 @@
 
       <p>AI changed what was possible for me. It became an implementation layer: a way to generate code, understand unfamiliar systems, debug faster, compare approaches, and move through areas I had never been formally trained in.</p>
 
-      <p>But production does not care whether the code came from a human hand or a model. When account state is wrong, a provider disconnects, authentication breaks, a deployment regresses something unrelated, an execution needs reconciliation, a database truth disagrees with the UI, or an AI confidently proposes an architecture that does not fit the system, somebody still has to understand what is happening.</p>
+      <p>But production does not care whether the code came from a human hand or a model. Real users eventually find the weak assumptions. Providers fail. Networks fail. Deployments break things you did not expect. Models can be confidently wrong. Somebody still has to understand the product deeply enough to tell the difference between a convincing answer and a dependable system.</p>
 
-      <p>Shipping Beaverly forced me into the unglamorous edges of engineering: service boundaries, state ownership, databases, authentication, provider integrations, execution lifecycle, retries, reconciliation, infrastructure, observability, security boundaries, model failure modes, deployment regressions, and the discipline of proving that a fix actually fixed the original failure without quietly breaking something else.</p>
+      <p>Shipping Beaverly forced me to learn the unglamorous side of engineering: reliability, security, state, integrations, infrastructure, failure handling, and the discipline of proving that something actually works outside a demo.</p>
 
       <p>The test was never whether I could reproduce every line of syntax from memory. The test was whether I understood the system well enough to make it work in the wild.</p>
 
@@ -108,18 +108,16 @@
       <p>The direction became clearer over time: the product should start with the person’s goal, not with the configuration needed to pursue it.</p>
 
       <h2>That is how Chilla became a financial worker</h2>
-      <p>Today the product idea is much simpler to explain: tell Chilla what you are working towards. Chilla can reason over the supported ways it can work, prepare something concrete, let you inspect and change it, and ask for explicit approval before material live work becomes active.</p>
+      <p>Today the product idea is much simpler to explain: tell Chilla what you are working towards. Chilla can prepare supported work, let you inspect and change the material choices, and ask for approval before live work becomes active.</p>
 
       <p>Then it works and reports back.</p>
 
       <p>That is a very different relationship from a dashboard, a trading bot, or an AI chat that happens to have a broker tool attached.</p>
 
       <h2>Why M-II exists separately</h2>
-      <p>Making Chilla easier to talk to should not make financial execution less rigorous. That is why the conversational intelligence and the execution machinery are separate.</p>
+      <p>Making Chilla easier to talk to should not make financial work casual. M-II is Beaverly’s financial execution system underneath authorized live work, so the conversational experience can stay simple while the work remains bounded by what the user approved.</p>
 
-      <p>M-II is the engineered system underneath authorized live work. It owns the deterministic responsibilities that should not depend on a language model improvising correctly: authorization, validation, account scope, provider communication, lifecycle state, reconciliation, and traceability.</p>
-
-      <p>You talk to Chilla. M-II handles the machinery.</p>
+      <p>You talk to Chilla. M-II carries the live work.</p>
 
       <h2>The lesson became bigger than the product</h2>
       <p>The more Beaverly developed, the more obvious the underlying mission became. People should not have to become operators of increasingly complicated software just because software became more powerful.</p>

@@ -4,172 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Troubleshooting | Beaverly Support</title>
-  <meta name="description" content="Troubleshoot login issues, connection failures, paused tasks, low capacity, and no-activity scenarios in Chilla." />
-  <link rel="canonical" href="https://beaverlyai.com/support/troubleshooting.html" />
-  <meta property="og:title" content="Troubleshooting | Beaverly Support" />
-  <meta property="og:description" content="Step-by-step checks for common Chilla issues." />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://beaverlyai.com/support/troubleshooting.html" />
-  <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,700&display=swap" /></noscript>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="support.css" />
+  <meta name="description" content="Troubleshoot common Chilla issues involving conversation, activation, connected accounts, provider assistance, Flow, Work Capacity and billing." />
+  <link rel="canonical" href="https://www.beaverlyai.com/support/troubleshooting.html" />
+  <meta property="og:title" content="Troubleshooting | Beaverly Support" /><meta property="og:description" content="Practical checks for common Chilla issues." /><meta property="og:type" content="article" /><meta property="og:url" content="https://www.beaverlyai.com/support/troubleshooting.html" /><meta property="og:image" content="https://www.beaverlyai.com/attached_assets/og-cover.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,700&display=swap" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,700&display=swap" /></noscript><script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script><link rel="stylesheet" href="../css/style.css" /><link rel="stylesheet" href="../css/navbar.css" /><link rel="stylesheet" href="support.css" />
 </head>
-<body>
-  <main class="support-page page--nav-offset">
-    <div class="support-shell">
-      <nav class="support-breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a><span>/</span><a href="index.html">Support</a><span>/</span><span>Troubleshooting</span>
-      </nav>
-
-      <header class="support-hero support-hero--light">
-        <p class="support-kicker">Troubleshooting</p>
-        <h1 class="support-title">What to check when something is not working</h1>
-        <p class="support-subtitle">Use this page for fast diagnostics before escalation. Start with status, account readiness, and Flow timestamps.</p>
-        <div class="support-meta">
-          <span class="support-chip"><i data-lucide="triangle-alert"></i> Article type: Troubleshooting</span>
-          <span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: March 12, 2026</span>
-        </div>
-      </header>
-
-      <div class="support-layout">
-        <aside class="support-sidebar" aria-label="Support sections">
-          <h2>Sections</h2>
-          <a href="index.html">Support Home</a>
-          <a href="getting-started.html">Getting Started</a>
-          <a href="chilla-basics.html">Chilla Basics</a>
-          <a href="flow.html">Flow and Transparency</a>
-          <a href="automation-capacity.html">Automation Capacity</a>
-          <a href="behaviors-markets.html">Styles and Markets</a>
-          <a href="instructions-and-comfort.html">Tasks and Comfort</a>
-          <a href="connected-accounts.html">Trading Accounts</a>
-          <a href="plans-billing-usage.html">Plans, Billing and Usage</a>
-          <a href="troubleshooting.html" aria-current="page">Troubleshooting</a>
-          <a href="account-security.html">Account and Security</a>
-          <a href="enterprise.html">Enterprise</a>
-          <a href="contact.html">Contact and Escalation</a>
-        </aside>
-
-        <section class="support-content">
-          <article class="support-card">
-            <h2>Universal first checks</h2>
-            <ol class="support-steps">
-              <li><strong>Check dashboard status card.</strong> It should not stay on <strong>Not connected yet</strong> / <strong>Not Connected</strong>.</li>
-              <li><strong>Check task status.</strong> Use <strong>Your Tasks</strong> and confirm status is not <strong>Paused</strong> or <strong>Stopped</strong>.</li>
-              <li><strong>Check Flow card.</strong> Review latest <strong>SKIP</strong>/<strong>WARN</strong> items and open details.</li>
-              <li><strong>Check Usage & Capacity.</strong> Review <strong>Automation Capacity Used</strong>, <strong>Capacity Available</strong>, and alerts.</li>
-              <li><strong>Check active account.</strong> Confirm the selected account matches the task boundaries.</li>
-            </ol>
-          </article>
-
-          <article class="support-card">
-            <h2>Issue: Login failed</h2>
-            <ul>
-              <li>Confirm email and password match account records.</li>
-              <li>Retry after refreshing session.</li>
-              <li>Check inbox for verification requirements.</li>
-            </ul>
-            <p><strong>Escalate when:</strong> repeated failures continue after credential reset.</p>
-          </article>
-
-          <article class="support-card">
-            <h2>Issue: Account connection failed</h2>
-            <ul>
-              <li>Re-check account credentials and authorization scope.</li>
-              <li>Confirm target account is active on provider side.</li>
-              <li>Retry connection and watch verification status transitions.</li>
-              <li>Use Flow or status panel notes for failure context.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>Issue: Task will not run</h2>
-            <ul>
-              <li>Confirm trading account is connected and selected as active.</li>
-              <li>Review comfort boundaries for invalid combinations.</li>
-              <li>Check plan and capacity state if activation is blocked.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>Issue: No activity appears in Flow</h2>
-            <ul>
-              <li>Confirm task is active, not paused or stopped.</li>
-              <li>If Flow shows <strong>Live automation context will appear here once you're connected</strong>, reconnect or switch active connected account.</li>
-              <li>Confirm account readiness.</li>
-              <li>Check usage and remaining capacity.</li>
-              <li>Review skip reasons such as <strong>Entry paused by available resources</strong> or <strong>Entry paused by task boundaries</strong>.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>Issue: Capacity looks low</h2>
-            <ul>
-              <li>Review number of active tasks and market coverage.</li>
-              <li>Check whether a high-activity window increased cycle usage.</li>
-              <li>Look for <strong>High Automation Load</strong> or <strong>Daily Capacity Reached</strong> alerts.</li>
-              <li>Use <strong>Upgrade Plan</strong> when daily usage is consistently high.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>Issue: Upgrade not reflected yet</h2>
-            <ul>
-              <li>Refresh session and return to <strong>Usage & Capacity</strong>.</li>
-              <li>Confirm billing event completed successfully.</li>
-              <li>Re-open `upgrade.html` and verify the expected tier state.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>Issue: Connected but not automating</h2>
-            <ul>
-              <li>Check account health and connection continuity.</li>
-              <li>Review Flow for any persistent warnings.</li>
-              <li>Confirm that thetask is valid.</li>
-              <li>If the status card stays at <strong>Your task are ready to run</strong> for an extended period, escalate with timestamps.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>Before contacting support</h2>
-            <ul>
-              <li>Account email used for sign-in.</li>
-              <li>Task ID or clear task name.</li>
-              <li>Trading account trading account name and current status.</li>
-              <li>Recent Flow timestamps and event types.</li>
-              <li>Short summary: expected vs observed behavior.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>Related articles</h2>
-            <div class="support-related">
-              <a href="flow.html">Read Flow events</a>
-              <a href="connected-accounts.html">Connection troubleshooting</a>
-              <a href="contact.html">Escalation checklist</a>
-            </div>
-          </article>
-        </section>
-      </div>
-    </div>
-  </main>
-
-  
-  <script src="/js/header-loader.js"></script>
-  <script src="/js/footer-loader.js"></script>
-  <script>if (window.lucide) { window.lucide.createIcons(); }</script>
-</body>
-</html>
-
-
-
-
+<body><main class="support-page page--nav-offset"><div class="support-shell">
+<nav class="support-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="index.html">Support</a><span>/</span><span>Troubleshooting</span></nav>
+<header class="support-hero support-hero--light"><p class="support-kicker">Troubleshooting</p><h1 class="support-title">Start by asking Chilla what is wrong.</h1><p class="support-subtitle">Chilla can read relevant product context and explain many user-facing problems directly. When you need to inspect the source activity, use Flow.</p><div class="support-meta"><span class="support-chip"><i data-lucide="triangle-alert"></i> Article type: Troubleshooting</span><span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: September 12, 2026</span></div></header>
+<div class="support-layout"><aside class="support-sidebar" aria-label="Support sections"><h2>Sections</h2><a href="index.html">Support Home</a><a href="getting-started.html">Getting Started</a><a href="chilla-basics.html">Chilla Basics</a><a href="flow.html">Flow and Transparency</a><a href="automation-capacity.html">Work Capacity</a><a href="behaviors-markets.html">Styles and Markets</a><a href="instructions-and-comfort.html">Tasks and Comfort</a><a href="connected-accounts.html">Connected Accounts</a><a href="deposits.html">Deposits</a><a href="withdrawals.html">Withdrawals</a><a href="plans-billing-usage.html">Tiers, Billing and Usage</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a><a href="account-security.html">Account and Security</a><a href="enterprise.html">Enterprise</a><a href="contact.html">Contact and Escalation</a></aside>
+<section class="support-content">
+<article class="support-card"><h2>First checks</h2><ol class="support-steps"><li><strong>Ask Chilla.</strong> Describe what you expected and what you are seeing.</li><li><strong>Check the active work.</strong> Confirm the task is still active and matches what you intended.</li><li><strong>Check the connected account.</strong> Make sure the expected provider account is available for live work.</li><li><strong>Check Work Capacity.</strong> Confirm there is enough room for the work you expect Chilla to carry.</li><li><strong>Inspect Flow if needed.</strong> Look at the recent user-facing activity or warning around the time of the issue.</li></ol></article>
+<article class="support-card"><h2>Chilla is not responding normally</h2><ul><li>Check your internet connection and retry the conversation.</li><li>If the message failed, resend it once rather than creating repeated duplicate requests.</li><li>If earlier context appears missing, open the relevant conversation or tell Chilla what you are referring to.</li><li>If the problem persists, contact support with the approximate time and what you expected to happen.</li></ul></article>
+<article class="support-card"><h2>A provider connection or assisted journey failed</h2><ul><li>Ask Chilla whether the provider account still appears connected or needs your attention.</li><li>If the provider requires a password, OTP/MFA, identity check, legal declaration or approval, complete that step yourself.</li><li>Do not paste credentials or OTPs into chat.</li><li>If the provider itself is unavailable or rejecting access, use the provider’s own support where appropriate.</li><li>If Chilla cannot continue after the provider step is complete, contact Beaverly support with the provider name, approximate time and the user-visible state.</li></ul></article>
+<article class="support-card"><h2>Active work is quiet</h2><p>Quiet does not automatically mean broken. Chilla can correctly stay out when conditions do not fit the active work.</p><ul><li>Ask Chilla what has happened recently.</li><li>Check that the task is active and the expected account is connected.</li><li>Review Work Capacity.</li><li>Open Flow if you want the underlying activity trail.</li></ul></article>
+<article class="support-card"><h2>Work will not activate</h2><ul><li>Confirm that you have made the material choices Chilla is waiting for.</li><li>Review the exact PLAN Chilla presents.</li><li>Confirm the required provider account is connected and ready.</li><li>Check whether Work Capacity is constraining the proposed work.</li><li>Complete the required disclosure before using <strong>Activate</strong>.</li><li>Resolve any user-facing warning Chilla presents before trying again.</li></ul></article>
+<article class="support-card"><h2>Work Capacity is low</h2><p>Low Work Capacity means less room remains under the current tier. It does not mean market outcomes are worse.</p><p>You can reduce active work, wait for the applicable reset, or compare a tier with more room on <a href="/pricing.html">Pricing</a>.</p></article>
+<article class="support-card"><h2>A billing change is not reflected</h2><ul><li>Refresh Chilla and re-open your billing/tier information.</li><li>Confirm the billing event completed on the payment side.</li><li>If the expected tier still is not shown, contact Beaverly support with your account email, the tier you expected, the date and a non-sensitive payment reference if available.</li></ul></article>
+<article class="support-card"><h2>Before contacting support</h2><ul><li>Your Beaverly account email.</li><li>The approximate time of the issue.</li><li>The affected provider/account name if relevant.</li><li>The user-visible warning or Flow event if there is one.</li><li>A short expected-versus-observed description.</li></ul><div class="support-callout"><strong>Never send:</strong> passwords, OTP/MFA codes, recovery codes, private keys or sensitive payment credentials.</div></article>
+<article class="support-card"><h2>Related articles</h2><div class="support-related"><a href="flow.html">Flow</a><a href="connected-accounts.html">Connected accounts</a><a href="automation-capacity.html">Work Capacity</a><a href="account-security.html">Account and security</a><a href="contact.html">Contact support</a></div></article>
+</section></div></div></main><script src="/js/header-loader.js"></script><script src="/js/footer-loader.js"></script><script>if(window.lucide){window.lucide.createIcons();}</script></body></html>

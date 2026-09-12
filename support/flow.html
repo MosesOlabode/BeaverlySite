@@ -4,186 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flow and Transparency | Beaverly Support</title>
-  <meta name="description" content="Learn how to read Flow events, statuses, filters, and historical activity in Chilla." />
+  <meta name="description" content="Learn how Flow gives you the factual activity trail behind what Chilla reports in conversation, including entries, exits, skips, warnings and live updates." />
   <link rel="canonical" href="https://beaverlyai.com/support/flow.html" />
   <meta property="og:title" content="Flow and Transparency | Beaverly Support" />
-  <meta property="og:description" content="Understand what happened, why it happened, and what to do next." />
+  <meta property="og:description" content="Ask Chilla for the answer. Open Flow when you want the underlying activity trail." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://beaverlyai.com/support/flow.html" />
   <meta property="og:image" content="https://beaverlyai.com/attached_assets/og-cover.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,700&display=swap" /></noscript>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="support.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,700&display=swap" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,700&display=swap" /></noscript>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script><link rel="stylesheet" href="../css/style.css" /><link rel="stylesheet" href="../css/navbar.css" /><link rel="stylesheet" href="support.css" />
 </head>
-<body>
-  <main class="support-page page--nav-offset">
-    <div class="support-shell">
-      <nav class="support-breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a><span>/</span><a href="index.html">Support</a><span>/</span><span>Flow and Transparency</span>
-      </nav>
-
-      <header class="support-hero support-hero--light">
-        <p class="support-kicker">Flow and Transparency</p>
-        <h1 class="support-title">What Flow explains and how to use it</h1>
-        <p class="support-subtitle">Flow is the human-readable activity stream in Chilla. It helps you answer two questions quickly: what happened, and why it happened.</p>
-        <div class="support-meta">
-          <span class="support-chip"><i data-lucide="activity"></i> Article type: Concept + Reference</span>
-          <span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: March 12, 2026</span>
-        </div>
-      </header>
-
-      <div class="support-layout">
-        <aside class="support-sidebar" aria-label="Support sections">
-          <h2>Sections</h2>
-          <a href="index.html">Support Home</a>
-          <a href="getting-started.html">Getting Started</a>
-          <a href="chilla-basics.html">Chilla Basics</a>
-          <a href="flow.html" aria-current="page">Flow and Transparency</a>
-          <a href="automation-capacity.html">Automation Capacity</a>
-          <a href="behaviors-markets.html">Styles and Markets</a>
-          <a href="instructions-and-comfort.html">Tasks and Comfort</a>
-          <a href="connected-accounts.html">Connected Accounts</a>
-          <a href="deposits.html">Deposits</a>
-          <a href="withdrawals.html">Withdrawals</a>
-          <a href="plans-billing-usage.html">Plans, Billing and Usage</a>
-          <a href="troubleshooting.html">Troubleshooting</a>
-          <a href="account-security.html">Account and Security</a>
-          <a href="enterprise.html">Enterprise</a>
-          <a href="contact.html">Contact and Escalation</a>
-        </aside>
-
-        <section class="support-content">
-          <article class="support-card">
-            <h2>Where to find this</h2>
-            <p>Flow is the card titled <strong>Flow</strong> on the main dashboard (`dashboard.html`). It is visible directly under the <strong>Tasks</strong> card.</p>
-          </article>
-
-          <article class="support-card">
-            <h2>What you will see</h2>
-            <ul>
-              <li>Flow action buttons: <strong>Replay logs</strong>, <strong>Expand Flow</strong>, <strong>Download logs</strong>.</li>
-              <li>Category chips: <strong>All</strong>, <strong>Entry</strong>, <strong>Exit</strong>, <strong>Pass</strong>, <strong>Warn</strong>, <strong>Live</strong>.</li>
-              <li>Per-event status pills: <strong>ENTRY</strong>, <strong>EXIT</strong>, <strong>PASS</strong>, <strong>WARN</strong>, <strong>LIVE</strong>.</li>
-              <li>Summary counters above the feed for Entry, Exit, Pass, Errors, and Live.</li>
-            </ul>
-            <div class="support-inline-list">
-              <span class="support-status support-status--active">ENTRY</span>
-              <span class="support-status support-status--paused">EXIT</span>
-              <span class="support-status support-status--revoked">SKIP</span>
-              <span class="support-status support-status--verifying">PASS</span>
-              <span class="support-status support-status--monitoring">LIVE</span>
-            </div>
-          </article>
-
-          <article class="support-card">
-            <h2>What each major element means</h2>
-            <div class="support-table-wrap">
-              <table class="support-table">
-                <thead>
-                  <tr><th>Element</th><th>Meaning</th><th>What to do next</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Entry event</td><td>Chilla opened activity within your boundaries.</td><td>Confirm account and task are the expected ones.</td></tr>
-                  <tr><td>Exit event</td><td>A tracked activity was closed.</td><td>Review sequence around the event if you need context.</td></tr>
-                  <tr><td>Passed event</td><td>System stepped aside with a specific reason such as task boundaries, or account minimum.</td><td>Open event details and compare with your selections and account readiness.</td></tr>
-                  <tr><td>Warning event</td><td>Validation or account warning event was recorded.</td><td>Use troubleshooting steps and include the warning title in support requests.</td></tr>
-                  <tr><td>Live event</td><td>Monitoring update without an entry/exit action.</td><td>No action needed unless the update conflicts with your expected setup.</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </article>
-
-          <article class="support-card">
-            <h2>Common skip reasons and app wording</h2>
-            <div class="support-table-wrap">
-              <table class="support-table">
-                <thead>
-                  <tr><th>Flow reason code</th><th>User-visible headline</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td><code>insufficient_balance</code></td><td>Entry paused by available resources</td></tr>
-                  <tr><td><code>broker_minimum</code></td><td>Entry paused by account minimum</td></tr>
-                  <tr><td><code>not_authorized</code></td><td>Entry paused by task boundaries</td></tr>
-                  <tr><td><code>validation_failed</code></td><td>Action paused by validation check</td></tr>
-                  <tr><td><code>risk_cap_exhausted</code> / <code>risk_cap_approaching</code></td><td>Entry paused by comfort boundary</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </article>
-
-          <article class="support-card">
-            <h2>What you can do here</h2>
-            <ul>
-              <li>Filter event categories with the Flow chips.</li>
-              <li>Open <strong>Replay logs</strong> and load history by <strong>Last hour</strong>, <strong>Last 24 hours</strong>, <strong>Last 7 days</strong>, <strong>Last 14 days</strong>, <strong>Last month</strong>, <strong>All available history</strong>, or <strong>Custom range</strong>.</li>
-              <li>Open details for a single event using the Flow details view.</li>
-              <li>Download filtered logs as `chilla-flow-YYYY-MM-DD.pdf` or `chilla-flow-YYYY-MM-DD.json` from <strong>Download logs</strong>.</li>
-              <li>Use Flow first when troubleshooting no-activity, passed events, or warnings.</li>
-            </ul>
-          </article>
-
-          <article class="support-card">
-            <h2>What Flow explains, and what it does not expose</h2>
-            <div class="support-pair">
-              <div class="support-box">
-                <h3>Flow explains</h3>
-                <ul>
-                  <li>What happened.</li>
-                  <li>Why Chilla responded at a high level.</li>
-                  <li>What action was taken or safely passed.</li>
-                  <li>Which task context was involved.</li>
-                </ul>
-              </div>
-              <div class="support-box">
-                <h3>Flow does not expose</h3>
-                <ul>
-                  <li>Proprietary threshold values.</li>
-                  <li>Exact pattern and validation internals.</li>
-                  <li>Internal formula details.</li>
-                  <li>Private sequencing mechanics.</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="support-card support-faq">
-            <h2>Flow FAQ</h2>
-            <details>
-              <summary>I expected activity but Flow is quiet. Is that a problem?</summary>
-              <p>Not always. A quiet period can mean no valid conditions, active monitoring, or step-aside behavior within your boundaries. Check task status, account readiness, and capacity first.</p>
-            </details>
-            <details>
-              <summary>Can Flow be used for support requests?</summary>
-              <p>Yes. Include recent event timestamps, event types, and any warning labels when you contact support.</p>
-            </details>
-          </article>
-
-          <article class="support-card">
-            <h2>Related articles</h2>
-            <div class="support-related">
-              <a href="troubleshooting.html">Troubleshooting no activity</a>
-              <a href="instructions-and-comfort.html">Task statuses</a>
-              <a href="automation-capacity.html">Capacity and passed actions</a>
-            </div>
-          </article>
-        </section>
-      </div>
-    </div>
-  </main>
-
-  
-  <script src="/js/header-loader.js"></script>
-  <script src="/js/footer-loader.js"></script>
-  <script>if (window.lucide) { window.lucide.createIcons(); }</script>
-</body>
-</html>
-
-
+<body><main class="support-page page--nav-offset"><div class="support-shell">
+<nav class="support-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="index.html">Support</a><span>/</span><span>Flow and Transparency</span></nav>
+<header class="support-hero support-hero--light"><p class="support-kicker">Flow and Transparency</p><h1 class="support-title">The activity trail behind the conversation.</h1><p class="support-subtitle">Chilla can give you the answer in plain language. Flow is there when you want to inspect the underlying activity itself.</p><div class="support-meta"><span class="support-chip"><i data-lucide="activity"></i> Article type: Concept + Reference</span><span class="support-chip"><i data-lucide="calendar-check-2"></i> Last reviewed: September 12, 2026</span></div></header>
+<div class="support-layout"><aside class="support-sidebar" aria-label="Support sections"><h2>Sections</h2><a href="index.html">Support Home</a><a href="getting-started.html">Getting Started</a><a href="chilla-basics.html">Chilla Basics</a><a href="flow.html" aria-current="page">Flow and Transparency</a><a href="automation-capacity.html">Work Capacity</a><a href="behaviors-markets.html">Styles and Markets</a><a href="instructions-and-comfort.html">Tasks and Comfort</a><a href="connected-accounts.html">Connected Accounts</a><a href="deposits.html">Deposits</a><a href="withdrawals.html">Withdrawals</a><a href="plans-billing-usage.html">Plans, Billing and Usage</a><a href="troubleshooting.html">Troubleshooting</a><a href="account-security.html">Account and Security</a><a href="enterprise.html">Enterprise</a><a href="contact.html">Contact and Escalation</a></aside>
+<section class="support-content">
+<article class="support-card"><h2>Flow and Chilla have different jobs</h2><div class="support-grid support-grid--2"><div class="support-box"><h3>Chilla</h3><p>Answers your question, summarizes what matters and tells you whether anything needs your attention.</p></div><div class="support-box"><h3>Flow</h3><p>Keeps the factual activity record available when you want to inspect the work itself.</p></div></div><p>You do not need to read Flow every day for Chilla to be useful. It exists so transparency is available when you want it.</p></article>
+<article class="support-card"><h2>Common Flow event types</h2><div class="support-table-wrap"><table class="support-table"><thead><tr><th>Event</th><th>Plain-language meaning</th></tr></thead><tbody><tr><td>Entry</td><td>Chilla started market activity within active authorized work.</td></tr><tr><td>Exit</td><td>Previously opened activity was closed.</td></tr><tr><td>Skip / Pass</td><td>Chilla stayed out or did not proceed because the work should not continue in that situation.</td></tr><tr><td>Warn</td><td>Something about the account, provider, work or environment needs attention or prevented normal progress.</td></tr><tr><td>Live</td><td>An ongoing status update without a new entry or exit.</td></tr></tbody></table></div></article>
+<article class="support-card"><h2>Ask before you dig</h2><p>If something in Flow is confusing, ask Chilla about it. Chilla can explain the user-relevant reason using the context it is allowed to read.</p><p>Flow is not intended to expose Beaverly's proprietary thresholds, security controls, execution internals or private orchestration. It explains enough for the user to understand the outcome and get support when needed.</p></article>
+<article class="support-card"><h2>Quiet Flow can be normal</h2><p>Automation does not need to manufacture activity. A quiet period can simply mean Chilla has nothing appropriate to do within the active work.</p><p>If you expected activity, first ask Chilla what is happening. You can also check the active task, connected account and Work Capacity, then use troubleshooting if something appears wrong.</p></article>
+<article class="support-card"><h2>Inspect, filter and share</h2><p>Depending on the current Chilla client, Flow can provide filtering, event detail, history and share/export options so you can review a specific period or keep evidence of what happened.</p><p>When you contact support, the useful information is normally the approximate time, the user-visible event or warning, the affected account context, and what you expected to happen. Do not send passwords, OTPs or other secrets.</p></article>
+<article class="support-card support-faq"><h2>Flow FAQ</h2><details><summary>Is Flow the same thing as Chilla's explanation?</summary><p>No. Chilla gives you a conversational explanation. Flow is the underlying user-facing activity record.</p></details><details><summary>Does a skip mean Chilla failed?</summary><p>No. A skip can be the correct outcome when the active work should not proceed in that situation.</p></details><details><summary>Can Flow expose Beaverly's internal logic?</summary><p>No. Flow is designed to explain user-relevant outcomes without publishing protected implementation details.</p></details></article>
+<article class="support-card"><h2>Related articles</h2><div class="support-related"><a href="instructions-and-comfort.html">Tasks and Comfort</a><a href="automation-capacity.html">Work Capacity</a><a href="troubleshooting.html">Troubleshooting</a><a href="contact.html">Contact support</a></div></article>
+</section></div></div></main><script src="/js/header-loader.js"></script><script src="/js/footer-loader.js"></script><script>if(window.lucide){window.lucide.createIcons();}</script></body></html>

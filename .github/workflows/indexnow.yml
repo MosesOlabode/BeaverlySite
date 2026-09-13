@@ -83,11 +83,25 @@ jobs:
               print(url)
           PY
 
+      - name: Wait for verification key to be live
+        if: steps.changed.outputs.count != '0'
+        env:
+          INDEXNOW_KEY: f0e0d7c5d3cae068e8f85ed9938313ef
+        run: |
+          curl --fail --silent --show-error \
+            --retry 12 \
+            --retry-delay 10 \
+            --retry-all-errors \
+            "https://www.beaverlyai.com/${INDEXNOW_KEY}.txt" \
+            --output /tmp/indexnow-key.txt
+          grep -Fx "${INDEXNOW_KEY}" /tmp/indexnow-key.txt
+
       - name: Submit changed URLs to IndexNow
         if: steps.changed.outputs.count != '0'
         run: |
           curl --fail-with-body \
             --retry 2 \
+            --retry-all-errors \
             --header 'Content-Type: application/json; charset=utf-8' \
             --data-binary @/tmp/indexnow.json \
             https://api.indexnow.org/IndexNow

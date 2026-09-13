@@ -59,11 +59,30 @@ jobs:
 
           urls = []
           seen = set()
-          for path in paths:
-              url = public_url(path)
+
+          def add_url(url: str):
               if url and url not in seen:
                   seen.add(url)
                   urls.append(url)
+
+          for path in paths:
+              add_url(public_url(path))
+
+          # A redirect change is itself a public discovery change. When the
+          # deployment updates vercel.json, submit static legacy source URLs
+          # too so participating engines can revisit them and see the new 308.
+          if "vercel.json" in paths:
+              with open("vercel.json", "r", encoding="utf-8") as f:
+                  vercel_config = json.load(f)
+              for redirect in vercel_config.get("redirects", []):
+                  source = redirect.get("source")
+                  if not isinstance(source, str) or not source.startswith("/"):
+                      continue
+                  # Only submit concrete paths. Pattern redirects can fan out
+                  # to arbitrary URLs and do not belong in an IndexNow batch.
+                  if any(token in source for token in (":", "*", "(", ")")):
+                      continue
+                  add_url(f"https://{host}{source}")
 
           payload = {
               "host": host,

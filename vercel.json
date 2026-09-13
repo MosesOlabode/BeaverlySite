@@ -1,4 +1,23 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "redirects": [
+    { "source": "/chilla", "destination": "/chilla.html", "permanent": true },
+    { "source": "/m-ii", "destination": "/m-ii.html", "permanent": true },
+    { "source": "/company", "destination": "/company.html", "permanent": true },
+    { "source": "/security", "destination": "/security.html", "permanent": true },
+    { "source": "/pricing", "destination": "/pricing.html", "permanent": true },
+    { "source": "/supported-accounts", "destination": "/supported-accounts.html", "permanent": true },
+    { "source": "/privacy", "destination": "/privacy.html", "permanent": true },
+    { "source": "/refund", "destination": "/refund.html", "permanent": true },
+    { "source": "/risk-disclosure", "destination": "/risk-disclosure.html", "permanent": true },
+    { "source": "/terms", "destination": "/terms.html", "permanent": true },
+    { "source": "/usage-and-guardrails", "destination": "/usage-and-guardrails.html", "permanent": true },
+    { "source": "/support", "destination": "/support/", "permanent": true },
+    { "source": "/blog", "destination": "/blog/", "permanent": true },
+    { "source": "/support/behaviors-playgrounds.html", "destination": "/support/behaviors-markets.html", "permanent": true },
+    { "source": "/support/environments.html", "destination": "/support/connected-accounts.html", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

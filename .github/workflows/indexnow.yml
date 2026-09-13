@@ -1,0 +1,126 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  notify-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build changed public URL list
+        id: changed
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          INDEXNOW_KEY: f0e0d7c5d3cae068e8f85ed9938313ef
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import subprocess
+
+          host = "www.beaverlyai.com"
+          key = os.environ["INDEXNOW_KEY"]
+          before = os.environ["BEFORE_SHA"]
+          after = os.environ["AFTER_SHA"]
+
+          zero = "0" * 40
+          if not before or before == zero:
+              raw = subprocess.check_output(
+                  ["git", "show", "--pretty=", "--name-only", after],
+                  text=True,
+              )
+              paths = [line.strip() for line in raw.splitlines() if line.strip()]
+          else:
+              raw = subprocess.check_output(
+                  ["git", "diff", "--name-only", before, after],
+                  text=True,
+              )
+              paths = [line.strip() for line in raw.splitlines() if line.strip()]
+
+          def public_url(path: str):
+              if path == "index.html":
+                  return f"https://{host}/"
+              if path.endswith("/index.html"):
+                  return f"https://{host}/{path[:-10]}"
+              if path.endswith(".html"):
+                  return f"https://{host}/{path}"
+              return None
+
+          urls = []
+          seen = set()
+
+          def add_url(url: str):
+              if url and url not in seen:
+                  seen.add(url)
+                  urls.append(url)
+
+          for path in paths:
+              add_url(public_url(path))
+
+          # A redirect change is itself a public discovery change. When the
+          # deployment updates vercel.json, submit static legacy source URLs
+          # too so participating engines can revisit them and see the new 308.
+          if "vercel.json" in paths:
+              with open("vercel.json", "r", encoding="utf-8") as f:
+                  vercel_config = json.load(f)
+              for redirect in vercel_config.get("redirects", []):
+                  source = redirect.get("source")
+                  if not isinstance(source, str) or not source.startswith("/"):
+                      continue
+                  # Only submit concrete paths. Pattern redirects can fan out
+                  # to arbitrary URLs and do not belong in an IndexNow batch.
+                  if any(token in source for token in (":", "*", "(", ")")):
+                      continue
+                  add_url(f"https://{host}{source}")
+
+          payload = {
+              "host": host,
+              "key": key,
+              "keyLocation": f"https://{host}/{key}.txt",
+              "urlList": urls,
+          }
+
+          with open("/tmp/indexnow.json", "w", encoding="utf-8") as f:
+              json.dump(payload, f)
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"count={len(urls)}\n")
+
+          print(f"IndexNow URLs: {len(urls)}")
+          for url in urls:
+              print(url)
+          PY
+
+      - name: Wait for verification key to be live
+        if: steps.changed.outputs.count != '0'
+        env:
+          INDEXNOW_KEY: f0e0d7c5d3cae068e8f85ed9938313ef
+        run: |
+          curl --fail --silent --show-error \
+            --retry 12 \
+            --retry-delay 10 \
+            --retry-all-errors \
+            "https://www.beaverlyai.com/${INDEXNOW_KEY}.txt" \
+            --output /tmp/indexnow-key.txt
+          grep -Fx "${INDEXNOW_KEY}" /tmp/indexnow-key.txt
+
+      - name: Submit changed URLs to IndexNow
+        if: steps.changed.outputs.count != '0'
+        run: |
+          curl --fail-with-body \
+            --retry 2 \
+            --retry-all-errors \
+            --header 'Content-Type: application/json; charset=utf-8' \
+            --data-binary @/tmp/indexnow.json \
+            https://api.indexnow.org/IndexNow

@@ -21,30 +21,41 @@
   <meta name="twitter:description" content="We think financial software should do more of the work." />
   <meta name="twitter:image" content="https://www.beaverlyai.com/attached_assets/og-cover.png" />
   <script>(function(){try{var saved=localStorage.getItem('beaverly-theme');var theme=saved==='dark'||saved==='light'?saved:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',theme)}catch(_){}})();</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Inter+Tight:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/v3-home.css" />
   <link rel="stylesheet" href="/css/v3-mii.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "@id": "https://www.beaverlyai.com/company.html#page",
-    "url": "https://www.beaverlyai.com/company.html",
-    "name": "Company — Beaverly",
-    "about": {
-      "@type": "Organization",
-      "@id": "https://www.beaverlyai.com/#organization",
-      "name": "Beaverly",
-      "url": "https://www.beaverlyai.com/",
-      "founder": {"@type":"Person","name":"Moses Olabode"},
-      "member": {
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://www.beaverlyai.com/company.html#page",
+        "url": "https://www.beaverlyai.com/company.html",
+        "name": "Company — Beaverly",
+        "about": { "@id": "https://www.beaverlyai.com/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.beaverlyai.com/#organization",
+        "name": "Beaverly",
+        "legalName": "Beaverly Innovative Systems Ltd.",
+        "url": "https://www.beaverlyai.com/",
+        "logo": "https://www.beaverlyai.com/attached_assets/beaverly-logo.png",
+        "founder": { "@id": "https://www.beaverlyai.com/#moses-olabode" },
+        "member": {
+          "@type": "Person",
+          "name": "Kolawole Oyedeji",
+          "jobTitle": "Founding Partner · Security"
+        }
+      },
+      {
         "@type": "Person",
-        "name": "Kolawole Oyedeji",
-        "jobTitle": "Founding Partner · Security"
+        "@id": "https://www.beaverlyai.com/#moses-olabode",
+        "name": "Moses Olabode"
       }
-    }
+    ]
   }
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-83PFRQ3WQ6"></script><script src="/js/gtag-init.js"></script>

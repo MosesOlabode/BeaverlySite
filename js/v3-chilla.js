@@ -1,6 +1,32 @@
 (function () {
   'use strict';
 
+  const CHILLA_POSES = ['neutral', 'okay', 'thinking', 'working'];
+
+  function wireMascot() {
+    const mascot = document.querySelector('[data-chilla-mascot]');
+    if (!mascot) return;
+
+    CHILLA_POSES.forEach((pose) => {
+      const preload = new Image();
+      preload.src = `/attached_assets/chilla/chilla-${pose}.png`;
+    });
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    let index = 0;
+    window.setInterval(() => {
+      if (document.hidden) return;
+      mascot.classList.add('is-changing');
+      window.setTimeout(() => {
+        index = (index + 1) % CHILLA_POSES.length;
+        mascot.dataset.pose = CHILLA_POSES[index];
+        window.requestAnimationFrame(() => mascot.classList.remove('is-changing'));
+      }, 180);
+    }, 4800);
+  }
+
   async function fetchFragment(paths) {
     for (const path of paths) {
       try {
@@ -226,7 +252,7 @@
     await loadShell();
     wireShell();
     wireReveals();
-    wireConversationDemo();
+    wireMascot();
   }
 
   if (document.readyState === 'loading') {

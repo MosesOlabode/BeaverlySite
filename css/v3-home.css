@@ -328,33 +328,50 @@ html[data-theme="dark"] .v3-icon-sun,
   transition: color 150ms ease, opacity 150ms ease;
 }
 
-.v3-wave {
+.v3-chilla-hero {
   position: absolute;
   z-index: 1;
-  right: -12vw;
-  top: 28%;
-  width: min(52vw, 760px);
-  aspect-ratio: 1.4 / 1;
-  opacity: 0.72;
+  right: clamp(20px, 4vw, 72px);
+  top: 26%;
+  width: clamp(280px, 29vw, 440px);
+  aspect-ratio: 1;
   pointer-events: none;
+  perspective: 900px;
 }
 
-.v3-wave span {
-  position: absolute;
-  inset: 50% auto auto 50%;
+.v3-chilla-hero-pose {
   width: 100%;
-  height: 42%;
-  border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--line));
-  border-radius: 50%;
-  transform-origin: 0 50%;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotateY(0deg) scale(1);
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+  transition: opacity 190ms ease, transform 190ms ease;
 }
 
-.v3-wave span:nth-child(1) { transform: translate(-24%, -50%) rotate(-14deg) scale(0.82); }
-.v3-wave span:nth-child(2) { transform: translate(-24%, -50%) rotate(-10deg) scale(0.92); }
-.v3-wave span:nth-child(3) { transform: translate(-24%, -50%) rotate(-6deg) scale(1.02); }
-.v3-wave span:nth-child(4) { transform: translate(-24%, -50%) rotate(-2deg) scale(1.12); }
-.v3-wave span:nth-child(5) { transform: translate(-24%, -50%) rotate(2deg) scale(1.22); }
-.v3-wave span:nth-child(6) { transform: translate(-24%, -50%) rotate(6deg) scale(1.32); }
+.v3-chilla-hero[data-pose="neutral"] .v3-chilla-hero-pose {
+  background-image: url("/attached_assets/chilla/chilla-neutral.png");
+}
+
+.v3-chilla-hero[data-pose="okay"] .v3-chilla-hero-pose {
+  background-image: url("/attached_assets/chilla/chilla-okay.png");
+}
+
+.v3-chilla-hero[data-pose="thinking"] .v3-chilla-hero-pose {
+  background-image: url("/attached_assets/chilla/chilla-thinking.png");
+}
+
+.v3-chilla-hero[data-pose="working"] .v3-chilla-hero-pose {
+  background-image: url("/attached_assets/chilla/chilla-working.png");
+}
+
+.v3-chilla-hero.is-changing .v3-chilla-hero-pose {
+  opacity: 0.18;
+  transform: rotateY(88deg) scale(0.985);
+}
 
 .v3-composer-wrap {
   position: relative;
@@ -379,6 +396,12 @@ html[data-theme="dark"] .v3-icon-sun,
   min-width: 0;
   color: var(--faint);
   font-size: 0.98rem;
+  transition: opacity 170ms ease, transform 170ms ease;
+}
+
+.v3-composer-text.is-changing {
+  opacity: 0;
+  transform: translateY(3px);
 }
 
 .v3-composer-go {
@@ -837,11 +860,10 @@ html[data-theme="dark"] .v3-icon-sun,
     display: none;
   }
 
-  .v3-wave {
-    right: -34vw;
-    top: 36%;
-    width: 86vw;
-    opacity: 0.42;
+  .v3-chilla-hero {
+    right: -3vw;
+    top: 33%;
+    width: min(40vw, 330px);
   }
 
   .v3-story-row {
@@ -889,8 +911,16 @@ html[data-theme="dark"] .v3-icon-sun,
     margin-top: 26px;
   }
 
+  .v3-chilla-hero {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(68vw, 290px);
+    margin: 36px auto 0;
+  }
+
   .v3-composer-wrap {
-    margin-top: 60px;
+    margin-top: 42px;
   }
 
   .v3-composer {

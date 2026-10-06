@@ -3,6 +3,25 @@
 
   const CHILLA_URL = 'https://chilla.beaverlyai.com';
 
+  const HERO_STATES = [
+    {
+      pose: 'neutral',
+      prompt: 'I need to earn $1B before Christmas. Make no mistakes 😂'
+    },
+    {
+      pose: 'okay',
+      prompt: 'Pass this $200k prop challenge.'
+    },
+    {
+      pose: 'thinking',
+      prompt: 'I need enough for a house.'
+    },
+    {
+      pose: 'working',
+      prompt: 'Find me a trading account and get me started.'
+    }
+  ];
+
   async function fetchFragment(paths) {
     for (const path of paths) {
       try {
@@ -168,22 +187,78 @@
 
   function wireHomepage() {
     const composerText = document.querySelector('[data-composer-text]');
-    const prompts = document.querySelectorAll('[data-prompt]');
+    const orb = document.querySelector('[data-chilla-orb]');
+    const prompts = Array.from(document.querySelectorAll('[data-hero-state]'));
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let heroIndex = 0;
+    let cycleTimer = null;
+    let transitionTimer = null;
+
+    function setActivePrompt(index) {
+      prompts.forEach((item) => {
+        item.classList.toggle('is-active', Number(item.getAttribute('data-hero-state')) === index);
+      });
+    }
+
+    function applyHeroState(index, animate) {
+      const nextIndex = ((index % HERO_STATES.length) + HERO_STATES.length) % HERO_STATES.length;
+      const next = HERO_STATES[nextIndex];
+      heroIndex = nextIndex;
+      setActivePrompt(nextIndex);
+
+      window.clearTimeout(transitionTimer);
+
+      if (!animate || reduceMotion) {
+        orb?.classList.remove('is-flipping');
+        composerText?.classList.remove('is-changing');
+        if (orb) orb.dataset.pose = next.pose;
+        if (composerText) composerText.textContent = next.prompt;
+        return;
+      }
+
+      orb?.classList.add('is-flipping');
+      composerText?.classList.add('is-changing');
+
+      transitionTimer = window.setTimeout(() => {
+        if (orb) orb.dataset.pose = next.pose;
+        if (composerText) composerText.textContent = next.prompt;
+
+        window.requestAnimationFrame(() => {
+          orb?.classList.remove('is-flipping');
+          composerText?.classList.remove('is-changing');
+        });
+      }, 180);
+    }
+
+    function restartCycle() {
+      window.clearInterval(cycleTimer);
+      if (reduceMotion) return;
+
+      cycleTimer = window.setInterval(() => {
+        if (document.hidden) return;
+        applyHeroState(heroIndex + 1, true);
+      }, 4800);
+    }
 
     prompts.forEach((prompt) => {
       prompt.addEventListener('click', () => {
-        prompts.forEach((item) => item.classList.remove('is-active'));
-        prompt.classList.add('is-active');
-        if (composerText) composerText.textContent = prompt.getAttribute('data-prompt') || 'What are you working towards?';
+        const stateIndex = Number(prompt.getAttribute('data-hero-state'));
+        if (!Number.isFinite(stateIndex)) return;
+        applyHeroState(stateIndex, true);
+        restartCycle();
       });
     });
+
+    applyHeroState(0, false);
+    restartCycle();
 
     document.querySelector('[data-go-chilla]')?.addEventListener('click', () => {
       window.location.href = CHILLA_URL;
     });
 
     const revealItems = document.querySelectorAll('.v3-reveal');
-    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (!('IntersectionObserver' in window) || reduceMotion) {
       revealItems.forEach((item) => item.classList.add('is-visible'));
       return;
     }

@@ -6,18 +6,22 @@
   const HERO_STATES = [
     {
       pose: 'neutral',
+      image: '/attached_assets/chilla/chilla-neutral.webp',
       prompt: 'I need to earn $1B before Christmas. Make no mistakes 😂'
     },
     {
       pose: 'okay',
+      image: '/attached_assets/chilla/chilla-okay.webp',
       prompt: 'Pass this $200k prop challenge.'
     },
     {
       pose: 'thinking',
+      image: '/attached_assets/chilla/chilla-thinking.webp',
       prompt: 'I need enough for a house.'
     },
     {
       pose: 'working',
+      image: '/attached_assets/chilla/chilla-working.webp',
       prompt: 'Find me a trading account and get me started.'
     }
   ];
@@ -186,8 +190,13 @@
   }
 
   function wireHomepage() {
+    HERO_STATES.forEach(({ image }) => {
+      const preload = new Image();
+      preload.src = image;
+    });
+
     const composerText = document.querySelector('[data-composer-text]');
-    const mascot = document.querySelector('[data-chilla-mascot]');
+    const heroMascot = document.querySelector('[data-chilla-hero]');
     const prompts = Array.from(document.querySelectorAll('[data-hero-state]'));
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -204,34 +213,34 @@
     function applyHeroState(index, animate) {
       const nextIndex = ((index % HERO_STATES.length) + HERO_STATES.length) % HERO_STATES.length;
       const next = HERO_STATES[nextIndex];
+
       heroIndex = nextIndex;
       setActivePrompt(nextIndex);
-
       window.clearTimeout(transitionTimer);
 
       if (!animate || reduceMotion) {
-        mascot?.classList.remove('is-flipping');
+        heroMascot?.classList.remove('is-changing');
         composerText?.classList.remove('is-changing');
-        if (mascot) mascot.dataset.pose = next.pose;
+        if (heroMascot) heroMascot.dataset.pose = next.pose;
         if (composerText) composerText.textContent = next.prompt;
         return;
       }
 
-      mascot?.classList.add('is-flipping');
+      heroMascot?.classList.add('is-changing');
       composerText?.classList.add('is-changing');
 
       transitionTimer = window.setTimeout(() => {
-        if (mascot) mascot.dataset.pose = next.pose;
+        if (heroMascot) heroMascot.dataset.pose = next.pose;
         if (composerText) composerText.textContent = next.prompt;
 
         window.requestAnimationFrame(() => {
-          mascot?.classList.remove('is-flipping');
+          heroMascot?.classList.remove('is-changing');
           composerText?.classList.remove('is-changing');
         });
       }, 180);
     }
 
-    function restartCycle() {
+    function restartHeroCycle() {
       window.clearInterval(cycleTimer);
       if (reduceMotion) return;
 
@@ -246,12 +255,12 @@
         const stateIndex = Number(prompt.getAttribute('data-hero-state'));
         if (!Number.isFinite(stateIndex)) return;
         applyHeroState(stateIndex, true);
-        restartCycle();
+        restartHeroCycle();
       });
     });
 
     applyHeroState(0, false);
-    restartCycle();
+    restartHeroCycle();
 
     document.querySelector('[data-go-chilla]')?.addEventListener('click', () => {
       window.location.href = CHILLA_URL;

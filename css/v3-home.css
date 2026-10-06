@@ -318,25 +318,49 @@ html[data-theme="dark"] .v3-icon-sun,
   transition: transform 190ms ease, opacity 190ms ease;
 }
 
-.v3-chilla-inline[data-pose="neutral"] .v3-chilla-pose {
+.v3-chilla-hero {
+  position: absolute;
+  z-index: 1;
+  right: clamp(20px, 4vw, 72px);
+  top: 26%;
+  width: clamp(280px, 29vw, 440px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  perspective: 900px;
+}
+
+.v3-chilla-hero-pose {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotateY(0deg) scale(1);
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+  transition: opacity 190ms ease, transform 190ms ease;
+}
+
+.v3-chilla-hero[data-pose="neutral"] .v3-chilla-hero-pose {
   background-image: url("/attached_assets/chilla/chilla-neutral.webp");
 }
 
-.v3-chilla-inline[data-pose="okay"] .v3-chilla-pose {
+.v3-chilla-hero[data-pose="okay"] .v3-chilla-hero-pose {
   background-image: url("/attached_assets/chilla/chilla-okay.webp");
 }
 
-.v3-chilla-inline[data-pose="thinking"] .v3-chilla-pose {
+.v3-chilla-hero[data-pose="thinking"] .v3-chilla-hero-pose {
   background-image: url("/attached_assets/chilla/chilla-thinking.webp");
 }
 
-.v3-chilla-inline[data-pose="working"] .v3-chilla-pose {
+.v3-chilla-hero[data-pose="working"] .v3-chilla-hero-pose {
   background-image: url("/attached_assets/chilla/chilla-working.webp");
 }
 
-.v3-chilla-inline.is-flipping .v3-chilla-pose {
-  opacity: 0.35;
-  transform: rotateY(90deg) scale(0.96);
+.v3-chilla-hero.is-changing .v3-chilla-hero-pose {
+  opacity: 0.18;
+  transform: rotateY(88deg) scale(0.985);
 }
 
 .v3-composer-wrap {
@@ -826,6 +850,12 @@ html[data-theme="dark"] .v3-icon-sun,
     display: none;
   }
 
+  .v3-chilla-hero {
+    right: -3vw;
+    top: 33%;
+    width: min(40vw, 330px);
+  }
+
   .v3-story-row {
     grid-template-columns: 56px minmax(0, 1fr);
   }
@@ -871,10 +901,12 @@ html[data-theme="dark"] .v3-icon-sun,
     margin-top: 26px;
   }
 
-  .v3-chilla-inline {
-    width: 0.52em;
-    height: 0.52em;
-    margin-left: 0.02em;
+  .v3-chilla-hero {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(68vw, 290px);
+    margin: 36px auto 0;
   }
 
   .v3-composer-wrap {

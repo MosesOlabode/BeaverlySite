@@ -284,10 +284,10 @@ html[data-theme="dark"] .v3-icon-sun,
   margin: 0;
   max-width: 760px;
   font-family: var(--font-display);
-  font-size: clamp(3.75rem, 9.5vw, 7.9rem);
+  font-size: clamp(3.7rem, 7vw, 6.6rem);
   font-weight: 500;
-  line-height: 0.9;
-  letter-spacing: -0.068em;
+  line-height: 0.92;
+  letter-spacing: -0.064em;
   text-wrap: balance;
 }
 
@@ -902,7 +902,7 @@ html[data-theme="dark"] .v3-icon-sun,
   }
 
   .v3-hero h1 {
-    font-size: clamp(3.45rem, 17vw, 5.25rem);
+    font-size: clamp(3.4rem, 15vw, 4.8rem);
     line-height: 0.92;
     letter-spacing: -0.06em;
   }

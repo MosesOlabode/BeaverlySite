@@ -328,33 +328,51 @@ html[data-theme="dark"] .v3-icon-sun,
   transition: color 150ms ease, opacity 150ms ease;
 }
 
-.v3-wave {
+.v3-chilla-orb {
   position: absolute;
   z-index: 1;
-  right: -12vw;
   top: 28%;
-  width: min(52vw, 760px);
-  aspect-ratio: 1.4 / 1;
-  opacity: 0.72;
+  right: clamp(28px, 6vw, 104px);
+  width: clamp(220px, 24vw, 320px);
+  aspect-ratio: 1;
   pointer-events: none;
+  perspective: 900px;
 }
 
-.v3-wave span {
-  position: absolute;
-  inset: 50% auto auto 50%;
+.v3-chilla-orb-frame {
   width: 100%;
-  height: 42%;
-  border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--line));
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
   border-radius: 50%;
-  transform-origin: 0 50%;
+  background:
+    radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--accent-soft) 76%, transparent), transparent 66%),
+    color-mix(in srgb, var(--surface) 58%, transparent);
 }
 
-.v3-wave span:nth-child(1) { transform: translate(-24%, -50%) rotate(-14deg) scale(0.82); }
-.v3-wave span:nth-child(2) { transform: translate(-24%, -50%) rotate(-10deg) scale(0.92); }
-.v3-wave span:nth-child(3) { transform: translate(-24%, -50%) rotate(-6deg) scale(1.02); }
-.v3-wave span:nth-child(4) { transform: translate(-24%, -50%) rotate(-2deg) scale(1.12); }
-.v3-wave span:nth-child(5) { transform: translate(-24%, -50%) rotate(2deg) scale(1.22); }
-.v3-wave span:nth-child(6) { transform: translate(-24%, -50%) rotate(6deg) scale(1.32); }
+.v3-chilla-pose {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url("/attached_assets/chilla/chilla-poses.webp");
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  background-position: 0 0;
+  transform: rotateY(0deg) scale(1);
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+  transition: transform 190ms ease, opacity 190ms ease;
+}
+
+.v3-chilla-orb[data-pose="neutral"] .v3-chilla-pose { background-position: 0 0; }
+.v3-chilla-orb[data-pose="okay"] .v3-chilla-pose { background-position: 100% 0; }
+.v3-chilla-orb[data-pose="thinking"] .v3-chilla-pose { background-position: 0 100%; }
+.v3-chilla-orb[data-pose="working"] .v3-chilla-pose { background-position: 100% 100%; }
+
+.v3-chilla-orb.is-flipping .v3-chilla-pose {
+  opacity: 0.42;
+  transform: rotateY(90deg) scale(0.97);
+}
 
 .v3-composer-wrap {
   position: relative;
@@ -379,6 +397,12 @@ html[data-theme="dark"] .v3-icon-sun,
   min-width: 0;
   color: var(--faint);
   font-size: 0.98rem;
+  transition: opacity 170ms ease, transform 170ms ease;
+}
+
+.v3-composer-text.is-changing {
+  opacity: 0;
+  transform: translateY(3px);
 }
 
 .v3-composer-go {
@@ -837,11 +861,12 @@ html[data-theme="dark"] .v3-icon-sun,
     display: none;
   }
 
-  .v3-wave {
-    right: -34vw;
-    top: 36%;
-    width: 86vw;
-    opacity: 0.42;
+  .v3-chilla-orb {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(52vw, 230px);
+    margin: 44px auto 0;
   }
 
   .v3-story-row {
@@ -889,8 +914,13 @@ html[data-theme="dark"] .v3-icon-sun,
     margin-top: 26px;
   }
 
+  .v3-chilla-orb {
+    width: min(58vw, 190px);
+    margin-top: 34px;
+  }
+
   .v3-composer-wrap {
-    margin-top: 60px;
+    margin-top: 42px;
   }
 
   .v3-composer {

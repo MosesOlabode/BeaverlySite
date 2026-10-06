@@ -277,12 +277,12 @@ html[data-theme="dark"] .v3-icon-sun,
 .v3-hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 980px;
+  max-width: 820px;
 }
 
 .v3-hero h1 {
   margin: 0;
-  max-width: 940px;
+  max-width: 760px;
   font-family: var(--font-display);
   font-size: clamp(3.75rem, 9.5vw, 7.9rem);
   font-weight: 500;

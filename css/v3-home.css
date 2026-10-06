@@ -274,6 +274,13 @@ html[data-theme="dark"] .v3-icon-sun,
   padding: clamp(150px, 17vh, 210px) 0 72px;
 }
 
+.v3-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .62fr);
+  align-items: center;
+  gap: clamp(52px, 7vw, 96px);
+}
+
 .v3-hero-copy {
   position: relative;
   z-index: 2;
@@ -329,12 +336,11 @@ html[data-theme="dark"] .v3-icon-sun,
 }
 
 .v3-chilla-hero {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  right: clamp(20px, 4vw, 72px);
-  top: 26%;
-  width: clamp(280px, 29vw, 440px);
+  width: min(100%, 430px);
   aspect-ratio: 1;
+  justify-self: end;
   pointer-events: none;
   perspective: 900px;
 }
@@ -860,10 +866,14 @@ html[data-theme="dark"] .v3-icon-sun,
     display: none;
   }
 
+  .v3-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
   .v3-chilla-hero {
-    right: -3vw;
-    top: 33%;
-    width: min(40vw, 330px);
+    width: min(62vw, 360px);
+    justify-self: center;
   }
 
   .v3-story-row {
@@ -911,12 +921,13 @@ html[data-theme="dark"] .v3-icon-sun,
     margin-top: 26px;
   }
 
+  .v3-hero-grid {
+    gap: 32px;
+  }
+
   .v3-chilla-hero {
-    position: relative;
-    top: auto;
-    right: auto;
-    width: min(68vw, 290px);
-    margin: 36px auto 0;
+    width: min(72vw, 300px);
+    justify-self: center;
   }
 
   .v3-composer-wrap {

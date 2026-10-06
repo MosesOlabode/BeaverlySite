@@ -9,7 +9,7 @@
 
     CHILLA_POSES.forEach((pose) => {
       const preload = new Image();
-      preload.src = `/attached_assets/chilla/chilla-${pose}.png`;
+      preload.src = `/attached_assets/chilla/chilla-${pose}.webp`;
     });
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -43,10 +43,10 @@
   transition: opacity 190ms ease, transform 190ms ease;
 }
 
-.ch3-mascot[data-pose="neutral"] .ch3-mascot-pose { background-image: url("/attached_assets/chilla/chilla-neutral.png"); }
-.ch3-mascot[data-pose="okay"] .ch3-mascot-pose { background-image: url("/attached_assets/chilla/chilla-okay.png"); }
-.ch3-mascot[data-pose="thinking"] .ch3-mascot-pose { background-image: url("/attached_assets/chilla/chilla-thinking.png"); }
-.ch3-mascot[data-pose="working"] .ch3-mascot-pose { background-image: url("/attached_assets/chilla/chilla-working.png"); }
+.ch3-mascot[data-pose="neutral"] .ch3-mascot-pose { background-image: url("/attached_assets/chilla/chilla-neutral.webp"); }
+.ch3-mascot[data-pose="okay"] .ch3-mascot-pose { background-image: url("/attached_assets/chilla/chilla-okay.webp"); }
+.ch3-mascot[data-pose="thinking"] .ch3-mascot-pose { background-image: url("/attached_assets/chilla/chilla-thinking.webp"); }
+.ch3-mascot[data-pose="working"] .ch3-mascot-pose { background-image: url("/attached_assets/chilla/chilla-working.webp"); }
 
 .ch3-mascot.is-changing .ch3-mascot-pose {
   opacity: .18;

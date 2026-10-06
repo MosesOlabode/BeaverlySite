@@ -343,6 +343,12 @@ html[data-theme="dark"] .v3-icon-sun,
   justify-self: end;
   pointer-events: none;
   perspective: 900px;
+  animation: v3ChillaFloat 8.6s ease-in-out infinite;
+}
+
+@keyframes v3ChillaFloat {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -5px; }
 }
 
 .v3-chilla-hero-pose {
@@ -987,5 +993,13 @@ html[data-theme="dark"] .v3-icon-sun,
 
   .v3-footer-links {
     justify-content: flex-start;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .v3-chilla-hero {
+    animation: none !important;
+    translate: none !important;
   }
 }

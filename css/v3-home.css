@@ -353,19 +353,19 @@ html[data-theme="dark"] .v3-icon-sun,
 }
 
 .v3-chilla-hero[data-pose="neutral"] .v3-chilla-hero-pose {
-  background-image: url("/attached_assets/chilla/chilla-neutral.png");
+  background-image: url("/attached_assets/chilla/chilla-neutral.webp");
 }
 
 .v3-chilla-hero[data-pose="okay"] .v3-chilla-hero-pose {
-  background-image: url("/attached_assets/chilla/chilla-okay.png");
+  background-image: url("/attached_assets/chilla/chilla-okay.webp");
 }
 
 .v3-chilla-hero[data-pose="thinking"] .v3-chilla-hero-pose {
-  background-image: url("/attached_assets/chilla/chilla-thinking.png");
+  background-image: url("/attached_assets/chilla/chilla-thinking.webp");
 }
 
 .v3-chilla-hero[data-pose="working"] .v3-chilla-hero-pose {
-  background-image: url("/attached_assets/chilla/chilla-working.png");
+  background-image: url("/attached_assets/chilla/chilla-working.webp");
 }
 
 .v3-chilla-hero.is-changing .v3-chilla-hero-pose {

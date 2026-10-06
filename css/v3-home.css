@@ -309,20 +309,30 @@ html[data-theme="dark"] .v3-icon-sun,
   width: 100%;
   height: 100%;
   display: block;
-  background-image: url("/attached_assets/chilla/chilla-poses.webp?v=0cdc1e8");
   background-repeat: no-repeat;
-  background-size: 200% 200%;
-  background-position: 0 0;
+  background-size: contain;
+  background-position: center;
   transform: rotateY(0deg) scale(1);
   transform-origin: 50% 50%;
   backface-visibility: hidden;
   transition: transform 190ms ease, opacity 190ms ease;
 }
 
-.v3-chilla-inline[data-pose="neutral"] .v3-chilla-pose { background-position: 0 0; }
-.v3-chilla-inline[data-pose="okay"] .v3-chilla-pose { background-position: 100% 0; }
-.v3-chilla-inline[data-pose="thinking"] .v3-chilla-pose { background-position: 0 100%; }
-.v3-chilla-inline[data-pose="working"] .v3-chilla-pose { background-position: 100% 100%; }
+.v3-chilla-inline[data-pose="neutral"] .v3-chilla-pose {
+  background-image: url("/attached_assets/chilla/chilla-neutral.webp");
+}
+
+.v3-chilla-inline[data-pose="okay"] .v3-chilla-pose {
+  background-image: url("/attached_assets/chilla/chilla-okay.webp");
+}
+
+.v3-chilla-inline[data-pose="thinking"] .v3-chilla-pose {
+  background-image: url("/attached_assets/chilla/chilla-thinking.webp");
+}
+
+.v3-chilla-inline[data-pose="working"] .v3-chilla-pose {
+  background-image: url("/attached_assets/chilla/chilla-working.webp");
+}
 
 .v3-chilla-inline.is-flipping .v3-chilla-pose {
   opacity: 0.35;

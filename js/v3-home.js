@@ -6,22 +6,22 @@
   const HERO_STATES = [
     {
       pose: 'neutral',
-      image: '/attached_assets/chilla/chilla-neutral.png',
+      image: '/attached_assets/chilla/chilla-neutral.webp',
       prompt: 'I need to earn $1B before Christmas. Make no mistakes 😂'
     },
     {
       pose: 'okay',
-      image: '/attached_assets/chilla/chilla-okay.png',
+      image: '/attached_assets/chilla/chilla-okay.webp',
       prompt: 'Pass this $200k prop challenge.'
     },
     {
       pose: 'thinking',
-      image: '/attached_assets/chilla/chilla-thinking.png',
+      image: '/attached_assets/chilla/chilla-thinking.webp',
       prompt: 'I need enough for a house.'
     },
     {
       pose: 'working',
-      image: '/attached_assets/chilla/chilla-working.png',
+      image: '/attached_assets/chilla/chilla-working.webp',
       prompt: 'Find me a trading account and get me started.'
     }
   ];

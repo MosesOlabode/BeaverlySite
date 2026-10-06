@@ -187,7 +187,7 @@
 
   function wireHomepage() {
     const composerText = document.querySelector('[data-composer-text]');
-    const orb = document.querySelector('[data-chilla-orb]');
+    const mascot = document.querySelector('[data-chilla-mascot]');
     const prompts = Array.from(document.querySelectorAll('[data-hero-state]'));
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -210,22 +210,22 @@
       window.clearTimeout(transitionTimer);
 
       if (!animate || reduceMotion) {
-        orb?.classList.remove('is-flipping');
+        mascot?.classList.remove('is-flipping');
         composerText?.classList.remove('is-changing');
-        if (orb) orb.dataset.pose = next.pose;
+        if (mascot) mascot.dataset.pose = next.pose;
         if (composerText) composerText.textContent = next.prompt;
         return;
       }
 
-      orb?.classList.add('is-flipping');
+      mascot?.classList.add('is-flipping');
       composerText?.classList.add('is-changing');
 
       transitionTimer = window.setTimeout(() => {
-        if (orb) orb.dataset.pose = next.pose;
+        if (mascot) mascot.dataset.pose = next.pose;
         if (composerText) composerText.textContent = next.prompt;
 
         window.requestAnimationFrame(() => {
-          orb?.classList.remove('is-flipping');
+          mascot?.classList.remove('is-flipping');
           composerText?.classList.remove('is-changing');
         });
       }, 180);

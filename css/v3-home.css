@@ -327,6 +327,13 @@ html[data-theme="dark"] .v3-icon-sun,
   margin-top: 34px;
 }
 
+.v3-guest-note {
+  margin: 13px 0 0;
+  color: var(--muted);
+  font-size: 0.87rem;
+  line-height: 1.5;
+}
+
 .v3-text-link {
   color: var(--muted);
   text-underline-offset: 4px;
